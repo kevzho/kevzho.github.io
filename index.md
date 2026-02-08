@@ -3,56 +3,29 @@ layout: default
 title: Home
 ---
 
-# Kevin
+<header class="hero" style="position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg-color);">
+    <div id="particle-container">
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    </div>
 
-Hi, I'm Kevin from Pennington, NJ.  
+    <div class="hero-content">
+      <h1 style="color: var(--primary); font-size: 4rem; margin: 0;">{{ site.author | default: "Kevin" }}</h1>
+      <h2 style="color: var(--text-color); font-size: 2.2rem; margin: 0.5rem 0;">Data Scientist in Training</h2>
+      <p style="color: var(--text-color); font-size: 1.4rem; opacity: 0.9; margin: 1rem 0 2.5rem;">{{ site.tagline | default: "Exploring patterns, predicting possibilities" }}</p>
 
-I'm a high school junior passionate about turning raw data into real decisions and building models that solve meaningful problems.
+      <div class="status-line">
+        <span> <strong>Currently working on</strong>: PLForecast - A Premier League Predictive Dashboard</span>
+      </div>
 
-## About Me
+      <div class="cta-buttons">
+        <a href="/projects/" class="cta-primary">View Projects</a>
+        <a href="/insights/" class="cta-secondary">Read Insights</a>
+      </div>
+    </div>
+</header>
 
-I'm an enthusiastic learner with a strong foundation in:
-- Machine learning algorithms & model building
-- Data analysis & visualization
-- Python programming & software development basics
-
-I love tackling complex questions, cleaning messy datasets, and seeing how small changes in features or hyperparameters can dramatically improve results.
-
-## My Experiments (Work in Progress)
-
-### Featured / Recent Work
-- **Project 1** — [Brief description — e.g., Sentiment Analysis on Social Media Data]  
-  Used NLP + classification models to detect emotion in text. Achieved XX% accuracy after feature engineering and hyperparameter tuning.
-- **Project 2** — [Brief description — e.g., Boston Housing Price Prediction]  
-  Classic regression problem with heavy emphasis on data cleaning, outlier handling, and model comparison (Linear Regression vs. Random Forest vs. XGBoost).
-
-More experiments coming soon — check the [Experiments](/experiments/) page for details, code, notebooks, and live demos!
-
-## Resume
-
-[Download My Resume (PDF)](resume.pdf)
-
-## Let's Connect & Collaborate
-
-Have a cool dataset, project idea, or just want to chat about ML/AI? Reach out!
-
-<form action="https://formspree.io/f/{your_form_id}" method="post">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
-
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-  <button type="submit">Send Message</button>
-</form>
-
-Or find me on:
-- [GitHub](https://github.com/kevzho)
-- [LinkedIn](https://www.linkedin.com/in/kevin-zhou-423827308/)
-
-© {{ 'now' | date: "%Y" }} Kevin Zhou. 
-
-TEST BUILD

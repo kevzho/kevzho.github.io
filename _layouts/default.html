@@ -7,39 +7,21 @@
   <link rel="stylesheet" href="{{ '/assets/css/kevinlab.css' | relative_url }}">
 </head>
 <body>
-  <nav style="background: var(--secondary); padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000;">
-    <a href="/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">Home</a> ·
-    <a href="/experiments/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">Experiments</a> ·
-    <a href="/insights/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">Insights Lab</a> ·
-    <a href="/about/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">About</a> ·
-    <a href="/journal/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">Journal</a>
-  </nav>
+  <nav class="site-nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">{{ site.author | default: "Kevin" }}</a>
 
-  <header class="hero" style="position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg-color);">
-    <div id="particle-container">
-      <!-- 30 particles for floating data-point effect -->
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="nav-links">
+      <a href="/" class="nav-item {% if page.url == '/' %}active{% endif %}">Home</a>
+      <a href="/projects/" class="nav-item {% if page.url contains '/projects' %}active{% endif %}">Projects</a>
+      <a href="/insights/" class="nav-item {% if page.url contains '/insights' %}active{% endif %}">Insights Lab</a>
+      <a href="/about/" class="nav-item {% if page.url contains '/about' %}active{% endif %}">About</a>
+      <a href="/journal/" class="nav-item {% if page.url contains '/journal' %}active{% endif %}">Journal</a>
     </div>
+  </div>
+</nav>
 
-    <div style="z-index: 2; text-align: center; max-width: 800px; padding: 2rem;">
-      <h1 style="color: var(--primary); font-size: 3.5rem; margin: 0;">{{ site.author | default: "Kevin" }}</h1>
-      <h2 style="color: var(--text-color); font-size: 1.8rem; margin: 0.5rem 0;">Data Scientist in Training</h2>
-      <p style="color: var(--text-color); font-size: 1.3rem; opacity: 0.9;">{{ site.tagline | default: "Exploring patterns, predicting possibilities" }}</p>
-
-      <!-- Quick blueprint links / status -->
-      <div style="margin-top: 2rem;">
-        <p>🔬 Currently exploring: <strong>Your Big Project Name</strong></p>
-        <p>📚 Just completed: Veritas AI Fellowship</p>
-        <a href="/experiments/" style="background: var(--accent); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; margin: 0.5rem;">View Experiments</a>
-        <a href="/insights/" style="background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; margin: 0.5rem;">Read Insights</a>
-      </div>
-    </div>
-  </header>
+  
 
   <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
     {{ content }}

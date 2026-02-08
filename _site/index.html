@@ -7,100 +7,49 @@
   <link rel="stylesheet" href="/assets/css/kevinlab.css">
 </head>
 <body>
-  <nav style="background: var(--secondary); padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000;">
-    <a href="/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">Home</a> ·
-    <a href="/experiments/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">Experiments</a> ·
-    <a href="/insights/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">Insights Lab</a> ·
-    <a href="/about/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">About</a> ·
-    <a href="/journal/" style="color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 500;">Journal</a>
-  </nav>
+  <nav class="site-nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">Kevin</a>
 
-  <header class="hero" style="position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg-color);">
-    <div id="particle-container">
-      <!-- 30 particles for floating data-point effect -->
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="nav-links">
+      <a href="/" class="nav-item active">Home</a>
+      <a href="/projects/" class="nav-item ">Projects</a>
+      <a href="/insights/" class="nav-item ">Insights Lab</a>
+      <a href="/about/" class="nav-item ">About</a>
+      <a href="/journal/" class="nav-item ">Journal</a>
     </div>
+  </div>
+</nav>
 
-    <div style="z-index: 2; text-align: center; max-width: 800px; padding: 2rem;">
-      <h1 style="color: var(--primary); font-size: 3.5rem; margin: 0;">Kevin</h1>
-      <h2 style="color: var(--text-color); font-size: 1.8rem; margin: 0.5rem 0;">Data Scientist in Training</h2>
-      <p style="color: var(--text-color); font-size: 1.3rem; opacity: 0.9;">Exploring patterns, predicting possibilities</p>
-
-      <!-- Quick blueprint links / status -->
-      <div style="margin-top: 2rem;">
-        <p>🔬 Currently exploring: <strong>Your Big Project Name</strong></p>
-        <p>📚 Just completed: Veritas AI Fellowship</p>
-        <a href="/experiments/" style="background: var(--accent); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; margin: 0.5rem;">View Experiments</a>
-        <a href="/insights/" style="background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; margin: 0.5rem;">Read Insights</a>
-      </div>
-    </div>
-  </header>
+  
 
   <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-    <h1 id="kevin">Kevin</h1>
+    <header class="hero" style="position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg-color);">
+    <div id="particle-container">
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    </div>
 
-<p>Hi, I’m Kevin from Pennington, NJ.</p>
+    <div class="hero-content">
+      <h1 style="color: var(--primary); font-size: 4rem; margin: 0;">Kevin</h1>
+      <h2 style="color: var(--text-color); font-size: 2.2rem; margin: 0.5rem 0;">Data Scientist in Training</h2>
+      <p style="color: var(--text-color); font-size: 1.4rem; opacity: 0.9; margin: 1rem 0 2.5rem;">Exploring patterns, predicting possibilities</p>
 
-<p>I’m a high school junior passionate about turning raw data into real decisions and building models that solve meaningful problems.</p>
+      <div class="status-line">
+        <span> <strong>Currently working on</strong>: PLForecast - A Premier League Predictive Dashboard</span>
+      </div>
 
-<h2 id="about-me">About Me</h2>
+      <div class="cta-buttons">
+        <a href="/projects/" class="cta-primary">View Projects</a>
+        <a href="/insights/" class="cta-secondary">Read Insights</a>
+      </div>
+    </div>
+</header>
 
-<p>I’m an enthusiastic learner with a strong foundation in:</p>
-<ul>
-  <li>Machine learning algorithms &amp; model building</li>
-  <li>Data analysis &amp; visualization</li>
-  <li>Python programming &amp; software development basics</li>
-</ul>
-
-<p>I love tackling complex questions, cleaning messy datasets, and seeing how small changes in features or hyperparameters can dramatically improve results.</p>
-
-<h2 id="my-experiments-work-in-progress">My Experiments (Work in Progress)</h2>
-
-<h3 id="featured--recent-work">Featured / Recent Work</h3>
-<ul>
-  <li><strong>Project 1</strong> — [Brief description — e.g., Sentiment Analysis on Social Media Data]<br />
-Used NLP + classification models to detect emotion in text. Achieved XX% accuracy after feature engineering and hyperparameter tuning.</li>
-  <li><strong>Project 2</strong> — [Brief description — e.g., Boston Housing Price Prediction]<br />
-Classic regression problem with heavy emphasis on data cleaning, outlier handling, and model comparison (Linear Regression vs. Random Forest vs. XGBoost).</li>
-</ul>
-
-<p>More experiments coming soon — check the <a href="/experiments/">Experiments</a> page for details, code, notebooks, and live demos!</p>
-
-<h2 id="resume">Resume</h2>
-
-<p><a href="resume.pdf">Download My Resume (PDF)</a></p>
-
-<h2 id="lets-connect--collaborate">Let’s Connect &amp; Collaborate</h2>
-
-<p>Have a cool dataset, project idea, or just want to chat about ML/AI? Reach out!</p>
-
-<form action="https://formspree.io/f/{your_form_id}" method="post">
-  <label for="name">Name:</label><br />
-  <input type="text" id="name" name="name" required="" /><br /><br />
-
-  <label for="email">Email:</label><br />
-  <input type="email" id="email" name="email" required="" /><br /><br />
-
-  <label for="message">Message:</label><br />
-  <textarea id="message" name="message" rows="5" required=""></textarea><br /><br />
-
-  <button type="submit">Send Message</button>
-</form>
-
-<p>Or find me on:</p>
-<ul>
-  <li><a href="https://github.com/kevzho">GitHub</a></li>
-  <li><a href="https://www.linkedin.com/in/kevin-zhou-423827308/">LinkedIn</a></li>
-</ul>
-
-<p>© 2026 Kevin Zhou.</p>
-
-<p>TEST BUILD</p>
 
   </main>
 
