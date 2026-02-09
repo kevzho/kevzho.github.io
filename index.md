@@ -14,8 +14,8 @@ title: Homev2
     </div>
 
     <div class="hero-content">
-      <h1 style="color: var(--primary); font-size: 4rem; margin: 0;">{{ site.author | default: "Kevin" }}</h1>
-      <h2 style="color: var(--text-color); font-size: 2.2rem; margin: 0.5rem 0;">Data Scientist in Training</h2>
+      <h1 style="color: var(--primary); font-size: 4rem; margin: 0;">Kevin Zhou</h1>
+      <h2 style="color: var(--text-color); font-size: 2.2rem; margin: 0.5rem 0;">Aspiring Data Scientist</h2>
       <p style="color: var(--text-color); font-size: 1.4rem; opacity: 0.9; margin: 1rem 0 2.5rem;">{{ site.tagline | default: "Exploring patterns, predicting possibilities" }}</p>
 
       <div class="status-line">
