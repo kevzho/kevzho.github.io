@@ -3,7 +3,9 @@ author: Kevin
 description: High school data scientist exploring ML, AI, statistics
 
 url: "https://kevzho.github.io"
-baseurl: "/kevinzhou/"
+baseurl: ""
+
+permalink: pretty  
 
 sass:
   sass_dir: assets/css   # points to your SCSS folder
