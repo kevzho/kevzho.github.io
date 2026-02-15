@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homev2 | Kevin's Data Science Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&family=Jersey+25&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -15,7 +18,6 @@
       <a href="/" class="nav-item active">Home</a>
       <a href="/projects/" class="nav-item ">Projects</a>
       <a href="/insights/" class="nav-item ">Insights Lab</a>
-      <a href="/about/" class="nav-item ">About</a>
       <a href="/journal/" class="nav-item ">Journal</a>
     </div>
   </div>
@@ -23,8 +25,8 @@
 
   
 
-  <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-    <header class="hero" style="position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg-color);">
+  <main class="main-content">
+    <header class="hero">
     <div id="particle-container">
       <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
       <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
@@ -35,12 +37,16 @@
     </div>
 
     <div class="hero-content">
-      <h1 style="color: var(--primary); font-size: 4rem; margin: 0;">Kevin Zhou</h1>
-      <h2 style="color: var(--text-color); font-size: 2.2rem; margin: 0.5rem 0;">Aspiring Data Scientist</h2>
-      <p style="color: var(--text-color); font-size: 1.4rem; opacity: 0.9; margin: 1rem 0 2.5rem;">Exploring patterns, predicting possibilities</p>
+      <h1>Kevin Zhou</h1>
+      <h2>Aspiring Data Scientist</h2>
+      <p>Exploring patterns, predicting possibilities</p>
 
       <div class="status-line">
-        <span> <strong>Currently working on</strong>: PLForecast - A Premier League Predictive Dashboard</span>
+        <span><strong>Currently working on</strong>: UPenn Wharton DS Competition: WHL Predictions</span>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img src="/assets/images/whl.jpg" alt="WHL prediction project preview" class="hero-image" />
       </div>
 
       <div class="cta-buttons">
@@ -50,10 +56,38 @@
     </div>
 </header>
 
+<section class="home-about">
+  <h2>About</h2>
+  <p>Hi, I'm Kevin from Pennington, NJ.</p>
+  <p>I'm a high school junior passionate about machine learning, data science, statistics, and building AI that solves real problems.</p>
+
+  <h3>Current Focus</h3>
+  <ul>
+    <li>Deepening time series forecasting &amp; NLP</li>
+    <li>Mastering model interpretability &amp; deployment</li>
+  </ul>
+
+  <h3>Toolkit</h3>
+  <ul>
+    <li><strong>Languages</strong>: Python (Pandas, NumPy, Scikit-learn), SQL basics</li>
+    <li><strong>ML/DL</strong>: TensorFlow, PyTorch (early stage)</li>
+    <li><strong>Visualization</strong>: Matplotlib, Seaborn, Plotly</li>
+    <li><strong>Deployment</strong>: Streamlit</li>
+  </ul>
+
+  <h3>Philosophy</h3>
+  <p>I learn best by building experiments. Each run, whether it succeeds or fails, teaches something valuable about how data tells stories.</p>
+
+  <h3>Connect</h3>
+  <div class="connect-links">
+    <a href="https://github.com/kevzho" class="connect-link">GitHub</a>
+    <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" class="connect-link">LinkedIn</a>
+  </div>
+</section>
 
   </main>
 
-  <footer style="background: var(--secondary); padding: 2rem; text-align: center; color: var(--text-color); margin-top: 4rem;">
+  <footer class="site-footer">
     &copy; 2026 Kevin Zhou • "You don't have any enemies. No one has any."
   </footer>
 </body>

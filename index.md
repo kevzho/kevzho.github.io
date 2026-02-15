@@ -3,7 +3,7 @@ layout: default
 title: Homev2
 ---
 
-<header class="hero" style="position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg-color);">
+<header class="hero">
     <div id="particle-container">
       <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
       <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
@@ -14,12 +14,16 @@ title: Homev2
     </div>
 
     <div class="hero-content">
-      <h1 style="color: var(--primary); font-size: 4rem; margin: 0;">Kevin Zhou</h1>
-      <h2 style="color: var(--text-color); font-size: 2.2rem; margin: 0.5rem 0;">Aspiring Data Scientist</h2>
-      <p style="color: var(--text-color); font-size: 1.4rem; opacity: 0.9; margin: 1rem 0 2.5rem;">{{ site.tagline | default: "Exploring patterns, predicting possibilities" }}</p>
+      <h1>Kevin Zhou</h1>
+      <h2>Aspiring Data Scientist</h2>
+      <p>{{ site.tagline | default: "Exploring patterns, predicting possibilities" }}</p>
 
       <div class="status-line">
-        <span> <strong>Currently working on</strong>: PLForecast - A Premier League Predictive Dashboard</span>
+        <span><strong>Currently working on</strong>: UPenn Wharton DS Competition: WHL Predictions</span>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img src="{{ '/assets/images/whl.jpg' | relative_url }}" alt="WHL prediction project preview" class="hero-image">
       </div>
 
       <div class="cta-buttons">
@@ -29,3 +33,31 @@ title: Homev2
     </div>
 </header>
 
+<section class="home-about">
+  <h2>About</h2>
+  <p>Hi, I'm Kevin from Pennington, NJ.</p>
+  <p>I'm a high school junior passionate about machine learning, data science, statistics, and building AI that solves real problems.</p>
+
+  <h3>Current Focus</h3>
+  <ul>
+    <li>Deepening time series forecasting &amp; NLP</li>
+    <li>Mastering model interpretability &amp; deployment</li>
+  </ul>
+
+  <h3>Toolkit</h3>
+  <ul>
+    <li><strong>Languages</strong>: Python (Pandas, NumPy, Scikit-learn), SQL basics</li>
+    <li><strong>ML/DL</strong>: TensorFlow, PyTorch (early stage)</li>
+    <li><strong>Visualization</strong>: Matplotlib, Seaborn, Plotly</li>
+    <li><strong>Deployment</strong>: Streamlit</li>
+  </ul>
+
+  <h3>Philosophy</h3>
+  <p>I learn best by building experiments. Each run, whether it succeeds or fails, teaches something valuable about how data tells stories.</p>
+
+  <h3>Connect</h3>
+  <div class="connect-links">
+    <a href="https://github.com/kevzho" class="connect-link">GitHub</a>
+    <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" class="connect-link">LinkedIn</a>
+  </div>
+</section>
