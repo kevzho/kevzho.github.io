@@ -14,9 +14,11 @@ title: Projects
       <img src="{{ '/assets/images/plforecast-cover.jpg' | relative_url }}" alt="PLForecast dashboard">
     </div>
     <div class="project-content">
-      <span class="project-tag">Featured</span>
+      <div class="project-meta">
+        <span class="project-tag">Featured</span>
+        <p class="project-date">Dec 2025 - Feb 2026</p>
+      </div>
       <h2>PLForecast</h2>
-      <p class="project-date">Dec 2025 - Feb 2026</p>
       <p class="project-description">A Premier League predictive dashboard built with Streamlit for interactive match and performance forecasting.</p>
       
       <div class="skills-list">
@@ -24,9 +26,11 @@ title: Projects
         <span class="skill">Predictive Modeling</span>
         <span class="skill">Sports Analytics</span>
       </div>
-      
-      <a href="https://plforecast.streamlit.app/" class="btn-primary">View App →</a>
-      <a href="https://github.com/kevzho/plforecast/blob/main/app.py" class="btn-secondary">View GitHub →</a>
+
+      <div class="project-actions">
+        <a href="https://plforecast.streamlit.app/" class="btn-primary">View App →</a>
+        <a href="https://github.com/kevzho/plforecast/blob/main/app.py" class="btn-secondary">View GitHub →</a>
+      </div>
     </div>
   </div>
 </div>
@@ -74,9 +78,11 @@ title: Projects
       <img src="{{ '/assets/images/veritas-cover.jpg' | relative_url }}" alt="Veritas AI project">
     </div>
     <div class="project-content">
-      <span class="project-tag">Project</span>
+      <div class="project-meta">
+        <span class="project-tag">Project</span>
+        <p class="project-date">Jul - Aug 2025</p>
+      </div>
       <h2>Veritas AI</h2>
-      <p class="project-date">Jul - Aug 2025</p>
       <p class="project-description">An AI-focused build exploring practical workflows and applied ML experimentation.</p>
 
       <div class="skills-list">
@@ -85,7 +91,9 @@ title: Projects
         <span class="skill">Applied AI</span>
       </div>
 
-      <a href="https://github.com/kevzho/VeritasAI" class="btn-secondary">View GitHub →</a>
+      <div class="project-actions">
+        <a href="https://github.com/kevzho/VeritasAI" class="btn-secondary">View GitHub →</a>
+      </div>
     </div>
   </div>
 </section>

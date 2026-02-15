@@ -34,6 +34,39 @@ body {
   flex-direction: column;
 }
 
+@keyframes nav-drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes content-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes footer-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 h1 {
   font-family: "Jersey 10", monospace;
   font-size: clamp(2.8rem, 7vw, 5rem);
@@ -72,6 +105,7 @@ a {
   z-index: 1000;
   background: var(--surface);
   border-bottom: 3px solid var(--border);
+  animation: nav-drop-in 0.45s ease-out both;
 }
 
 .nav-container {
@@ -118,6 +152,17 @@ a {
   flex: 1;
 }
 
+.main-content > * {
+  opacity: 0;
+  animation: content-fade-up 0.55s ease-out forwards;
+}
+
+.main-content > *:nth-child(2) { animation-delay: 0.08s; }
+.main-content > *:nth-child(3) { animation-delay: 0.14s; }
+.main-content > *:nth-child(4) { animation-delay: 0.2s; }
+.main-content > *:nth-child(5) { animation-delay: 0.26s; }
+.main-content > *:nth-child(6) { animation-delay: 0.32s; }
+
 .hero {
   position: relative;
   min-height: 58vh;
@@ -149,6 +194,11 @@ a {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.hero-image-wrap:hover .hero-image {
+  transform: scale(1.025);
 }
 
 .hero h2 {
@@ -264,6 +314,8 @@ pre.highlight {
   border-top: 3px solid var(--border);
   padding: 1.2rem;
   color: var(--muted-text);
+  animation: footer-rise 0.45s ease-out both;
+  animation-delay: 0.18s;
 }
 
 .home-about {
@@ -352,6 +404,12 @@ pre.highlight {
   background: var(--surface-alt);
   padding: 0.9rem;
   box-shadow: 3px 3px 0 var(--border);
+  transition: transform 0.16s ease-in-out, box-shadow 0.16s ease-in-out;
+}
+
+.hobby-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--border);
 }
 
 .hobby-card h3 {
@@ -399,6 +457,16 @@ pre.highlight {
   .hero {
     min-height: 50vh;
     padding: 2rem 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
 

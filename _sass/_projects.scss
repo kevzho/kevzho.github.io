@@ -23,6 +23,7 @@
   border: 2px solid var(--border);
   overflow: hidden;
   box-shadow: 4px 4px 0 var(--border);
+  transition: transform 0.18s ease-in-out, box-shadow 0.18s ease-in-out;
 
   &.featured {
     display: grid;
@@ -42,6 +43,7 @@
       object-fit: cover;
       display: block;
       filter: grayscale(14%) contrast(1.05);
+      transition: transform 0.28s ease-in-out, filter 0.28s ease-in-out;
     }
   }
 
@@ -53,12 +55,25 @@
     padding: 1rem;
   }
 
+  &.featured .project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
   .project-tag {
     display: inline-block;
     border: 2px solid var(--border);
     background: var(--accent-soft);
     padding: 0.12rem 0.6rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0;
   }
 
   .project-date {
@@ -66,14 +81,14 @@
     border: 2px solid var(--border);
     background: var(--surface-alt);
     padding: 0.12rem 0.55rem;
-    margin: 0 0 0.7rem;
+    margin: 0;
     color: var(--text-color);
     line-height: 1.2;
   }
 
   h2 {
     font-size: clamp(1.7rem, 4vw, 2.5rem);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
   }
 
   h3 {
@@ -85,6 +100,28 @@
   p {
     color: var(--muted-text);
   }
+
+  &:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0 var(--border);
+  }
+
+  &:hover .project-image img {
+    transform: scale(1.035);
+    filter: grayscale(4%) contrast(1.08);
+  }
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+}
+
+.project-actions .btn-primary,
+.project-actions .btn-secondary {
+  margin-top: 0;
 }
 
 .skills-list {
@@ -97,6 +134,12 @@
     border: 2px solid var(--border);
     background: var(--surface-alt);
     padding: 0.2rem 0.55rem;
+    transition: transform 0.15s ease-in-out, background 0.15s ease-in-out;
+
+    &:hover {
+      transform: translate(-1px, -1px);
+      background: var(--accent-soft);
+    }
   }
 }
 
@@ -183,10 +226,12 @@
   box-shadow: 4px 4px 0 var(--border);
   text-align: center;
   padding: 1rem;
-  transition: 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background 0.15s ease-in-out;
 
   &:hover {
     transform: translate(-2px, -2px);
+    background: var(--surface-alt);
+    box-shadow: 6px 6px 0 var(--border);
   }
 
   h4 {
