@@ -14,7 +14,7 @@ title: Kevin Zhou
     </div>
 
     <div class="hero-content">
-      <h1>Kevin Zhou</h1>
+      <h1><span class="hero-name" data-name="Kevin Zhou">Kevin Zhou</span></h1>
       <h2>Aspiring Data Scientist</h2>
       <p>{{ site.tagline | default: "Exploring patterns, predicting possibilities" }}</p>
 

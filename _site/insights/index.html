@@ -6,20 +6,20 @@
   
   
   
-  <title>Insights Lab | Kevin's Data Science Lab</title>
+  <title>Insights Lab | Kevin Zhou</title>
   <meta name="description" content="High school data scientist exploring ML, AI, statistics">
-  <link rel="canonical" href="http://localhost:4000/insights/">
+  <link rel="canonical" href="https://kevzho.github.io/insights/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Kevin's Data Science Lab">
+  <meta property="og:site_name" content="Kevin Zhou">
   <meta property="og:title" content="Insights Lab">
   <meta property="og:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta property="og:url" content="http://localhost:4000/insights/">
-  <meta property="og:image" content="http://localhost:4000/assets/images/whl.jpg">
+  <meta property="og:url" content="https://kevzho.github.io/insights/">
+  <meta property="og:image" content="https://kevzho.github.io/assets/images/whl.jpg">
   <meta property="og:image:alt" content="Kevin Zhou portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Insights Lab">
   <meta name="twitter:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta name="twitter:image" content="http://localhost:4000/assets/images/whl.jpg">
+  <meta name="twitter:image" content="https://kevzho.github.io/assets/images/whl.jpg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,5 +56,61 @@
   <footer class="site-footer">
     &copy; 2026 Kevin Zhou • "You don't have any enemies. No one has any."
   </footer>
+  <script>
+    (() => {
+      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!isFinePointer || prefersReducedMotion) {
+        return;
+      }
+
+      const glow = document.createElement("div");
+      glow.className = "cursor-glow";
+      document.body.appendChild(glow);
+
+      const activeTrails = [];
+      const maxTrails = 20;
+      const trailGapMs = 34;
+      let lastTrailTime = 0;
+
+      const addTrail = (x, y) => {
+        const pixel = document.createElement("span");
+        pixel.className = "pixel-trail";
+        pixel.style.left = `${x}px`;
+        pixel.style.top = `${y}px`;
+        pixel.style.setProperty("--pixel-rotate", `${(Math.random() - 0.5) * 24}deg`);
+        document.body.appendChild(pixel);
+        activeTrails.push(pixel);
+
+        if (activeTrails.length > maxTrails) {
+          const oldPixel = activeTrails.shift();
+          if (oldPixel) oldPixel.remove();
+        }
+
+        pixel.addEventListener("animationend", () => {
+          const index = activeTrails.indexOf(pixel);
+          if (index !== -1) activeTrails.splice(index, 1);
+          pixel.remove();
+        }, { once: true });
+      };
+
+      document.addEventListener("mousemove", (event) => {
+        glow.classList.add("is-visible");
+        glow.style.left = `${event.clientX}px`;
+        glow.style.top = `${event.clientY}px`;
+
+        const now = performance.now();
+        if (now - lastTrailTime >= trailGapMs) {
+          addTrail(event.clientX, event.clientY);
+          lastTrailTime = now;
+        }
+      });
+
+      document.addEventListener("mousedown", () => glow.classList.add("is-pressed"));
+      document.addEventListener("mouseup", () => glow.classList.remove("is-pressed"));
+      document.addEventListener("mouseleave", () => glow.classList.remove("is-visible"));
+    })();
+  </script>
 </body>
 </html>

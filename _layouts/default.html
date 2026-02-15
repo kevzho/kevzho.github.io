@@ -51,5 +51,61 @@
   <footer class="site-footer">
     &copy; {{ 'now' | date: "%Y" }} Kevin Zhou • "You don't have any enemies. No one has any."
   </footer>
+  <script>
+    (() => {
+      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!isFinePointer || prefersReducedMotion) {
+        return;
+      }
+
+      const glow = document.createElement("div");
+      glow.className = "cursor-glow";
+      document.body.appendChild(glow);
+
+      const activeTrails = [];
+      const maxTrails = 20;
+      const trailGapMs = 34;
+      let lastTrailTime = 0;
+
+      const addTrail = (x, y) => {
+        const pixel = document.createElement("span");
+        pixel.className = "pixel-trail";
+        pixel.style.left = `${x}px`;
+        pixel.style.top = `${y}px`;
+        pixel.style.setProperty("--pixel-rotate", `${(Math.random() - 0.5) * 24}deg`);
+        document.body.appendChild(pixel);
+        activeTrails.push(pixel);
+
+        if (activeTrails.length > maxTrails) {
+          const oldPixel = activeTrails.shift();
+          if (oldPixel) oldPixel.remove();
+        }
+
+        pixel.addEventListener("animationend", () => {
+          const index = activeTrails.indexOf(pixel);
+          if (index !== -1) activeTrails.splice(index, 1);
+          pixel.remove();
+        }, { once: true });
+      };
+
+      document.addEventListener("mousemove", (event) => {
+        glow.classList.add("is-visible");
+        glow.style.left = `${event.clientX}px`;
+        glow.style.top = `${event.clientY}px`;
+
+        const now = performance.now();
+        if (now - lastTrailTime >= trailGapMs) {
+          addTrail(event.clientX, event.clientY);
+          lastTrailTime = now;
+        }
+      });
+
+      document.addEventListener("mousedown", () => glow.classList.add("is-pressed"));
+      document.addEventListener("mouseup", () => glow.classList.remove("is-pressed"));
+      document.addEventListener("mouseleave", () => glow.classList.remove("is-visible"));
+    })();
+  </script>
 </body>
 </html>

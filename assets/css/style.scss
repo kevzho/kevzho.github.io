@@ -9,8 +9,8 @@
   --surface: #ffffff;
   --surface-alt: #efeee7;
   --border: #111111;
-  --accent: #d35f2e;
-  --accent-soft: #f4d9cb;
+  --accent: #2f4f78;
+  --accent-soft: #d6e1ef;
 }
 
 * {
@@ -206,6 +206,41 @@ a {
   margin-top: 0.35rem;
 }
 
+.hero-name {
+  position: relative;
+  display: inline-block;
+  color: #edf2f8;
+  background-image: linear-gradient(90deg, #c2d3e4 0%, #7f9bbb 45%, #355375 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 4px rgba(47, 79, 120, 0.22));
+  text-shadow:
+    0 0 6px rgba(137, 173, 211, 0.34),
+    2px 2px 0 rgba(17, 17, 17, 0.28);
+  animation: hero-name-idle 6s ease-in-out infinite;
+}
+
+.hero-name::before,
+.hero-name::after {
+  content: attr(data-name);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-name::before {
+  color: rgba(182, 203, 227, 0.24);
+  transform: translate(0.05em, 0.028em);
+  animation: hero-name-layer-a 8s ease-in-out infinite;
+  z-index: -1;
+}
+
+.hero-name::after {
+  content: none;
+}
+
 .hero p {
   font-size: clamp(1rem, 2.6vw, 1.3rem);
   color: var(--muted-text);
@@ -381,6 +416,72 @@ pre.highlight {
   box-shadow: 4px 4px 0 var(--border);
 }
 
+.hobbies-section {
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.hobbies-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hobbies-bg-icons {
+  position: absolute;
+  inset: -78px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pixel-bg-icon {
+  position: absolute;
+  --icon-base-transform: translate(0, 0);
+  width: clamp(66px, 8vw, 108px);
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  opacity: 0.62;
+  filter: drop-shadow(2px 2px 0 rgba(17, 17, 17, 0.22));
+  animation: pixel-icon-float 6.2s ease-in-out infinite;
+}
+
+.icon-dumbbell {
+  left: -152px;
+  top: 7%;
+  animation-delay: -0.8s;
+  animation-duration: 5.9s;
+}
+
+.icon-sushi {
+  right: -142px;
+  top: 35%;
+  animation-delay: -2.6s;
+  animation-duration: 6.4s;
+}
+
+.icon-piano {
+  right: -132px;
+  bottom: 9%;
+  animation-delay: -3.4s;
+  animation-duration: 6.8s;
+}
+
+.icon-book {
+  left: -154px;
+  bottom: 42%;
+  animation-delay: -1.5s;
+  animation-duration: 5.7s;
+}
+
+.icon-soccer {
+  left: 73%;
+  bottom: -122px;
+  --icon-base-transform: translate(-50%, 0);
+  animation-delay: -4.7s;
+  animation-duration: 6.6s;
+}
+
 .hobbies-section h2,
 .fun-facts-section h2 {
   font-size: clamp(2rem, 5vw, 3rem);
@@ -435,6 +536,44 @@ pre.highlight {
   margin: 0.15rem 0;
 }
 
+.cursor-glow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3000;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  background: radial-gradient(circle, rgba(47, 79, 120, 0.5) 0%, rgba(214, 225, 239, 0.25) 45%, rgba(214, 225, 239, 0) 72%);
+  box-shadow: 0 0 16px rgba(47, 79, 120, 0.45);
+  transition: opacity 0.16s ease-out, transform 0.1s ease-out;
+}
+
+.cursor-glow.is-visible {
+  opacity: 0.95;
+}
+
+.cursor-glow.is-pressed {
+  transform: translate(-50%, -50%) scale(0.75);
+}
+
+.pixel-trail {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  pointer-events: none;
+  z-index: 2999;
+  transform: translate(-50%, -50%) rotate(var(--pixel-rotate, 0deg));
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  animation: pixel-trail-fade 460ms steps(5, end) forwards;
+}
+
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -458,6 +597,43 @@ pre.highlight {
     min-height: 50vh;
     padding: 2rem 0.9rem;
   }
+
+  .pixel-bg-icon {
+    width: clamp(50px, 14vw, 78px);
+    opacity: 0.5;
+  }
+
+  .icon-dumbbell {
+    left: -78px;
+    top: 10%;
+  }
+
+  .icon-sushi {
+    right: -72px;
+    top: 33%;
+  }
+
+  .icon-piano {
+    right: -68px;
+    bottom: 12%;
+  }
+
+  .icon-book {
+    left: -80px;
+    bottom: 40%;
+  }
+
+  .icon-soccer {
+    left: 70%;
+    bottom: -72px;
+  }
+}
+
+@media (pointer: coarse) {
+  .cursor-glow,
+  .pixel-trail {
+    display: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -467,6 +643,98 @@ pre.highlight {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@keyframes hero-name-idle {
+  0% {
+    transform: translateY(0) scale(1);
+    letter-spacing: 1.15px;
+    text-shadow:
+      0 0 6px rgba(137, 173, 211, 0.34),
+      2px 2px 0 rgba(17, 17, 17, 0.28);
+  }
+  50% {
+    transform: translateY(-1px) scale(1.006);
+    letter-spacing: 1.22px;
+    text-shadow:
+      0 0 8px rgba(156, 190, 224, 0.42),
+      2px 2px 0 rgba(17, 17, 17, 0.26);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    letter-spacing: 1.15px;
+    text-shadow:
+      0 0 6px rgba(137, 173, 211, 0.34),
+      2px 2px 0 rgba(17, 17, 17, 0.28);
+  }
+}
+
+@keyframes hero-name-layer-a {
+  0% {
+    transform: translate(0.05em, 0.028em);
+    opacity: 0.18;
+  }
+  50% {
+    transform: translate(0.035em, 0.018em);
+    opacity: 0.26;
+  }
+  100% {
+    transform: translate(0.05em, 0.028em);
+    opacity: 0.18;
+  }
+}
+
+@keyframes hero-name-layer-b {
+  0% {
+    transform: translate(-0.038em, -0.028em);
+    opacity: 0.38;
+  }
+  50% {
+    transform: translate(-0.024em, -0.016em);
+    opacity: 0.48;
+  }
+  100% {
+    transform: translate(-0.038em, -0.028em);
+    opacity: 0.38;
+  }
+}
+
+@keyframes hero-name-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes pixel-icon-float {
+  0% {
+    transform: var(--icon-base-transform) translate(0, 0);
+  }
+  25% {
+    transform: var(--icon-base-transform) translate(1px, -3px);
+  }
+  50% {
+    transform: var(--icon-base-transform) translate(-1px, -6px);
+  }
+  75% {
+    transform: var(--icon-base-transform) translate(1px, -3px);
+  }
+  100% {
+    transform: var(--icon-base-transform) translate(0, 0);
+  }
+}
+
+@keyframes pixel-trail-fade {
+  0% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(1) rotate(var(--pixel-rotate, 0deg));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(var(--pixel-rotate, 0deg));
   }
 }
 

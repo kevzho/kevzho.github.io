@@ -6,6 +6,13 @@ title: More About Me
 # More About Me
 
 <section class="hobbies-section">
+  <div class="hobbies-bg-icons" aria-hidden="true">
+    <img src="{{ '/assets/images/pixel-icons/dumbbell.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-dumbbell" loading="lazy" decoding="async">
+    <img src="{{ '/assets/images/pixel-icons/sushi.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-sushi" loading="lazy" decoding="async">
+    <img src="{{ '/assets/images/pixel-icons/piano.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-piano" loading="lazy" decoding="async">
+    <img src="{{ '/assets/images/pixel-icons/book.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-book" loading="lazy" decoding="async">
+    <img src="{{ '/assets/images/pixel-icons/soccer.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-soccer" loading="lazy" decoding="async">
+  </div>
   <h2>Hobbies & Interests</h2>
   <p>Outside data and ML, this is where I spend my energy.</p>
 
