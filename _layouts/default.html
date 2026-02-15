@@ -3,7 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: "Kevin's Data Science Lab" }}</title>
+  {% assign seo_title = page.title | default: site.title | default: "Kevin Zhou" %}
+  {% assign seo_description = page.description | default: site.description | default: "High school data scientist exploring ML, AI, statistics" %}
+  {% assign seo_image = page.image | default: "/assets/images/whl.jpg" %}
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title | default: "Kevin Zhou" }}{% else %}{{ site.title | default: "Kevin Zhou" }}{% endif %}</title>
+  <meta name="description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title | default: 'Kevin Zhou' }}">
+  <meta property="og:title" content="{{ seo_title | escape }}">
+  <meta property="og:description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ seo_image | absolute_url }}">
+  <meta property="og:image:alt" content="Kevin Zhou portfolio preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ seo_title | escape }}">
+  <meta name="twitter:description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
+  <meta name="twitter:image" content="{{ seo_image | absolute_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&family=Jersey+25&display=swap" rel="stylesheet">
@@ -18,6 +36,7 @@
       <a href="/" class="nav-item {% if page.url == '/' %}active{% endif %}">Home</a>
       <a href="/projects/" class="nav-item {% if page.url contains '/projects' %}active{% endif %}">Projects</a>
       <a href="/insights/" class="nav-item {% if page.url contains '/insights' %}active{% endif %}">Insights Lab</a>
+      <a href="/about/" class="nav-item {% if page.url contains '/about' %}active{% endif %}">More About Me</a>
       <a href="/journal/" class="nav-item {% if page.url contains '/journal' %}active{% endif %}">Journal</a>
     </div>
   </div>

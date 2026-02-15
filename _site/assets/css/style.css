@@ -175,7 +175,7 @@ a {
 
 .particle:nth-child(1) {
   left: 3.3333333333%;
-  top: 77%;
+  top: 20%;
   animation: drift-1 31.6s infinite linear;
   animation-delay: -0.25s;
 }
@@ -196,7 +196,7 @@ a {
 }
 .particle:nth-child(2) {
   left: 6.6666666667%;
-  top: 68%;
+  top: 80%;
   animation: drift-2 33.2s infinite linear;
   animation-delay: -0.5s;
 }
@@ -217,7 +217,7 @@ a {
 }
 .particle:nth-child(3) {
   left: 10%;
-  top: 86%;
+  top: 70%;
   animation: drift-3 34.8s infinite linear;
   animation-delay: -0.75s;
 }
@@ -238,7 +238,7 @@ a {
 }
 .particle:nth-child(4) {
   left: 13.3333333333%;
-  top: 22%;
+  top: 25%;
   animation: drift-4 36.4s infinite linear;
   animation-delay: -1s;
 }
@@ -259,7 +259,7 @@ a {
 }
 .particle:nth-child(5) {
   left: 16.6666666667%;
-  top: 24%;
+  top: 29%;
   animation: drift-5 38s infinite linear;
   animation-delay: -1.25s;
 }
@@ -280,7 +280,7 @@ a {
 }
 .particle:nth-child(6) {
   left: 20%;
-  top: 31%;
+  top: 45%;
   animation: drift-6 39.6s infinite linear;
   animation-delay: -1.5s;
 }
@@ -301,7 +301,7 @@ a {
 }
 .particle:nth-child(7) {
   left: 23.3333333333%;
-  top: 63%;
+  top: 6%;
   animation: drift-7 41.2s infinite linear;
   animation-delay: -1.75s;
 }
@@ -322,7 +322,7 @@ a {
 }
 .particle:nth-child(8) {
   left: 26.6666666667%;
-  top: 68%;
+  top: 17%;
   animation: drift-8 42.8s infinite linear;
   animation-delay: -2s;
 }
@@ -343,7 +343,7 @@ a {
 }
 .particle:nth-child(9) {
   left: 30%;
-  top: 55%;
+  top: 66%;
   animation: drift-9 44.4s infinite linear;
   animation-delay: -2.25s;
 }
@@ -364,7 +364,7 @@ a {
 }
 .particle:nth-child(10) {
   left: 33.3333333333%;
-  top: 6%;
+  top: 66%;
   animation: drift-10 46s infinite linear;
   animation-delay: -2.5s;
 }
@@ -385,7 +385,7 @@ a {
 }
 .particle:nth-child(11) {
   left: 36.6666666667%;
-  top: 48%;
+  top: 19%;
   animation: drift-11 47.6s infinite linear;
   animation-delay: -2.75s;
 }
@@ -406,7 +406,7 @@ a {
 }
 .particle:nth-child(12) {
   left: 40%;
-  top: 76%;
+  top: 52%;
   animation: drift-12 49.2s infinite linear;
   animation-delay: -3s;
 }
@@ -427,7 +427,7 @@ a {
 }
 .particle:nth-child(13) {
   left: 43.3333333333%;
-  top: 31%;
+  top: 45%;
   animation: drift-13 50.8s infinite linear;
   animation-delay: -3.25s;
 }
@@ -448,7 +448,7 @@ a {
 }
 .particle:nth-child(14) {
   left: 46.6666666667%;
-  top: 8%;
+  top: 47%;
   animation: drift-14 52.4s infinite linear;
   animation-delay: -3.5s;
 }
@@ -469,7 +469,7 @@ a {
 }
 .particle:nth-child(15) {
   left: 50%;
-  top: 49%;
+  top: 2%;
   animation: drift-15 54s infinite linear;
   animation-delay: -3.75s;
 }
@@ -490,7 +490,7 @@ a {
 }
 .particle:nth-child(16) {
   left: 53.3333333333%;
-  top: 35%;
+  top: 72%;
   animation: drift-16 55.6s infinite linear;
   animation-delay: -4s;
 }
@@ -511,7 +511,7 @@ a {
 }
 .particle:nth-child(17) {
   left: 56.6666666667%;
-  top: 68%;
+  top: 70%;
   animation: drift-17 57.2s infinite linear;
   animation-delay: -4.25s;
 }
@@ -532,7 +532,7 @@ a {
 }
 .particle:nth-child(18) {
   left: 60%;
-  top: 36%;
+  top: 18%;
   animation: drift-18 58.8s infinite linear;
   animation-delay: -4.5s;
 }
@@ -553,7 +553,7 @@ a {
 }
 .particle:nth-child(19) {
   left: 63.3333333333%;
-  top: 11%;
+  top: 60%;
   animation: drift-19 60.4s infinite linear;
   animation-delay: -4.75s;
 }
@@ -574,7 +574,7 @@ a {
 }
 .particle:nth-child(20) {
   left: 66.6666666667%;
-  top: 62%;
+  top: 67%;
   animation: drift-20 62s infinite linear;
   animation-delay: -5s;
 }
@@ -595,7 +595,7 @@ a {
 }
 .particle:nth-child(21) {
   left: 70%;
-  top: 34%;
+  top: 27%;
   animation: drift-21 63.6s infinite linear;
   animation-delay: -5.25s;
 }
@@ -616,7 +616,7 @@ a {
 }
 .particle:nth-child(22) {
   left: 73.3333333333%;
-  top: 6%;
+  top: 71%;
   animation: drift-22 65.2s infinite linear;
   animation-delay: -5.5s;
 }
@@ -637,7 +637,7 @@ a {
 }
 .particle:nth-child(23) {
   left: 76.6666666667%;
-  top: 75%;
+  top: 64%;
   animation: drift-23 66.8s infinite linear;
   animation-delay: -5.75s;
 }
@@ -658,7 +658,7 @@ a {
 }
 .particle:nth-child(24) {
   left: 80%;
-  top: 66%;
+  top: 79%;
   animation: drift-24 68.4s infinite linear;
   animation-delay: -6s;
 }
@@ -679,7 +679,7 @@ a {
 }
 .particle:nth-child(25) {
   left: 83.3333333333%;
-  top: 69%;
+  top: 80%;
   animation: drift-25 70s infinite linear;
   animation-delay: -6.25s;
 }
@@ -700,7 +700,7 @@ a {
 }
 .particle:nth-child(26) {
   left: 86.6666666667%;
-  top: 57%;
+  top: 29%;
   animation: drift-26 71.6s infinite linear;
   animation-delay: -6.5s;
 }
@@ -721,7 +721,7 @@ a {
 }
 .particle:nth-child(27) {
   left: 90%;
-  top: 35%;
+  top: 6%;
   animation: drift-27 73.2s infinite linear;
   animation-delay: -6.75s;
 }
@@ -742,7 +742,7 @@ a {
 }
 .particle:nth-child(28) {
   left: 93.3333333333%;
-  top: 68%;
+  top: 69%;
   animation: drift-28 74.8s infinite linear;
   animation-delay: -7s;
 }
@@ -763,7 +763,7 @@ a {
 }
 .particle:nth-child(29) {
   left: 96.6666666667%;
-  top: 1%;
+  top: 9%;
   animation: drift-29 76.4s infinite linear;
   animation-delay: -7.25s;
 }
@@ -784,7 +784,7 @@ a {
 }
 .particle:nth-child(30) {
   left: 100%;
-  top: 6%;
+  top: 34%;
   animation: drift-30 78s infinite linear;
   animation-delay: -7.5s;
 }
@@ -922,6 +922,63 @@ pre.highlight {
 .connect-link:hover {
   transform: translate(-2px, -2px);
   box-shadow: 4px 4px 0 var(--border);
+}
+
+.hobbies-section,
+.fun-facts-section {
+  margin-top: 1.3rem;
+  padding: 1.2rem;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--border);
+}
+
+.hobbies-section h2,
+.fun-facts-section h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.4rem;
+}
+
+.hobbies-section p,
+.fun-facts-section p {
+  color: var(--muted-text);
+}
+
+.hobby-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.hobby-card {
+  border: 2px solid var(--border);
+  background: var(--surface-alt);
+  padding: 0.9rem;
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+.hobby-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.hobby-card p {
+  color: var(--muted-text);
+}
+
+.facts-divider {
+  margin: 0.15rem 0 0.35rem;
+  color: var(--text-color);
+}
+
+.fun-facts-list {
+  margin-left: 1.1rem;
+}
+
+.fun-facts-list li {
+  color: var(--muted-text);
+  margin: 0.15rem 0;
 }
 
 @media (max-width: 768px) {

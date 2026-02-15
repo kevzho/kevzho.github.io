@@ -320,6 +320,63 @@ pre.highlight {
   box-shadow: 4px 4px 0 var(--border);
 }
 
+.hobbies-section,
+.fun-facts-section {
+  margin-top: 1.3rem;
+  padding: 1.2rem;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--border);
+}
+
+.hobbies-section h2,
+.fun-facts-section h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.4rem;
+}
+
+.hobbies-section p,
+.fun-facts-section p {
+  color: var(--muted-text);
+}
+
+.hobby-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.hobby-card {
+  border: 2px solid var(--border);
+  background: var(--surface-alt);
+  padding: 0.9rem;
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+.hobby-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.hobby-card p {
+  color: var(--muted-text);
+}
+
+.facts-divider {
+  margin: 0.15rem 0 0.35rem;
+  color: var(--text-color);
+}
+
+.fun-facts-list {
+  margin-left: 1.1rem;
+}
+
+.fun-facts-list li {
+  color: var(--muted-text);
+  margin: 0.15rem 0;
+}
+
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
