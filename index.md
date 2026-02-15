@@ -35,8 +35,8 @@ title: Homev2
 
 <section class="home-about">
   <h2>About</h2>
-  <p>Hi, I'm Kevin from Pennington, NJ.</p>
-  <p>I'm a high school junior passionate about machine learning, data science, statistics, and building AI that solves real problems.</p>
+  <p>I'm a high school student who likes finding the stories hidden in data.</p>
+  <p>I build ML models, explore datasets with Python and R, and work on projects that solve real-world problems.</p>
 
   <h3>Current Focus</h3>
   <ul>
