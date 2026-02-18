@@ -269,7 +269,7 @@ a {
 
 .particle:nth-child(1) {
   left: 3.3333333333%;
-  top: 61%;
+  top: 12%;
   animation: drift-1 31.6s infinite linear;
   animation-delay: -0.25s;
 }
@@ -311,7 +311,7 @@ a {
 }
 .particle:nth-child(3) {
   left: 10%;
-  top: 85%;
+  top: 37%;
   animation: drift-3 34.8s infinite linear;
   animation-delay: -0.75s;
 }
@@ -332,7 +332,7 @@ a {
 }
 .particle:nth-child(4) {
   left: 13.3333333333%;
-  top: 45%;
+  top: 29%;
   animation: drift-4 36.4s infinite linear;
   animation-delay: -1s;
 }
@@ -353,7 +353,7 @@ a {
 }
 .particle:nth-child(5) {
   left: 16.6666666667%;
-  top: 52%;
+  top: 28%;
   animation: drift-5 38s infinite linear;
   animation-delay: -1.25s;
 }
@@ -374,7 +374,7 @@ a {
 }
 .particle:nth-child(6) {
   left: 20%;
-  top: 36%;
+  top: 15%;
   animation: drift-6 39.6s infinite linear;
   animation-delay: -1.5s;
 }
@@ -395,7 +395,7 @@ a {
 }
 .particle:nth-child(7) {
   left: 23.3333333333%;
-  top: 5%;
+  top: 55%;
   animation: drift-7 41.2s infinite linear;
   animation-delay: -1.75s;
 }
@@ -416,7 +416,7 @@ a {
 }
 .particle:nth-child(8) {
   left: 26.6666666667%;
-  top: 76%;
+  top: 84%;
   animation: drift-8 42.8s infinite linear;
   animation-delay: -2s;
 }
@@ -437,7 +437,7 @@ a {
 }
 .particle:nth-child(9) {
   left: 30%;
-  top: 30%;
+  top: 68%;
   animation: drift-9 44.4s infinite linear;
   animation-delay: -2.25s;
 }
@@ -458,7 +458,7 @@ a {
 }
 .particle:nth-child(10) {
   left: 33.3333333333%;
-  top: 26%;
+  top: 5%;
   animation: drift-10 46s infinite linear;
   animation-delay: -2.5s;
 }
@@ -479,7 +479,7 @@ a {
 }
 .particle:nth-child(11) {
   left: 36.6666666667%;
-  top: 12%;
+  top: 54%;
   animation: drift-11 47.6s infinite linear;
   animation-delay: -2.75s;
 }
@@ -500,7 +500,7 @@ a {
 }
 .particle:nth-child(12) {
   left: 40%;
-  top: 70%;
+  top: 11%;
   animation: drift-12 49.2s infinite linear;
   animation-delay: -3s;
 }
@@ -521,7 +521,7 @@ a {
 }
 .particle:nth-child(13) {
   left: 43.3333333333%;
-  top: 5%;
+  top: 90%;
   animation: drift-13 50.8s infinite linear;
   animation-delay: -3.25s;
 }
@@ -542,7 +542,7 @@ a {
 }
 .particle:nth-child(14) {
   left: 46.6666666667%;
-  top: 37%;
+  top: 42%;
   animation: drift-14 52.4s infinite linear;
   animation-delay: -3.5s;
 }
@@ -563,7 +563,7 @@ a {
 }
 .particle:nth-child(15) {
   left: 50%;
-  top: 80%;
+  top: 12%;
   animation: drift-15 54s infinite linear;
   animation-delay: -3.75s;
 }
@@ -584,7 +584,7 @@ a {
 }
 .particle:nth-child(16) {
   left: 53.3333333333%;
-  top: 36%;
+  top: 44%;
   animation: drift-16 55.6s infinite linear;
   animation-delay: -4s;
 }
@@ -605,7 +605,7 @@ a {
 }
 .particle:nth-child(17) {
   left: 56.6666666667%;
-  top: 71%;
+  top: 23%;
   animation: drift-17 57.2s infinite linear;
   animation-delay: -4.25s;
 }
@@ -626,7 +626,7 @@ a {
 }
 .particle:nth-child(18) {
   left: 60%;
-  top: 23%;
+  top: 38%;
   animation: drift-18 58.8s infinite linear;
   animation-delay: -4.5s;
 }
@@ -647,7 +647,7 @@ a {
 }
 .particle:nth-child(19) {
   left: 63.3333333333%;
-  top: 87%;
+  top: 58%;
   animation: drift-19 60.4s infinite linear;
   animation-delay: -4.75s;
 }
@@ -668,7 +668,7 @@ a {
 }
 .particle:nth-child(20) {
   left: 66.6666666667%;
-  top: 75%;
+  top: 45%;
   animation: drift-20 62s infinite linear;
   animation-delay: -5s;
 }
@@ -710,7 +710,7 @@ a {
 }
 .particle:nth-child(22) {
   left: 73.3333333333%;
-  top: 90%;
+  top: 55%;
   animation: drift-22 65.2s infinite linear;
   animation-delay: -5.5s;
 }
@@ -731,7 +731,7 @@ a {
 }
 .particle:nth-child(23) {
   left: 76.6666666667%;
-  top: 52%;
+  top: 3%;
   animation: drift-23 66.8s infinite linear;
   animation-delay: -5.75s;
 }
@@ -752,7 +752,7 @@ a {
 }
 .particle:nth-child(24) {
   left: 80%;
-  top: 42%;
+  top: 32%;
   animation: drift-24 68.4s infinite linear;
   animation-delay: -6s;
 }
@@ -773,7 +773,7 @@ a {
 }
 .particle:nth-child(25) {
   left: 83.3333333333%;
-  top: 73%;
+  top: 26%;
   animation: drift-25 70s infinite linear;
   animation-delay: -6.25s;
 }
@@ -794,7 +794,7 @@ a {
 }
 .particle:nth-child(26) {
   left: 86.6666666667%;
-  top: 19%;
+  top: 32%;
   animation: drift-26 71.6s infinite linear;
   animation-delay: -6.5s;
 }
@@ -815,7 +815,7 @@ a {
 }
 .particle:nth-child(27) {
   left: 90%;
-  top: 48%;
+  top: 47%;
   animation: drift-27 73.2s infinite linear;
   animation-delay: -6.75s;
 }
@@ -836,7 +836,7 @@ a {
 }
 .particle:nth-child(28) {
   left: 93.3333333333%;
-  top: 61%;
+  top: 30%;
   animation: drift-28 74.8s infinite linear;
   animation-delay: -7s;
 }
@@ -857,7 +857,7 @@ a {
 }
 .particle:nth-child(29) {
   left: 96.6666666667%;
-  top: 52%;
+  top: 48%;
   animation: drift-29 76.4s infinite linear;
   animation-delay: -7.25s;
 }
@@ -878,7 +878,7 @@ a {
 }
 .particle:nth-child(30) {
   left: 100%;
-  top: 45%;
+  top: 18%;
   animation: drift-30 78s infinite linear;
   animation-delay: -7.5s;
 }

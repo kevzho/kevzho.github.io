@@ -62,4 +62,9 @@ title: Kevin Zhou
     <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" class="connect-link">LinkedIn</a>
     <a href="mailto:kevinz09302009@gmail.com" class="connect-link">Gmail</a>
   </div>
+
+  <h3>Resume</h3>
+  <div class="connect-links">
+    <a href="{{ '/assets/resume/resume.pdf' | relative_url }}" class="connect-link" download>Download Resume (PDF)</a>
+  </div>
 </section>
