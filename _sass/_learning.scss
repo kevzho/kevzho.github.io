@@ -1,0 +1,33 @@
+/* Learning page theme overrides - slightly darker blue
+   Scoped under .learning-page so other pages remain unchanged */
+
+.learning-page {
+  /* slightly darker accent for Learning section */
+  --accent: #244a78; /* darker than default */
+  --accent-soft: #cbdcf0;
+
+  .projects-hero {
+    .lead {
+      color: #2b4f7a;
+    }
+  }
+
+  .project-card.featured {
+    .project-meta .project-tag {
+      background: linear-gradient(90deg, rgba(36,74,120,0.12), rgba(36,74,120,0.06));
+      color: #15324f;
+      border: 1px solid rgba(36,74,120,0.12);
+    }
+
+    .project-actions .btn-secondary {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .project-actions .btn-primary,
+    .cta-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+  }
+}

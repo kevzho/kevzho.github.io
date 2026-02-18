@@ -58,6 +58,7 @@ title: Kevin Zhou
   <h3>Connect</h3>
   <div class="connect-links">
     <a href="https://github.com/kevzho" class="connect-link">GitHub</a>
+    <a href="https://leetcode.com/u/kevin_zhou33/" class="connect-link" target="_blank" rel="noopener">LeetCode</a>
     <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" class="connect-link">LinkedIn</a>
     <a href="mailto:kevinz09302009@gmail.com" class="connect-link">Gmail</a>
   </div>
