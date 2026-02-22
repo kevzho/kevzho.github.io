@@ -24,6 +24,14 @@
   <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>
+    (() => {
+      const storedTheme = localStorage.getItem("theme-preference");
+      const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = storedTheme || (preferredDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&family=Jersey+25&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
@@ -39,11 +47,12 @@
       <a href="/insights/" class="nav-item {% if page.url contains '/insights' %}active{% endif %}">Insights Lab</a>
       <a href="/about/" class="nav-item {% if page.url contains '/about' %}active{% endif %}">More About Me</a>
       <a href="/journal/" class="nav-item {% if page.url contains '/journal' %}active{% endif %}">Journal</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark Mode</button>
     </div>
   </div>
 </nav>
 
-  
+
 
   <main class="main-content">
     {{ content }}
@@ -54,6 +63,57 @@
   </footer>
   <script>
     (() => {
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("theme-toggle");
+      const setTheme = (theme) => {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme-preference", theme);
+        if (themeToggle) {
+          const isDark = theme === "dark";
+          themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+          themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
+        }
+      };
+
+      if (themeToggle) {
+        const activeTheme = root.getAttribute("data-theme") || "light";
+        setTheme(activeTheme);
+        themeToggle.addEventListener("click", () => {
+          const current = root.getAttribute("data-theme") || "light";
+          setTheme(current === "dark" ? "light" : "dark");
+        });
+      }
+
+      const clickableCards = document.querySelectorAll(".project-card[data-href], .mini-card[data-href]");
+      clickableCards.forEach((card) => {
+        card.setAttribute("role", "link");
+        card.setAttribute("tabindex", "0");
+
+        const navigate = () => {
+          const href = card.getAttribute("data-href");
+          if (!href) return;
+          const openNewTab = card.getAttribute("data-target") === "_blank";
+          if (openNewTab) {
+            window.open(href, "_blank", "noopener,noreferrer");
+          } else {
+            window.location.href = href;
+          }
+        };
+
+        card.addEventListener("click", (event) => {
+          const interactive = event.target.closest("a, button");
+          if (interactive) return;
+          navigate();
+        });
+
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            navigate();
+          }
+        });
+      });
+
       const isFinePointer = window.matchMedia("(pointer: fine)").matches;
       const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

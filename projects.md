@@ -9,7 +9,7 @@ title: Projects
 </div>
 
 <div class="project-featured">
-  <div class="project-card featured">
+  <div class="project-card featured" data-href="https://plforecast.streamlit.app/" data-target="_blank">
     <div class="project-image">
       <img src="{{ '/assets/images/plforecast-cover.jpg' | relative_url }}" alt="PLForecast dashboard">
     </div>
@@ -48,22 +48,22 @@ title: Projects
   </div>
 
   <div class="mini-projects">
-    <div class="mini-card">
+    <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
       <h4>Credit Card Fraud Detection</h4>
       <p>Anomaly detection for fraudulent transactions</p>
     </div>
 
-    <div class="mini-card">
+    <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
       <h4>Twitter Sentiment Analysis</h4>
       <p>NLP-based sentiment classification on social media data</p>
     </div>
 
-    <div class="mini-card">
+    <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
       <h4>Book Recommender</h4>
       <p>Cosine similarity-based recommendation system</p>
     </div>
 
-    <div class="mini-card">
+    <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
       <h4>Text Emotion Classifier</h4>
       <p>Multi-class emotion detection from text</p>
     </div>
@@ -73,7 +73,7 @@ title: Projects
 </section>
 
 <section class="project-section">
-  <div class="project-card featured">
+  <div class="project-card featured" data-href="https://github.com/kevzho/VeritasAI" data-target="_blank">
     <div class="project-image">
       <img src="{{ '/assets/images/veritas-cover.jpg' | relative_url }}" alt="Veritas AI project">
     </div>
@@ -112,7 +112,7 @@ title: Projects
   </div>
 
   <div class="project-grid">
-    <div class="project-card">
+    <div class="project-card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
       <div class="project-image">
         <img src="{{ '/assets/images/real-estate.jpg' | relative_url }}" alt="Real Estate Analysis">
       </div>
@@ -122,7 +122,7 @@ title: Projects
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
       <div class="project-image">
         <img src="{{ '/assets/images/titanic.jpg' | relative_url }}" alt="Titanic Dataset">
       </div>
@@ -132,7 +132,7 @@ title: Projects
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
       <div class="project-image">
         <img src="{{ '/assets/images/image-classification.jpg' | relative_url }}" alt="Image Classification">
       </div>
@@ -142,7 +142,7 @@ title: Projects
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
       <div class="project-image">
         <img src="{{ '/assets/images/linear-regression.jpg' | relative_url }}" alt="Linear Regression">
       </div>

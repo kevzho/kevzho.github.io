@@ -8,18 +8,19 @@
 
   .projects-hero {
     .lead {
-      color: #2b4f7a;
+      color: var(--muted-text);
     }
   }
 
   .project-card.featured {
     .project-meta .project-tag {
-      background: linear-gradient(90deg, rgba(36,74,120,0.12), rgba(36,74,120,0.06));
-      color: #15324f;
-      border: 1px solid rgba(36,74,120,0.12);
+      background: linear-gradient(90deg, rgba(36, 74, 120, 0.2), rgba(36, 74, 120, 0.1));
+      color: var(--text-color);
+      border: 2px solid var(--accent);
     }
 
     .project-actions .btn-secondary {
+      background: var(--surface-alt);
       border-color: var(--accent);
       color: var(--accent);
     }
@@ -28,6 +29,32 @@
     .cta-primary {
       background: var(--accent);
       color: #fff;
+    }
+  }
+}
+
+html[data-theme="dark"] .learning-page {
+  --accent: #9dc2f4;
+  --accent-soft: #2f3f58;
+
+  .project-card.featured {
+    .project-meta .project-tag {
+      background: linear-gradient(90deg, rgba(157, 194, 244, 0.32), rgba(157, 194, 244, 0.2));
+      color: #f5f8ff;
+      border-color: #c9defd;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+    }
+
+    .project-actions .btn-secondary {
+      background: #c9defd;
+      border-color: #e7f0ff;
+      color: #10233d;
+      font-weight: 700;
+    }
+
+    .project-actions .btn-secondary:hover {
+      background: #e7f0ff;
+      color: #0b1a2f;
     }
   }
 }

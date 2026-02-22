@@ -13,7 +13,7 @@ title: Learning
 
 
 <section class="project-section">
-  <div class="project-card featured">
+  <div class="project-card featured" data-href="https://github.com/kevzho/USACO" data-target="_blank">
     <div class="project-image">
       <img src="{{ '/assets/images/usaco.png' | relative_url }}" alt="USACO repository">
     </div>
@@ -39,7 +39,7 @@ title: Learning
 </section>
 
 <section class="project-section">
-  <div class="project-card featured">
+  <div class="project-card featured" data-href="https://github.com/kevzho/r-for-data-science" data-target="_blank">
     <div class="project-image">
       <img src="{{ '/assets/images/r.png' | relative_url }}" alt="r-for-data-science repository">
     </div>
