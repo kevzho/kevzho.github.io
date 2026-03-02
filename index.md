@@ -19,11 +19,7 @@ title: Kevin Zhou
       <p>{{ site.tagline | default: "Exploring patterns, predicting possibilities" }}</p>
 
       <div class="status-line">
-        <span><strong>Currently working on</strong>: UPenn Wharton DS Competition: WHL Predictions</span>
-      </div>
-
-      <div class="hero-image-wrap">
-        <img src="{{ '/assets/images/whl.jpg' | relative_url }}" alt="WHL prediction project preview" class="hero-image">
+        <span><strong>Currently working on</strong>: Google UM-Flint Research</span>
       </div>
 
       <div class="cta-buttons">
