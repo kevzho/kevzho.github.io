@@ -1,0 +1,170 @@
+.stemmed-page {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.stemmed-panel {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  padding: 1.4rem;
+}
+
+.stemmed-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(47, 79, 120, 0.2) 0, rgba(47, 79, 120, 0.2) 1px, transparent 2px),
+    radial-gradient(circle at 38% 58%, rgba(47, 79, 120, 0.2) 0, rgba(47, 79, 120, 0.2) 1px, transparent 2px),
+    radial-gradient(circle at 75% 24%, rgba(47, 79, 120, 0.2) 0, rgba(47, 79, 120, 0.2) 1px, transparent 2px),
+    linear-gradient(115deg, rgba(47, 79, 120, 0.15), rgba(47, 79, 120, 0.02));
+  background-size: 210px 210px, 260px 260px, 180px 180px, auto;
+}
+
+.stemmed-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.stemmed-hero h1 {
+  font-size: clamp(3rem, 9vw, 6rem);
+  margin: 0.8rem 0 0.15rem;
+}
+
+.stemmed-hero-main {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.stemmed-hero-copy {
+  min-width: 0;
+}
+
+.stemmed-tagline {
+  font-family: "Jersey 15", monospace;
+  letter-spacing: 1px;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  color: var(--accent);
+  margin-bottom: 0.7rem;
+}
+
+.stemmed-description {
+  color: var(--muted-text);
+  max-width: 780px;
+  font-size: 1.1rem;
+}
+
+.stemmed-mini-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.stemmed-pill {
+  text-decoration: none;
+  border: 2px solid var(--border);
+  background: var(--surface-alt);
+  padding: 0.28rem 0.65rem;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background 0.15s ease-in-out;
+}
+
+.stemmed-pill:hover,
+.stemmed-pill.is-active {
+  background: var(--accent-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+.stemmed-actions {
+  margin-top: 1rem;
+}
+
+.stemmed-hero-image-wrap {
+  margin: 0;
+  border: 2px solid var(--border);
+  background: var(--surface-alt);
+  box-shadow: 3px 3px 0 var(--border);
+  overflow: hidden;
+}
+
+.stemmed-hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.stemmed-focus h2 {
+  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  margin-bottom: 0.25rem;
+}
+
+.stemmed-intro {
+  color: var(--muted-text);
+  margin-bottom: 0.9rem;
+}
+
+.stemmed-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.stemmed-card {
+  border: 2px solid var(--border);
+  background: var(--surface-alt);
+  box-shadow: 3px 3px 0 var(--border);
+  padding: 0.9rem;
+}
+
+.stemmed-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.stemmed-card p {
+  color: var(--muted-text);
+}
+
+html[data-theme="dark"] {
+  .stemmed-panel {
+    background: #0f2039;
+  }
+
+  .stemmed-panel::before {
+    opacity: 0.38;
+  }
+}
+
+@media (max-width: 980px) {
+  .stemmed-hero-main {
+    grid-template-columns: 1fr;
+  }
+
+  .stemmed-hero-image {
+    max-height: 260px;
+  }
+
+  .stemmed-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stemmed-panel {
+    padding: 1rem;
+  }
+
+  .stemmed-grid {
+    grid-template-columns: 1fr;
+  }
+}

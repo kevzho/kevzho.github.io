@@ -24,7 +24,7 @@ title: Kevin Zhou
 
       <div class="cta-buttons">
         <a href="/projects/" class="cta-primary">View Projects</a>
-        <a href="/insights/" class="cta-secondary">Read Insights</a>
+        <a href="/stemmed-in/" class="cta-secondary">Read STEMmed In</a>
       </div>
     </div>
 </header>
