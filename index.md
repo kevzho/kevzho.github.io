@@ -3,7 +3,7 @@ layout: default
 title: Kevin Zhou
 ---
 
-<header class="hero">
+<header class="hero terminal-window" data-terminal-title="~/home">
     <div id="particle-container">
       <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
       <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
@@ -14,6 +14,7 @@ title: Kevin Zhou
     </div>
 
     <div class="hero-content">
+      <p class="terminal-command">$ whoami</p>
       <h1><span class="hero-name" data-name="Kevin Zhou">Kevin Zhou</span></h1>
       <h2>Aspiring Data Scientist</h2>
       <p>{{ site.tagline | default: "Exploring patterns, predicting possibilities" }}</p>
@@ -29,7 +30,7 @@ title: Kevin Zhou
     </div>
 </header>
 
-<section class="home-about">
+<section class="home-about terminal-window" data-terminal-title="~/about">
   <h2>About</h2>
   <p>I'm a high school student who likes finding the stories hidden in data.</p>
   <p>I build ML models, explore datasets with Python and R, and work on projects that solve real-world problems.</p>
@@ -52,15 +53,25 @@ title: Kevin Zhou
   <p>I learn best by building experiments. Each run, whether it succeeds or fails, teaches something valuable about how data tells stories.</p>
 
   <h3>Connect</h3>
-  <div class="connect-links">
-    <a href="https://github.com/kevzho" class="connect-link">GitHub</a>
-    <a href="https://leetcode.com/u/kevin_zhou33/" class="connect-link" target="_blank" rel="noopener">LeetCode</a>
-    <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" class="connect-link">LinkedIn</a>
-    <a href="mailto:kevinz09302009@gmail.com" class="connect-link">Gmail</a>
+  <div class="icon-links">
+    <a href="https://github.com/kevzho" class="icon-link" aria-label="GitHub" title="GitHub">
+      <img src="{{ '/assets/images/icons/github.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+    </a>
+    <a href="https://leetcode.com/u/kevin_zhou33/" class="icon-link" aria-label="LeetCode" title="LeetCode" target="_blank" rel="noopener">
+      <img src="{{ '/assets/images/icons/leetcode.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+    </a>
+    <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" class="icon-link" aria-label="LinkedIn" title="LinkedIn">
+      <img src="{{ '/assets/images/icons/linkedin.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+    </a>
+    <a href="mailto:kevinz09302009@gmail.com" class="icon-link" aria-label="Email" title="Email">
+      <img src="{{ '/assets/images/icons/email.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+    </a>
   </div>
 
   <h3>Resume</h3>
-  <div class="connect-links">
-    <a href="{{ '/assets/resume/resume.pdf' | relative_url }}" class="connect-link" download>Download Resume (PDF)</a>
+  <div class="icon-links">
+    <a href="{{ '/assets/resume/resume.pdf' | relative_url }}" class="icon-link" aria-label="Download resume PDF" title="Download resume (PDF)" download>
+      <img src="{{ '/assets/images/icons/download.svg' | relative_url }}" alt="" loading="lazy" decoding="async">
+    </a>
   </div>
 </section>

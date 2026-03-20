@@ -2,9 +2,10 @@
    Scoped under .learning-page so other pages remain unchanged */
 
 .learning-page {
-  /* slightly darker accent for Learning section */
-  --accent: #244a78; /* darker than default */
-  --accent-soft: #cbdcf0;
+  /* subtle cyan-green accent for Learning section */
+  --accent: #0a7a74;
+  --accent-rgb: 10 122 116;
+  --accent-soft: rgba(10, 122, 116, 0.14);
 
   .projects-hero {
     .lead {
@@ -13,48 +14,70 @@
   }
 
   .project-card.featured {
+    .project-meta {
+      gap: 0.35rem;
+    }
+
     .project-meta .project-tag {
-      background: linear-gradient(90deg, rgba(36, 74, 120, 0.2), rgba(36, 74, 120, 0.1));
+      background: rgb(var(--accent-rgb) / 0.12);
       color: var(--text-color);
-      border: 2px solid var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 0;
+      font-size: 0.75rem;
+      line-height: 1.1;
+      padding: 0.08rem 0.45rem;
+    }
+
+    .project-meta .project-date {
+      font-size: 0.75rem;
+      padding: 0.08rem 0.45rem;
     }
 
     .project-actions .btn-secondary {
-      background: var(--surface-alt);
+      background: transparent;
       border-color: var(--accent);
       color: var(--accent);
     }
 
     .project-actions .btn-primary,
     .cta-primary {
-      background: var(--accent);
-      color: #fff;
+      background: transparent;
+      border-color: rgb(var(--accent-rgb) / 0.6);
+      color: rgb(var(--accent-rgb) / 0.92);
     }
   }
 }
 
 html[data-theme="dark"] .learning-page {
-  --accent: #9dc2f4;
-  --accent-soft: #2f3f58;
+  --accent: #00f5d4;
+  --accent-rgb: 0 245 212;
+  --accent-soft: rgba(0, 245, 212, 0.12);
 
   .project-card.featured {
     .project-meta .project-tag {
-      background: linear-gradient(90deg, rgba(157, 194, 244, 0.32), rgba(157, 194, 244, 0.2));
-      color: #f5f8ff;
-      border-color: #c9defd;
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+      background: rgb(var(--accent-rgb) / 0.16);
+      color: rgba(0, 0, 0, 0.88);
+      border-color: rgb(var(--accent-rgb) / 0.82);
+      font-size: 0.75rem;
+      line-height: 1.1;
+      padding: 0.08rem 0.45rem;
+    }
+
+    .project-meta .project-date {
+      font-size: 0.75rem;
+      padding: 0.08rem 0.45rem;
     }
 
     .project-actions .btn-secondary {
-      background: #c9defd;
-      border-color: #e7f0ff;
-      color: #10233d;
+      background: transparent;
+      border-color: rgb(var(--accent-rgb) / 0.45);
+      color: rgba(223, 255, 237, 0.93);
       font-weight: 700;
     }
 
     .project-actions .btn-secondary:hover {
-      background: #e7f0ff;
-      color: #0b1a2f;
+      background: rgb(var(--accent-rgb) / 0.12);
+      color: rgba(223, 255, 237, 0.93);
     }
   }
 }

@@ -5,16 +5,11 @@ permalink: /stemmed-in/
 ---
 
 <div class="stemmed-page">
-  <section class="stemmed-panel stemmed-hero">
-    <div class="stemmed-mini-nav" aria-label="STEMmed In sections">
-      <a href="/stemmed-in/" class="stemmed-pill is-active">Home</a>
-      <a href="/stemmed-in/" class="stemmed-pill">Concepts Explained</a>
-      <a href="https://stemmedin.com/" class="stemmed-pill" target="_blank" rel="noopener noreferrer">Resources</a>
-      <a href="https://stemmedin.com/" class="stemmed-pill" target="_blank" rel="noopener noreferrer">Contribute</a>
-    </div>
+  <section class="stemmed-panel stemmed-hero" data-terminal-title="~/stemmed-in">
 
     <div class="stemmed-hero-main">
       <div class="stemmed-hero-copy">
+        <p class="terminal-command">$ open stemmed-in --weekly</p>
         <h1>STEMmed In</h1>
         <p class="stemmed-tagline">Making complex ideas simple and powerful.</p>
         <p class="stemmed-description">A weekly newsletter that breaks down how AI and machine learning are applied in medicine, finance, physics, biology, chemistry, and beyond.</p>
@@ -29,7 +24,7 @@ permalink: /stemmed-in/
     </div>
   </section>
 
-  <section class="stemmed-panel stemmed-focus">
+  <section class="stemmed-panel stemmed-focus" data-terminal-title="~/stemmed-in/focus">
     <h2>Where We Focus</h2>
     <p class="stemmed-intro">Each issue connects core ML ideas to practical use in real domains.</p>
 

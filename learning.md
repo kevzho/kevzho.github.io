@@ -5,7 +5,8 @@ title: Learning
 
 <div class="learning-page">
 
-<div class="projects-hero">
+<div class="projects-hero" data-terminal-title="~/learning">
+  <p class="terminal-command">$ cat learning.log</p>
   <h1>Learning</h1>
   <p class="lead">Repositories and study projects documenting what I'm currently learning.</p>
 </div>

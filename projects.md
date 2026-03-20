@@ -3,12 +3,38 @@ layout: default
 title: Projects
 ---
 
-<div class="projects-hero">
+<div class="projects-hero" data-terminal-title="~/projects">
+  <p class="terminal-command">$ ls projects/ --sort=recent</p>
   <h1>Projects</h1>
   <p class="lead">Projects sorted from most recent to earliest, spanning collaborative builds, apps, and ML experiments.</p>
 </div>
 
 <div class="project-list">
+  <section class="project-section">
+    <div class="project-card project-row" data-href="https://github.com/kevzho/iu-indy-2026" data-target="_blank">
+      <div class="project-image">
+        <img src="/assets/images/iu-indy.png" alt="IU-Indy Project" />
+      </div>
+      <div class="project-content">
+        <div class="project-meta">
+          <p class="project-date">Mar 2026</p>
+        </div>
+        <h2> IU-Indy DataViz Competition (2nd Place)</h2>
+        <p class="project-description">Geospatial analysis of NCAA basketball fan travel patterns using Python.</p>
+
+        <div class="skills-list">
+          <span class="skill">Data Visualization</span>
+          <span class="skill">Data Analysis</span>
+          <span class="skill">Python</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="https://github.com/kevzho/iu-indy-2026" class="btn-secondary">View GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="project-section">
     <div class="project-card project-row" data-href="https://github.com/Notorious-D-A-T-A/WHL-2026" data-target="_blank">
       <div class="project-image">

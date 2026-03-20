@@ -5,14 +5,9 @@ title: More About Me
 
 # More About Me
 
-<section class="hobbies-section">
-  <div class="hobbies-bg-icons" aria-hidden="true">
-    <img src="{{ '/assets/images/pixel-icons/dumbbell.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-dumbbell" loading="lazy" decoding="async">
-    <img src="{{ '/assets/images/pixel-icons/sushi.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-sushi" loading="lazy" decoding="async">
-    <img src="{{ '/assets/images/pixel-icons/piano.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-piano" loading="lazy" decoding="async">
-    <img src="{{ '/assets/images/pixel-icons/book.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-book" loading="lazy" decoding="async">
-    <img src="{{ '/assets/images/pixel-icons/soccer.svg' | relative_url }}" alt="" class="pixel-bg-icon icon-soccer" loading="lazy" decoding="async">
-  </div>
+<p class="terminal-command">$ cat about.md</p>
+
+<section class="hobbies-section" data-terminal-title="~/about/hobbies">
   <h2>Hobbies & Interests</h2>
   <p>Outside data and ML, this is where I spend my energy.</p>
 
@@ -44,7 +39,7 @@ title: More About Me
   </div>
 </section>
 
-<section class="fun-facts-section">
+<section class="fun-facts-section" data-terminal-title="~/about/fun-facts">
   <h2>⚡ Fun Facts</h2>
   <p class="facts-divider">───────────────</p>
   <ul class="fun-facts-list">
