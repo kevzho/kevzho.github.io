@@ -3,210 +3,177 @@ layout: default
 title: Projects
 ---
 
-<div class="projects-hero" data-terminal-title="~/projects">
-  <p class="terminal-command">$ ls projects/ --sort=recent</p>
-  <h1>Projects</h1>
-  <p class="lead">Projects sorted from most recent to earliest, spanning collaborative builds, apps, and ML experiments.</p>
+<header class="page-header fade-up" style="--delay: 0.05s">
+  <p class="eyebrow">Work</p>
+  <h1>Projects <em>&amp; experiments</em></h1>
+  <p class="lead">Recent builds and ML explorations — listed from most recent to earliest.</p>
+  <div class="chip-row">
+    <span class="chip">Updated Apr 2026</span>
+    <span class="chip">Links open externally</span>
+  </div>
+</header>
+
+<div class="section-header fade-up" style="--delay: 0.15s">
+  <div class="section-left">
+    <span class="section-dot is-teal" aria-hidden="true"></span>
+    <span class="section-label">Selected</span>
+  </div>
+  <span class="section-count">4</span>
 </div>
 
-<div class="project-list">
-  <section class="project-section">
-    <div class="project-card project-row" data-href="https://github.com/kevzho/iu-indy-2026" data-target="_blank">
-      <div class="project-image">
-        <img src="/assets/images/iu-indy.png" alt="IU-Indy Project" />
+<div class="card-list fade-up" style="--delay: 0.25s">
+  <div class="card" data-href="https://github.com/kevzho/iu-indy-2026" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/iu-indy.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">IU-Indy DataViz Competition (2nd Place)</p>
+      <p class="card-subtitle">Geospatial analysis of NCAA basketball fan travel patterns using Python.</p>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">Geo</span>
+        <span class="tag">DataViz</span>
       </div>
-      <div class="project-content">
-        <div class="project-meta">
-          <p class="project-date">Mar 2026</p>
-        </div>
-        <h2> IU-Indy DataViz Competition (2nd Place)</h2>
-        <p class="project-description">Geospatial analysis of NCAA basketball fan travel patterns using Python.</p>
-
-        <div class="skills-list">
-          <span class="skill">Data Visualization</span>
-          <span class="skill">Data Analysis</span>
-          <span class="skill">Python</span>
-        </div>
-
-        <div class="project-actions">
-          <a href="https://github.com/kevzho/iu-indy-2026" class="btn-secondary">View GitHub →</a>
-        </div>
+      <div class="card-actions">
+        <a href="https://github.com/kevzho/iu-indy-2026" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-  </section>
-
-  <section class="project-section">
-    <div class="project-card project-row" data-href="https://github.com/Notorious-D-A-T-A/WHL-2026" data-target="_blank">
-      <div class="project-image">
-        <img src="{{ '/assets/images/whl.jpg' | relative_url }}" alt="WHL 2026 project">
-      </div>
-      <div class="project-content">
-        <div class="project-meta">
-          <p class="project-date">Feb 2026 - Mar 2026</p>
-        </div>
-        <h2>WHL-2026</h2>
-        <p class="project-description">A collaborative repository for the WHL 2026 build, including project code, technical exploration, and implementation progress.</p>
-
-        <div class="skills-list">
-          <span class="skill">Machine Learning</span>
-          <span class="skill">Research</span>
-          <span class="skill">Collaboration</span>
-        </div>
-
-        <div class="project-actions">
-          <a href="https://github.com/Notorious-D-A-T-A/WHL-2026" class="btn-secondary">View GitHub →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-section">
-    <div class="project-card project-row" data-href="https://plforecast.streamlit.app/" data-target="_blank">
-    <div class="project-image">
-      <img src="{{ '/assets/images/plforecast-cover.jpg' | relative_url }}" alt="PLForecast dashboard">
-    </div>
-    <div class="project-content">
-      <div class="project-meta">
-        <p class="project-date">Dec 2025 - Feb 2026</p>
-      </div>
-      <h2>PLForecast</h2>
-      <p class="project-description">A Premier League predictive dashboard built with Streamlit for interactive match and performance forecasting.</p>
-      
-      <div class="skills-list">
-        <span class="skill">Streamlit</span>
-        <span class="skill">Predictive Modeling</span>
-        <span class="skill">Sports Analytics</span>
-      </div>
-
-      <div class="project-actions">
-        <a href="https://plforecast.streamlit.app/" class="btn-primary">View App →</a>
-        <a href="https://github.com/kevzho/plforecast/blob/main/app.py" class="btn-secondary">View GitHub →</a>
-      </div>
+    <div class="card-side">
+      <span class="badge is-amber">Award</span>
+      <span class="chip">Mar 2026</span>
     </div>
   </div>
-</section>
 
-  <section class="project-section">
-    <div class="section-header">
-      <h2>Mini-Experiments</h2>
-      <p class="project-date">Aug 2025 - Sep 2025</p>
-      <p>Rapid prototypes and concept validations built in 1-2 days.</p>
-      <div class="skills-list section-skills">
-        <span class="skill">Machine Learning</span>
-        <span class="skill">Data Cleaning</span>
-        <span class="skill">Validation &amp; Testing</span>
+  <div class="card" data-href="https://github.com/Notorious-D-A-T-A/WHL-2026" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/whl.jpg' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">WHL-2026</p>
+      <p class="card-subtitle">Collaborative build tracking technical exploration and implementation progress.</p>
+      <div class="tag-row">
+        <span class="tag">Research</span>
+        <span class="tag">ML</span>
+        <span class="tag">Collaboration</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://github.com/Notorious-D-A-T-A/WHL-2026" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
+    <div class="card-side">
+      <span class="badge is-teal">Team</span>
+      <span class="chip">Feb–Mar 2026</span>
+    </div>
+  </div>
 
-    <div class="mini-projects">
-      <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
-        <h4>Credit Card Fraud Detection</h4>
-        <p>Anomaly detection for fraudulent transactions</p>
+  <div class="card" data-href="https://plforecast.streamlit.app/" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/plforecast-cover.jpg' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">PLForecast</p>
+      <p class="card-subtitle">Premier League predictive dashboard built with Streamlit for interactive forecasting.</p>
+      <div class="tag-row">
+        <span class="tag">Streamlit</span>
+        <span class="tag">Forecasting</span>
+        <span class="tag">Sports</span>
       </div>
-
-      <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
-        <h4>Twitter Sentiment Analysis</h4>
-        <p>NLP-based sentiment classification on social media data</p>
-      </div>
-
-      <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
-        <h4>Book Recommender</h4>
-        <p>Cosine similarity-based recommendation system</p>
-      </div>
-
-      <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
-        <h4>Text Emotion Classifier</h4>
-        <p>Multi-class emotion detection from text</p>
+      <div class="card-actions">
+        <a href="https://plforecast.streamlit.app/" target="_blank" rel="noopener">Live App</a>
+        <a href="https://github.com/kevzho/plforecast/blob/main/app.py" target="_blank" rel="noopener">Code</a>
       </div>
     </div>
+    <div class="card-side">
+      <span class="badge is-green">Shipped</span>
+      <span class="chip">Dec 2025–Feb 2026</span>
+    </div>
+  </div>
 
-    <a href="https://github.com/kevzho/MiniProjs" class="btn-secondary">View All Experiments →</a>
-  </section>
-
-  <section class="project-section">
-    <div class="project-card project-row" data-href="https://github.com/kevzho/VeritasAI" data-target="_blank">
-      <div class="project-image">
-        <img src="{{ '/assets/images/veritas-cover.jpg' | relative_url }}" alt="Veritas AI project">
+  <div class="card" data-href="https://github.com/kevzho/VeritasAI" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/veritas-cover.jpg' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">Veritas AI</p>
+      <p class="card-subtitle">Applied ML experimentation exploring practical workflows and prototypes.</p>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">ML</span>
+        <span class="tag">Applied</span>
       </div>
-      <div class="project-content">
-        <div class="project-meta">
-          <p class="project-date">Jul 2025 - Aug 2025</p>
-        </div>
-        <h2>Veritas AI</h2>
-        <p class="project-description">An AI-focused build exploring practical workflows and applied ML experimentation.</p>
-
-        <div class="skills-list">
-          <span class="skill">Python</span>
-          <span class="skill">Machine Learning</span>
-          <span class="skill">Applied AI</span>
-        </div>
-
-        <div class="project-actions">
-          <a href="https://github.com/kevzho/VeritasAI" class="btn-secondary">View GitHub →</a>
-        </div>
+      <div class="card-actions">
+        <a href="https://github.com/kevzho/VeritasAI" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-  </section>
-
-  <section class="project-section">
-    <div class="section-header">
-      <h2>ai-ml-learning-files</h2>
-      <p class="project-date">Feb 2025 - Jul 2025</p>
-      <p>Chronological progression of my self-study journey in machine learning.</p>
-      <div class="skills-list section-skills">
-        <span class="skill">Machine Learning</span>
-        <span class="skill">Keras</span>
-        <span class="skill">Computer Vision</span>
-        <span class="skill">Lin/Log Regression</span>
-      </div>
+    <div class="card-side">
+      <span class="badge is-teal">Build</span>
+      <span class="chip">Jul–Aug 2025</span>
     </div>
-
-    <div class="project-grid">
-      <div class="project-card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
-        <div class="project-image">
-          <img src="{{ '/assets/images/real-estate.jpg' | relative_url }}" alt="Real Estate Analysis">
-        </div>
-        <div class="project-content">
-          <h3>Real Estate Regression</h3>
-          <p>Kaggle dataset exploration using regression techniques to predict housing prices.</p>
-        </div>
-      </div>
-
-      <div class="project-card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
-        <div class="project-image">
-          <img src="{{ '/assets/images/titanic.jpg' | relative_url }}" alt="Titanic Dataset">
-        </div>
-        <div class="project-content">
-          <h3>Titanic ML Challenge</h3>
-          <p>Classic machine learning dataset exploration with survival prediction models.</p>
-        </div>
-      </div>
-
-      <div class="project-card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
-        <div class="project-image">
-          <img src="{{ '/assets/images/image-classification.jpg' | relative_url }}" alt="Image Classification">
-        </div>
-        <div class="project-content">
-          <h3>Image Classification</h3>
-          <p>Deep learning with TensorFlow for computer vision tasks.</p>
-        </div>
-      </div>
-
-      <div class="project-card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
-        <div class="project-image">
-          <img src="{{ '/assets/images/linear-regression.jpg' | relative_url }}" alt="Linear Regression">
-        </div>
-        <div class="project-content">
-          <h3>Trip Fare Prediction</h3>
-          <p>Linear regression modeling using Google ML Course trip fare dataset.</p>
-        </div>
-      </div>
-    </div>
-
-    <a href="https://github.com/kevzho/ai-ml-learning-files" class="btn-secondary">View All Notebooks →</a>
-  </section>
+  </div>
 </div>
 
-<div class="projects-footer">
-  <p>More projects added regularly! Check back soon.</p>
+<div class="section-header fade-up" style="--delay: 0.35s">
+  <div class="section-left">
+    <span class="section-dot is-amber" aria-hidden="true"></span>
+    <span class="section-label">Mini Experiments</span>
+  </div>
+  <span class="section-count">4</span>
+</div>
+
+<div class="grid-2 fade-up" style="--delay: 0.45s">
+  <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
+    <h4>Credit Card Fraud Detection</h4>
+    <p>Anomaly detection for fraudulent transactions.</p>
+  </div>
+
+  <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
+    <h4>Twitter Sentiment Analysis</h4>
+    <p>NLP-based sentiment classification on social media data.</p>
+  </div>
+
+  <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
+    <h4>Book Recommender</h4>
+    <p>Cosine similarity recommendation system.</p>
+  </div>
+
+  <div class="mini-card" data-href="https://github.com/kevzho/MiniProjs" data-target="_blank">
+    <h4>Text Emotion Classifier</h4>
+    <p>Multi-class emotion detection from text.</p>
+  </div>
+</div>
+
+<div class="card-actions fade-up" style="--delay: 0.55s">
+  <a href="https://github.com/kevzho/MiniProjs" target="_blank" rel="noopener">View All Experiments</a>
+</div>
+
+<div class="section-header fade-up" style="--delay: 0.65s">
+  <div class="section-left">
+    <span class="section-dot is-green" aria-hidden="true"></span>
+    <span class="section-label">Learning Archive</span>
+  </div>
+  <span class="section-count">1</span>
+</div>
+
+<div class="card-list fade-up" style="--delay: 0.75s">
+  <div class="card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/real-estate.jpg' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">ai-ml-learning-files</p>
+      <p class="card-subtitle">Chronological notebooks documenting my self-study journey in machine learning.</p>
+      <div class="tag-row">
+        <span class="tag">Keras</span>
+        <span class="tag">CV</span>
+        <span class="tag">Regression</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://github.com/kevzho/ai-ml-learning-files" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="card-side">
+      <span class="badge is-green">Archive</span>
+      <span class="chip">Feb–Jul 2025</span>
+    </div>
+  </div>
 </div>

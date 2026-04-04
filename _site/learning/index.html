@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,120 +8,110 @@
   
   <title>Learning | Kevin Zhou</title>
   <meta name="description" content="High school data scientist exploring ML, AI, statistics">
-  <link rel="canonical" href="https://kevzho.github.io/learning/">
+  <link rel="canonical" href="http://localhost:4000/learning/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kevin Zhou">
   <meta property="og:title" content="Learning">
   <meta property="og:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta property="og:url" content="https://kevzho.github.io/learning/">
-  <meta property="og:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta property="og:url" content="http://localhost:4000/learning/">
+  <meta property="og:image" content="http://localhost:4000/assets/images/whl.jpg">
   <meta property="og:image:alt" content="Kevin Zhou portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Learning">
   <meta name="twitter:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta name="twitter:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta name="twitter:image" content="http://localhost:4000/assets/images/whl.jpg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>
-    (() => {
-      const storedTheme = localStorage.getItem("theme-preference");
-      const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const theme = storedTheme || (preferredDark ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-    })();
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <nav class="site-nav">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">Kevin Zhou</a>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">Kevin Zhou</a>
 
-    <div class="nav-links">
-      <a href="/" class="nav-item ">Home</a>
-      <a href="/projects/" class="nav-item ">Projects</a>
-      <a href="/learning/" class="nav-item active">Learning</a>
-      <a href="/about/" class="nav-item ">More About Me</a>
-      <a href="/stemmed-in/" class="nav-item ">STEMmed In</a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark Mode</button>
+      <div class="nav-links" aria-label="Primary">
+        <a href="/" class="nav-link " >Home</a>
+        <a href="/projects/" class="nav-link " >Projects</a>
+        <a href="/learning/" class="nav-link is-active" aria-current="page">Learning</a>
+        <a href="/about/" class="nav-link " >About</a>
+        <a href="/stemmed-in/" class="nav-link " >STEMmed In</a>
+      </div>
     </div>
-  </div>
 </nav>
 
 
 
   <main class="main-content">
-    <div class="learning-page">
+    <div class="container">
+      <header class="page-header fade-up" style="--delay: 0.05s">
+  <p class="eyebrow">Now</p>
+  <h1>Learning <em>in public</em></h1>
+  <p class="lead">Repos and study logs documenting what I’m actively learning and practicing.</p>
+  <div class="chip-row">
+    <span class="chip">Updated Apr 2026</span>
+    <span class="chip">Ongoing</span>
+  </div>
+</header>
 
-<div class="projects-hero" data-terminal-title="~/learning">
-  <p class="terminal-command">$ cat learning.log</p>
-  <h1>Learning</h1>
-  <p class="lead">Repositories and study projects documenting what I'm currently learning.</p>
+<div class="section-header fade-up" style="--delay: 0.15s">
+  <div class="section-left">
+    <span class="section-dot is-teal" aria-hidden="true"></span>
+    <span class="section-label">Repositories</span>
+  </div>
+  <span class="section-count">2</span>
 </div>
 
-
-
-<section class="project-section">
-  <div class="project-card featured" data-href="https://github.com/kevzho/USACO" data-target="_blank">
-    <div class="project-image">
-      <img src="/assets/images/usaco.png" alt="USACO repository" />
+<div class="card-list fade-up" style="--delay: 0.25s">
+  <div class="card" data-href="https://github.com/kevzho/USACO" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="/assets/images/usaco.png" alt="" loading="lazy" decoding="async" />
+      </figure>
+      <p class="card-title">USACO</p>
+      <p class="card-subtitle">Practice and solutions for algorithmic programming problems from training + contests.</p>
+      <div class="tag-row">
+        <span class="tag">Algorithms</span>
+        <span class="tag">Data Structures</span>
+        <span class="tag">C++</span>
+        <span class="tag">Python</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://github.com/kevzho/USACO" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
-    <div class="project-content">
-      <div class="project-meta">
-        <span class="project-tag">Learning</span>
-        <p class="project-date">Aug 2025 - Present</p>
-      </div>
-      <h2>USACO</h2>
-      <p class="project-description">Practice and solutions for algorithmic programming problems from the USACO training and competitions.</p>
-
-      <div class="skills-list">
-        <span class="skill">Algorithms</span>
-        <span class="skill">Data Structures</span>
-        <span class="skill">C++ / Python</span>
-      </div>
-
-      <div class="project-actions">
-        <a href="https://github.com/kevzho/USACO" class="btn-secondary">View GitHub →</a>
-      </div>
+    <div class="card-side">
+      <span class="badge is-teal">Learning</span>
+      <span class="chip">Aug 2025–Present</span>
     </div>
   </div>
-</section>
 
-<section class="project-section">
-  <div class="project-card featured" data-href="https://github.com/kevzho/r-for-data-science" data-target="_blank">
-    <div class="project-image">
-      <img src="/assets/images/r.png" alt="r-for-data-science repository" />
+  <div class="card" data-href="https://github.com/kevzho/r-for-data-science" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="/assets/images/r.png" alt="" loading="lazy" decoding="async" />
+      </figure>
+      <p class="card-title">r-for-data-science</p>
+      <p class="card-subtitle">Notes and exercises following R for Data Science (wrangling + visualization).</p>
+      <div class="tag-row">
+        <span class="tag">R</span>
+        <span class="tag">Tidyverse</span>
+        <span class="tag">Viz</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://github.com/kevzho/r-for-data-science" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
-    <div class="project-content">
-      <div class="project-meta">
-        <span class="project-tag">Learning</span>
-        <p class="project-date">Nov 2025 - Present</p>
-      </div>
-      <h2>r-for-data-science</h2>
-      <p class="project-description">Notes, exercises, and examples following R for Data Science to improve data wrangling and visualization skills in R.</p>
-
-      <div class="skills-list">
-        <span class="skill">R</span>
-        <span class="skill">Tidyverse</span>
-        <span class="skill">Data Visualization</span>
-      </div>
-
-      <div class="project-actions">
-        <a href="https://github.com/kevzho/r-for-data-science" class="btn-secondary">View GitHub →</a>
-      </div>
+    <div class="card-side">
+      <span class="badge is-teal">Learning</span>
+      <span class="chip">Nov 2025–Present</span>
     </div>
   </div>
-</section>
-
-<div class="projects-footer">
-  <p>More learning repositories added as I continue studying — check back soon.</p>
 </div>
 
-</div>
-
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -129,28 +119,7 @@
   </footer>
   <script>
     (() => {
-      const root = document.documentElement;
-      const themeToggle = document.getElementById("theme-toggle");
-      const setTheme = (theme) => {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme-preference", theme);
-        if (themeToggle) {
-          const isDark = theme === "dark";
-          themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-          themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
-        }
-      };
-
-      if (themeToggle) {
-        const activeTheme = root.getAttribute("data-theme") || "light";
-        setTheme(activeTheme);
-        themeToggle.addEventListener("click", () => {
-          const current = root.getAttribute("data-theme") || "light";
-          setTheme(current === "dark" ? "light" : "dark");
-        });
-      }
-
-      const clickableCards = document.querySelectorAll(".project-card[data-href], .mini-card[data-href]");
+      const clickableCards = document.querySelectorAll("[data-href].card, [data-href].mini-card");
       clickableCards.forEach((card) => {
         card.setAttribute("role", "link");
         card.setAttribute("tabindex", "0");
@@ -179,60 +148,6 @@
           }
         });
       });
-
-      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!isFinePointer || prefersReducedMotion) return;
-
-      const aura = document.createElement("div");
-      aura.className = "cursor-aura";
-      const dot = document.createElement("div");
-      dot.className = "cursor-dot";
-      document.body.appendChild(aura);
-      document.body.appendChild(dot);
-
-      let targetX = window.innerWidth / 2;
-      let targetY = window.innerHeight / 2;
-      let auraX = targetX;
-      let auraY = targetY;
-      let rafId = 0;
-
-      const render = () => {
-        auraX += (targetX - auraX) * 0.16;
-        auraY += (targetY - auraY) * 0.16;
-        aura.style.left = `${auraX}px`;
-        aura.style.top = `${auraY}px`;
-        rafId = window.requestAnimationFrame(render);
-      };
-
-      const show = () => {
-        aura.classList.add("is-visible");
-        dot.classList.add("is-visible");
-        if (!rafId) rafId = window.requestAnimationFrame(render);
-      };
-
-      const hide = () => {
-        aura.classList.remove("is-visible");
-        dot.classList.remove("is-visible");
-        aura.classList.remove("is-pressed");
-        if (rafId) {
-          window.cancelAnimationFrame(rafId);
-          rafId = 0;
-        }
-      };
-
-      document.addEventListener("mousemove", (event) => {
-        targetX = event.clientX;
-        targetY = event.clientY;
-        dot.style.left = `${targetX}px`;
-        dot.style.top = `${targetY}px`;
-        show();
-      }, { passive: true });
-
-      document.addEventListener("mousedown", () => aura.classList.add("is-pressed"));
-      document.addEventListener("mouseup", () => aura.classList.remove("is-pressed"));
-      document.addEventListener("mouseleave", hide);
-
     })();
   </script>
 </body>

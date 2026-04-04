@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,37 +24,30 @@
   <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>
-    (() => {
-      const storedTheme = localStorage.getItem("theme-preference");
-      const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const theme = storedTheme || (preferredDark ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-    })();
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
   <nav class="site-nav">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">Kevin Zhou</a>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">Kevin Zhou</a>
 
-    <div class="nav-links">
-      <a href="/" class="nav-item {% if page.url == '/' %}active{% endif %}">Home</a>
-      <a href="/projects/" class="nav-item {% if page.url contains '/projects' %}active{% endif %}">Projects</a>
-      <a href="/learning/" class="nav-item {% if page.url contains '/learning' %}active{% endif %}">Learning</a>
-      <a href="/about/" class="nav-item {% if page.url contains '/about' %}active{% endif %}">More About Me</a>
-      <a href="/stemmed-in/" class="nav-item {% if page.url contains '/stemmed-in' %}active{% endif %}">STEMmed In</a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark Mode</button>
+      <div class="nav-links" aria-label="Primary">
+        <a href="/" class="nav-link {% if page.url == '/' %}is-active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+        <a href="/projects/" class="nav-link {% if page.url contains '/projects' %}is-active{% endif %}" {% if page.url contains '/projects' %}aria-current="page"{% endif %}>Projects</a>
+        <a href="/learning/" class="nav-link {% if page.url contains '/learning' %}is-active{% endif %}" {% if page.url contains '/learning' %}aria-current="page"{% endif %}>Learning</a>
+        <a href="/about/" class="nav-link {% if page.url contains '/about' %}is-active{% endif %}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>About</a>
+        <a href="/stemmed-in/" class="nav-link {% if page.url contains '/stemmed-in' %}is-active{% endif %}" {% if page.url contains '/stemmed-in' %}aria-current="page"{% endif %}>STEMmed In</a>
+      </div>
     </div>
-  </div>
 </nav>
 
 
 
   <main class="main-content">
-    {{ content }}
+    <div class="container">
+      {{ content }}
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -62,28 +55,7 @@
   </footer>
   <script>
     (() => {
-      const root = document.documentElement;
-      const themeToggle = document.getElementById("theme-toggle");
-      const setTheme = (theme) => {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme-preference", theme);
-        if (themeToggle) {
-          const isDark = theme === "dark";
-          themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-          themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
-        }
-      };
-
-      if (themeToggle) {
-        const activeTheme = root.getAttribute("data-theme") || "light";
-        setTheme(activeTheme);
-        themeToggle.addEventListener("click", () => {
-          const current = root.getAttribute("data-theme") || "light";
-          setTheme(current === "dark" ? "light" : "dark");
-        });
-      }
-
-      const clickableCards = document.querySelectorAll(".project-card[data-href], .mini-card[data-href]");
+      const clickableCards = document.querySelectorAll("[data-href].card, [data-href].mini-card");
       clickableCards.forEach((card) => {
         card.setAttribute("role", "link");
         card.setAttribute("tabindex", "0");
@@ -112,60 +84,6 @@
           }
         });
       });
-
-      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!isFinePointer || prefersReducedMotion) return;
-
-      const aura = document.createElement("div");
-      aura.className = "cursor-aura";
-      const dot = document.createElement("div");
-      dot.className = "cursor-dot";
-      document.body.appendChild(aura);
-      document.body.appendChild(dot);
-
-      let targetX = window.innerWidth / 2;
-      let targetY = window.innerHeight / 2;
-      let auraX = targetX;
-      let auraY = targetY;
-      let rafId = 0;
-
-      const render = () => {
-        auraX += (targetX - auraX) * 0.16;
-        auraY += (targetY - auraY) * 0.16;
-        aura.style.left = `${auraX}px`;
-        aura.style.top = `${auraY}px`;
-        rafId = window.requestAnimationFrame(render);
-      };
-
-      const show = () => {
-        aura.classList.add("is-visible");
-        dot.classList.add("is-visible");
-        if (!rafId) rafId = window.requestAnimationFrame(render);
-      };
-
-      const hide = () => {
-        aura.classList.remove("is-visible");
-        dot.classList.remove("is-visible");
-        aura.classList.remove("is-pressed");
-        if (rafId) {
-          window.cancelAnimationFrame(rafId);
-          rafId = 0;
-        }
-      };
-
-      document.addEventListener("mousemove", (event) => {
-        targetX = event.clientX;
-        targetY = event.clientY;
-        dot.style.left = `${targetX}px`;
-        dot.style.top = `${targetY}px`;
-        show();
-      }, { passive: true });
-
-      document.addEventListener("mousedown", () => aura.classList.add("is-pressed"));
-      document.addEventListener("mouseup", () => aura.classList.remove("is-pressed"));
-      document.addEventListener("mouseleave", hide);
-
     })();
   </script>
 </body>

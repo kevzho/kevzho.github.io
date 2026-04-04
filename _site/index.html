@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,125 +8,152 @@
   
   <title>Kevin Zhou</title>
   <meta name="description" content="High school data scientist exploring ML, AI, statistics">
-  <link rel="canonical" href="https://kevzho.github.io/">
+  <link rel="canonical" href="http://localhost:4000/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kevin Zhou">
   <meta property="og:title" content="Kevin Zhou">
   <meta property="og:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta property="og:url" content="https://kevzho.github.io/">
-  <meta property="og:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta property="og:url" content="http://localhost:4000/">
+  <meta property="og:image" content="http://localhost:4000/assets/images/whl.jpg">
   <meta property="og:image:alt" content="Kevin Zhou portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kevin Zhou">
   <meta name="twitter:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta name="twitter:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta name="twitter:image" content="http://localhost:4000/assets/images/whl.jpg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>
-    (() => {
-      const storedTheme = localStorage.getItem("theme-preference");
-      const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const theme = storedTheme || (preferredDark ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-    })();
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <nav class="site-nav">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">Kevin Zhou</a>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">Kevin Zhou</a>
 
-    <div class="nav-links">
-      <a href="/" class="nav-item active">Home</a>
-      <a href="/projects/" class="nav-item ">Projects</a>
-      <a href="/learning/" class="nav-item ">Learning</a>
-      <a href="/about/" class="nav-item ">More About Me</a>
-      <a href="/stemmed-in/" class="nav-item ">STEMmed In</a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark Mode</button>
+      <div class="nav-links" aria-label="Primary">
+        <a href="/" class="nav-link is-active" aria-current="page">Home</a>
+        <a href="/projects/" class="nav-link " >Projects</a>
+        <a href="/learning/" class="nav-link " >Learning</a>
+        <a href="/about/" class="nav-link " >About</a>
+        <a href="/stemmed-in/" class="nav-link " >STEMmed In</a>
+      </div>
     </div>
-  </div>
 </nav>
 
 
 
   <main class="main-content">
-    <header class="hero terminal-window" data-terminal-title="~/home">
-    <div id="particle-container">
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-      <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-    </div>
+    <div class="container">
+      <header class="page-header fade-up" style="--delay: 0.05s">
+  <p class="eyebrow">Portfolio</p>
+  <h1>Kevin Zhou</h1>
+  <p class="lead">Exploring patterns, predicting possibilities</p>
 
-    <div class="hero-content">
-      <p class="terminal-command">$ whoami</p>
-      <h1><span class="hero-name" data-name="Kevin Zhou">Kevin Zhou</span></h1>
-      <h2>Aspiring Data Scientist</h2>
-      <p>Exploring patterns, predicting possibilities</p>
-
-      <div class="status-line">
-        <span><strong>Currently working on</strong>: Google UM-Flint Research</span>
-      </div>
-
-      <div class="cta-buttons">
-        <a href="/projects/" class="cta-primary">View Projects</a>
-        <a href="/stemmed-in/" class="cta-secondary">Read STEMmed In</a>
-      </div>
-    </div>
+  <div class="chip-row">
+    <span class="chip">Aspiring Data Scientist</span>
+    <span class="chip">Currently: Google UM-Flint Research</span>
+  </div>
 </header>
 
-<section class="home-about terminal-window" data-terminal-title="~/about">
-  <h2>About</h2>
-  <p>I'm a high school student who likes finding the stories hidden in data.</p>
-  <p>I build ML models, explore datasets with Python and R, and work on projects that solve real-world problems.</p>
+<div class="section-header fade-up" style="--delay: 0.15s">
+  <div class="section-left">
+    <span class="section-dot is-teal" aria-hidden="true"></span>
+    <span class="section-label">Highlights</span>
+  </div>
+  <span class="section-count">2</span>
+</div>
 
-  <h3>Current Focus</h3>
-  <ul>
-    <li>Deepening time series forecasting &amp; NLP</li>
-    <li>Mastering model interpretability &amp; deployment</li>
-  </ul>
-
-  <h3>Toolkit</h3>
-  <ul>
-    <li><strong>Languages</strong>: Python (Pandas, NumPy, Scikit-learn), SQL basics</li>
-    <li><strong>ML/DL</strong>: TensorFlow, PyTorch (early stage)</li>
-    <li><strong>Visualization</strong>: Matplotlib, Seaborn, Plotly</li>
-    <li><strong>Deployment</strong>: Streamlit</li>
-  </ul>
-
-  <h3>Philosophy</h3>
-  <p>I learn best by building experiments. Each run, whether it succeeds or fails, teaches something valuable about how data tells stories.</p>
-
-  <h3>Connect</h3>
-  <div class="icon-links">
-    <a href="https://github.com/kevzho" class="icon-link" aria-label="GitHub" title="GitHub">
-      <img src="/assets/images/icons/github.png" alt="" loading="lazy" decoding="async" />
-    </a>
-    <a href="https://leetcode.com/u/kevin_zhou33/" class="icon-link" aria-label="LeetCode" title="LeetCode" target="_blank" rel="noopener">
-      <img src="/assets/images/icons/leetcode.png" alt="" loading="lazy" decoding="async" />
-    </a>
-    <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" class="icon-link" aria-label="LinkedIn" title="LinkedIn">
-      <img src="/assets/images/icons/linkedin.png" alt="" loading="lazy" decoding="async" />
-    </a>
-    <a href="mailto:kevinz09302009@gmail.com" class="icon-link" aria-label="Email" title="Email">
-      <img src="/assets/images/icons/email.png" alt="" loading="lazy" decoding="async" />
-    </a>
+<div class="card-list fade-up" style="--delay: 0.25s">
+  <div class="card" data-href="/projects/">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="/assets/images/iu-indy.png" alt="" loading="lazy" decoding="async" />
+      </figure>
+      <p class="card-title">Projects</p>
+      <p class="card-subtitle">Recent work across data visualization, ML experiments, and collaborative builds.</p>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">ML</span>
+        <span class="tag">DataViz</span>
+      </div>
+    </div>
+    <div class="card-side">
+      <span class="badge is-teal">Explore</span>
+      <span class="chip">Updated 2026</span>
+    </div>
   </div>
 
-  <h3>Resume</h3>
-  <div class="icon-links">
-    <a href="/assets/resume/resume.pdf" class="icon-link" aria-label="Download resume PDF" title="Download resume (PDF)" download="">
-      <img src="/assets/images/icons/download.svg" alt="" loading="lazy" decoding="async" />
-    </a>
+  <div class="card" data-href="/stemmed-in/">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="/assets/images/stemmedin.png" alt="" loading="lazy" decoding="async" />
+      </figure>
+      <p class="card-title">STEMmed In</p>
+      <p class="card-subtitle">A weekly newsletter connecting ML concepts to real-world domains.</p>
+      <div class="tag-row">
+        <span class="tag">AI</span>
+        <span class="tag">Science</span>
+        <span class="tag">Writing</span>
+      </div>
+    </div>
+    <div class="card-side">
+      <span class="badge is-amber">Newsletter</span>
+      <span class="chip">Weekly</span>
+    </div>
   </div>
-</section>
+</div>
 
+<div class="section-header fade-up" style="--delay: 0.35s">
+  <div class="section-left">
+    <span class="section-dot is-green" aria-hidden="true"></span>
+    <span class="section-label">About</span>
+  </div>
+  <span class="section-count">Now</span>
+</div>
+
+<div class="card-list fade-up" style="--delay: 0.45s">
+  <div class="card">
+    <div class="card-main">
+      <p class="card-title">What I Do</p>
+      <p class="card-subtitle">I’m a high school student who likes finding the stories hidden in data — building models, exploring datasets, and shipping small tools.</p>
+      <div class="tag-row">
+        <span class="tag">Time Series</span>
+        <span class="tag">NLP</span>
+        <span class="tag">Interpretability</span>
+        <span class="tag">Deployment</span>
+      </div>
+      <div class="card-actions">
+        <a href="/about/">More</a>
+        <a href="/assets/resume/resume.pdf" download="">Resume (PDF)</a>
+      </div>
+    </div>
+    <div class="card-side">
+      <span class="badge is-green">Open</span>
+      <span class="chip">NY • USA</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-main">
+      <p class="card-title">Connect</p>
+      <p class="card-subtitle">Links if you want to see code or reach out.</p>
+      <div class="card-actions">
+        <a href="https://github.com/kevzho" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://leetcode.com/u/kevin_zhou33/" target="_blank" rel="noopener">LeetCode</a>
+        <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:kevinz09302009@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="card-side">
+      <span class="badge is-teal">Online</span>
+      <span class="chip">Links</span>
+    </div>
+  </div>
+</div>
+
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -134,28 +161,7 @@
   </footer>
   <script>
     (() => {
-      const root = document.documentElement;
-      const themeToggle = document.getElementById("theme-toggle");
-      const setTheme = (theme) => {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme-preference", theme);
-        if (themeToggle) {
-          const isDark = theme === "dark";
-          themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-          themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
-        }
-      };
-
-      if (themeToggle) {
-        const activeTheme = root.getAttribute("data-theme") || "light";
-        setTheme(activeTheme);
-        themeToggle.addEventListener("click", () => {
-          const current = root.getAttribute("data-theme") || "light";
-          setTheme(current === "dark" ? "light" : "dark");
-        });
-      }
-
-      const clickableCards = document.querySelectorAll(".project-card[data-href], .mini-card[data-href]");
+      const clickableCards = document.querySelectorAll("[data-href].card, [data-href].mini-card");
       clickableCards.forEach((card) => {
         card.setAttribute("role", "link");
         card.setAttribute("tabindex", "0");
@@ -184,60 +190,6 @@
           }
         });
       });
-
-      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!isFinePointer || prefersReducedMotion) return;
-
-      const aura = document.createElement("div");
-      aura.className = "cursor-aura";
-      const dot = document.createElement("div");
-      dot.className = "cursor-dot";
-      document.body.appendChild(aura);
-      document.body.appendChild(dot);
-
-      let targetX = window.innerWidth / 2;
-      let targetY = window.innerHeight / 2;
-      let auraX = targetX;
-      let auraY = targetY;
-      let rafId = 0;
-
-      const render = () => {
-        auraX += (targetX - auraX) * 0.16;
-        auraY += (targetY - auraY) * 0.16;
-        aura.style.left = `${auraX}px`;
-        aura.style.top = `${auraY}px`;
-        rafId = window.requestAnimationFrame(render);
-      };
-
-      const show = () => {
-        aura.classList.add("is-visible");
-        dot.classList.add("is-visible");
-        if (!rafId) rafId = window.requestAnimationFrame(render);
-      };
-
-      const hide = () => {
-        aura.classList.remove("is-visible");
-        dot.classList.remove("is-visible");
-        aura.classList.remove("is-pressed");
-        if (rafId) {
-          window.cancelAnimationFrame(rafId);
-          rafId = 0;
-        }
-      };
-
-      document.addEventListener("mousemove", (event) => {
-        targetX = event.clientX;
-        targetY = event.clientY;
-        dot.style.left = `${targetX}px`;
-        dot.style.top = `${targetY}px`;
-        show();
-      }, { passive: true });
-
-      document.addEventListener("mousedown", () => aura.classList.add("is-pressed"));
-      document.addEventListener("mouseup", () => aura.classList.remove("is-pressed"));
-      document.addEventListener("mouseleave", hide);
-
     })();
   </script>
 </body>

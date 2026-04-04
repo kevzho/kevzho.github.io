@@ -3,70 +3,67 @@ layout: default
 title: Learning
 ---
 
-<div class="learning-page">
+<header class="page-header fade-up" style="--delay: 0.05s">
+  <p class="eyebrow">Now</p>
+  <h1>Learning <em>in public</em></h1>
+  <p class="lead">Repos and study logs documenting what I’m actively learning and practicing.</p>
+  <div class="chip-row">
+    <span class="chip">Updated Apr 2026</span>
+    <span class="chip">Ongoing</span>
+  </div>
+</header>
 
-<div class="projects-hero" data-terminal-title="~/learning">
-  <p class="terminal-command">$ cat learning.log</p>
-  <h1>Learning</h1>
-  <p class="lead">Repositories and study projects documenting what I'm currently learning.</p>
+<div class="section-header fade-up" style="--delay: 0.15s">
+  <div class="section-left">
+    <span class="section-dot is-teal" aria-hidden="true"></span>
+    <span class="section-label">Repositories</span>
+  </div>
+  <span class="section-count">2</span>
 </div>
 
-
-
-<section class="project-section">
-  <div class="project-card featured" data-href="https://github.com/kevzho/USACO" data-target="_blank">
-    <div class="project-image">
-      <img src="{{ '/assets/images/usaco.png' | relative_url }}" alt="USACO repository">
+<div class="card-list fade-up" style="--delay: 0.25s">
+  <div class="card" data-href="https://github.com/kevzho/USACO" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/usaco.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">USACO</p>
+      <p class="card-subtitle">Practice and solutions for algorithmic programming problems from training + contests.</p>
+      <div class="tag-row">
+        <span class="tag">Algorithms</span>
+        <span class="tag">Data Structures</span>
+        <span class="tag">C++</span>
+        <span class="tag">Python</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://github.com/kevzho/USACO" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
-    <div class="project-content">
-      <div class="project-meta">
-        <span class="project-tag">Learning</span>
-        <p class="project-date">Aug 2025 - Present</p>
-      </div>
-      <h2>USACO</h2>
-      <p class="project-description">Practice and solutions for algorithmic programming problems from the USACO training and competitions.</p>
-
-      <div class="skills-list">
-        <span class="skill">Algorithms</span>
-        <span class="skill">Data Structures</span>
-        <span class="skill">C++ / Python</span>
-      </div>
-
-      <div class="project-actions">
-        <a href="https://github.com/kevzho/USACO" class="btn-secondary">View GitHub →</a>
-      </div>
+    <div class="card-side">
+      <span class="badge is-teal">Learning</span>
+      <span class="chip">Aug 2025–Present</span>
     </div>
   </div>
-</section>
 
-<section class="project-section">
-  <div class="project-card featured" data-href="https://github.com/kevzho/r-for-data-science" data-target="_blank">
-    <div class="project-image">
-      <img src="{{ '/assets/images/r.png' | relative_url }}" alt="r-for-data-science repository">
+  <div class="card" data-href="https://github.com/kevzho/r-for-data-science" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/r.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">r-for-data-science</p>
+      <p class="card-subtitle">Notes and exercises following R for Data Science (wrangling + visualization).</p>
+      <div class="tag-row">
+        <span class="tag">R</span>
+        <span class="tag">Tidyverse</span>
+        <span class="tag">Viz</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://github.com/kevzho/r-for-data-science" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
-    <div class="project-content">
-      <div class="project-meta">
-        <span class="project-tag">Learning</span>
-        <p class="project-date">Nov 2025 - Present</p>
-      </div>
-      <h2>r-for-data-science</h2>
-      <p class="project-description">Notes, exercises, and examples following R for Data Science to improve data wrangling and visualization skills in R.</p>
-
-      <div class="skills-list">
-        <span class="skill">R</span>
-        <span class="skill">Tidyverse</span>
-        <span class="skill">Data Visualization</span>
-      </div>
-
-      <div class="project-actions">
-        <a href="https://github.com/kevzho/r-for-data-science" class="btn-secondary">View GitHub →</a>
-      </div>
+    <div class="card-side">
+      <span class="badge is-teal">Learning</span>
+      <span class="chip">Nov 2025–Present</span>
     </div>
   </div>
-</section>
-
-<div class="projects-footer">
-  <p>More learning repositories added as I continue studying — check back soon.</p>
-</div>
-
 </div>

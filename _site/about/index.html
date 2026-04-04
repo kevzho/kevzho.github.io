@@ -1,106 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
   
-  <title>More About Me | Kevin Zhou</title>
+  <title>About | Kevin Zhou</title>
   <meta name="description" content="High school data scientist exploring ML, AI, statistics">
-  <link rel="canonical" href="https://kevzho.github.io/about/">
+  <link rel="canonical" href="http://localhost:4000/about/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kevin Zhou">
-  <meta property="og:title" content="More About Me">
+  <meta property="og:title" content="About">
   <meta property="og:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta property="og:url" content="https://kevzho.github.io/about/">
-  <meta property="og:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta property="og:url" content="http://localhost:4000/about/">
+  <meta property="og:image" content="http://localhost:4000/assets/images/whl.jpg">
   <meta property="og:image:alt" content="Kevin Zhou portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="More About Me">
+  <meta name="twitter:title" content="About">
   <meta name="twitter:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta name="twitter:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta name="twitter:image" content="http://localhost:4000/assets/images/whl.jpg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>
-    (() => {
-      const storedTheme = localStorage.getItem("theme-preference");
-      const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const theme = storedTheme || (preferredDark ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-    })();
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <nav class="site-nav">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">Kevin Zhou</a>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">Kevin Zhou</a>
 
-    <div class="nav-links">
-      <a href="/" class="nav-item ">Home</a>
-      <a href="/projects/" class="nav-item ">Projects</a>
-      <a href="/learning/" class="nav-item ">Learning</a>
-      <a href="/about/" class="nav-item active">More About Me</a>
-      <a href="/stemmed-in/" class="nav-item ">STEMmed In</a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark Mode</button>
+      <div class="nav-links" aria-label="Primary">
+        <a href="/" class="nav-link " >Home</a>
+        <a href="/projects/" class="nav-link " >Projects</a>
+        <a href="/learning/" class="nav-link " >Learning</a>
+        <a href="/about/" class="nav-link is-active" aria-current="page">About</a>
+        <a href="/stemmed-in/" class="nav-link " >STEMmed In</a>
+      </div>
     </div>
-  </div>
 </nav>
 
 
 
   <main class="main-content">
-    <h1 id="more-about-me">More About Me</h1>
+    <div class="container">
+      <header class="page-header fade-up" style="--delay: 0.05s">
+  <p class="eyebrow">More</p>
+  <h1>About <em>me</em></h1>
+  <p class="lead">Outside data + ML, this is where I spend my energy.</p>
+</header>
 
-<p class="terminal-command">$ cat about.md</p>
-
-<section class="hobbies-section" data-terminal-title="~/about/hobbies">
-  <h2>Hobbies &amp; Interests</h2>
-  <p>Outside data and ML, this is where I spend my energy.</p>
-
-  <div class="hobby-grid">
-    <article class="hobby-card">
-      <h3>Working Out</h3>
-      <p>Current numbers: <strong>245 bench</strong>, <strong>365 squat</strong>, <strong>405 deadlift</strong>.</p>
-    </article>
-
-    <article class="hobby-card">
-      <h3>Food Exploration</h3>
-      <p>Sushi enthusiast who loves both fine dining and great street food finds.</p>
-    </article>
-
-    <article class="hobby-card">
-      <h3>Piano</h3>
-      <p>Been playing for <strong>11+ years</strong>, from disciplined practice to expressive pieces.</p>
-    </article>
-
-    <article class="hobby-card">
-      <h3>Mystery Fiction</h3>
-      <p>I like analyzing clues and trying to solve the story before the ending, and I am always open to recommendations.</p>
-    </article>
-
-    <article class="hobby-card">
-      <h3>Pickup Soccer</h3>
-      <p>Fast-paced games that keep me sharp, competitive, and active.</p>
-    </article>
+<div class="section-header fade-up" style="--delay: 0.15s">
+  <div class="section-left">
+    <span class="section-dot is-green" aria-hidden="true"></span>
+    <span class="section-label">Hobbies</span>
   </div>
-</section>
+  <span class="section-count">5</span>
+</div>
 
-<section class="fun-facts-section" data-terminal-title="~/about/fun-facts">
-  <h2>⚡ Fun Facts</h2>
-  <p class="facts-divider">───────────────</p>
-  <ul class="fun-facts-list">
-    <li>Completed a 1000-piece puzzle in 6 straight hours</li>
-    <li>I have 8 chickens and helped build their coop</li>
-    <li>Finished a Costco chicken bake in 2 minutes flat</li>
-    <li>Can do 1,258 consecutive jump-rope reps</li>
-  </ul>
-</section>
+<div class="grid-2 fade-up" style="--delay: 0.25s">
+  <article class="mini-card">
+    <h4>Working Out</h4>
+    <p>Current numbers: <strong>245 bench</strong>, <strong>365 squat</strong>, <strong>405 deadlift</strong>.</p>
+  </article>
 
+  <article class="mini-card">
+    <h4>Food Exploration</h4>
+    <p>Sushi enthusiast who loves both fine dining and great street food finds.</p>
+  </article>
+
+  <article class="mini-card">
+    <h4>Piano</h4>
+    <p>Been playing for <strong>11+ years</strong>, from disciplined practice to expressive pieces.</p>
+  </article>
+
+  <article class="mini-card">
+    <h4>Mystery Fiction</h4>
+    <p>I like analyzing clues and trying to solve the story before the ending. Always open to recs.</p>
+  </article>
+
+  <article class="mini-card">
+    <h4>Pickup Soccer</h4>
+    <p>Fast-paced games that keep me sharp, competitive, and active.</p>
+  </article>
+</div>
+
+<div class="section-header fade-up" style="--delay: 0.35s">
+  <div class="section-left">
+    <span class="section-dot is-amber" aria-hidden="true"></span>
+    <span class="section-label">Fun Facts</span>
+  </div>
+  <span class="section-count">4</span>
+</div>
+
+<div class="card-list fade-up" style="--delay: 0.45s">
+  <div class="card">
+    <div class="card-main">
+      <p class="card-title">Quick hits</p>
+      <ul>
+        <li>Completed a 1000-piece puzzle in 6 straight hours</li>
+        <li>I have 8 chickens and helped build their coop</li>
+        <li>Finished a Costco chicken bake in 2 minutes flat</li>
+        <li>Can do 1,258 consecutive jump-rope reps</li>
+      </ul>
+    </div>
+    <div class="card-side">
+      <span class="badge is-amber">Personal</span>
+      <span class="chip">Just for fun</span>
+    </div>
+  </div>
+</div>
+
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -108,28 +121,7 @@
   </footer>
   <script>
     (() => {
-      const root = document.documentElement;
-      const themeToggle = document.getElementById("theme-toggle");
-      const setTheme = (theme) => {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme-preference", theme);
-        if (themeToggle) {
-          const isDark = theme === "dark";
-          themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-          themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
-        }
-      };
-
-      if (themeToggle) {
-        const activeTheme = root.getAttribute("data-theme") || "light";
-        setTheme(activeTheme);
-        themeToggle.addEventListener("click", () => {
-          const current = root.getAttribute("data-theme") || "light";
-          setTheme(current === "dark" ? "light" : "dark");
-        });
-      }
-
-      const clickableCards = document.querySelectorAll(".project-card[data-href], .mini-card[data-href]");
+      const clickableCards = document.querySelectorAll("[data-href].card, [data-href].mini-card");
       clickableCards.forEach((card) => {
         card.setAttribute("role", "link");
         card.setAttribute("tabindex", "0");
@@ -158,60 +150,6 @@
           }
         });
       });
-
-      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!isFinePointer || prefersReducedMotion) return;
-
-      const aura = document.createElement("div");
-      aura.className = "cursor-aura";
-      const dot = document.createElement("div");
-      dot.className = "cursor-dot";
-      document.body.appendChild(aura);
-      document.body.appendChild(dot);
-
-      let targetX = window.innerWidth / 2;
-      let targetY = window.innerHeight / 2;
-      let auraX = targetX;
-      let auraY = targetY;
-      let rafId = 0;
-
-      const render = () => {
-        auraX += (targetX - auraX) * 0.16;
-        auraY += (targetY - auraY) * 0.16;
-        aura.style.left = `${auraX}px`;
-        aura.style.top = `${auraY}px`;
-        rafId = window.requestAnimationFrame(render);
-      };
-
-      const show = () => {
-        aura.classList.add("is-visible");
-        dot.classList.add("is-visible");
-        if (!rafId) rafId = window.requestAnimationFrame(render);
-      };
-
-      const hide = () => {
-        aura.classList.remove("is-visible");
-        dot.classList.remove("is-visible");
-        aura.classList.remove("is-pressed");
-        if (rafId) {
-          window.cancelAnimationFrame(rafId);
-          rafId = 0;
-        }
-      };
-
-      document.addEventListener("mousemove", (event) => {
-        targetX = event.clientX;
-        targetY = event.clientY;
-        dot.style.left = `${targetX}px`;
-        dot.style.top = `${targetY}px`;
-        show();
-      }, { passive: true });
-
-      document.addEventListener("mousedown", () => aura.classList.add("is-pressed"));
-      document.addEventListener("mouseup", () => aura.classList.remove("is-pressed"));
-      document.addEventListener("mouseleave", hide);
-
     })();
   </script>
 </body>

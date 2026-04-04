@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,100 +8,104 @@
   
   <title>STEMmed In | Kevin Zhou</title>
   <meta name="description" content="High school data scientist exploring ML, AI, statistics">
-  <link rel="canonical" href="https://kevzho.github.io/stemmed-in/">
+  <link rel="canonical" href="http://localhost:4000/stemmed-in/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kevin Zhou">
   <meta property="og:title" content="STEMmed In">
   <meta property="og:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta property="og:url" content="https://kevzho.github.io/stemmed-in/">
-  <meta property="og:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta property="og:url" content="http://localhost:4000/stemmed-in/">
+  <meta property="og:image" content="http://localhost:4000/assets/images/whl.jpg">
   <meta property="og:image:alt" content="Kevin Zhou portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="STEMmed In">
   <meta name="twitter:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta name="twitter:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta name="twitter:image" content="http://localhost:4000/assets/images/whl.jpg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>
-    (() => {
-      const storedTheme = localStorage.getItem("theme-preference");
-      const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const theme = storedTheme || (preferredDark ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-    })();
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <nav class="site-nav">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">Kevin Zhou</a>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">Kevin Zhou</a>
 
-    <div class="nav-links">
-      <a href="/" class="nav-item ">Home</a>
-      <a href="/projects/" class="nav-item ">Projects</a>
-      <a href="/learning/" class="nav-item ">Learning</a>
-      <a href="/about/" class="nav-item ">More About Me</a>
-      <a href="/stemmed-in/" class="nav-item active">STEMmed In</a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark Mode</button>
+      <div class="nav-links" aria-label="Primary">
+        <a href="/" class="nav-link " >Home</a>
+        <a href="/projects/" class="nav-link " >Projects</a>
+        <a href="/learning/" class="nav-link " >Learning</a>
+        <a href="/about/" class="nav-link " >About</a>
+        <a href="/stemmed-in/" class="nav-link is-active" aria-current="page">STEMmed In</a>
+      </div>
     </div>
-  </div>
 </nav>
 
 
 
   <main class="main-content">
-    <div class="stemmed-page">
-  <section class="stemmed-panel stemmed-hero" data-terminal-title="~/stemmed-in">
+    <div class="container">
+      <header class="page-header fade-up" style="--delay: 0.05s">
+  <p class="eyebrow">Writing</p>
+  <h1>STEMmed In <em>weekly</em></h1>
+  <p class="lead">A newsletter breaking down how AI and machine learning show up in medicine, finance, physics, biology, chemistry, and beyond.</p>
+  <div class="chip-row">
+    <span class="chip">Weekly issues</span>
+    <span class="chip">External site</span>
+  </div>
+</header>
 
-    <div class="stemmed-hero-main">
-      <div class="stemmed-hero-copy">
-        <p class="terminal-command">$ open stemmed-in --weekly</p>
-        <h1>STEMmed In</h1>
-        <p class="stemmed-tagline">Making complex ideas simple and powerful.</p>
-        <p class="stemmed-description">A weekly newsletter that breaks down how AI and machine learning are applied in medicine, finance, physics, biology, chemistry, and beyond.</p>
-
-        <div class="stemmed-actions">
-          <a href="https://stemmedin.com/" class="btn-primary" target="_blank" rel="noopener noreferrer">Visit Newsletter →</a>
-        </div>
-      </div>
-      <figure class="stemmed-hero-image-wrap">
-        <img src="/assets/images/stemmedin.png" alt="STEMmed In visual preview" class="stemmed-hero-image" />
+<div class="card-list fade-up" style="--delay: 0.15s">
+  <div class="card" data-href="https://stemmedin.com/" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="/assets/images/stemmedin.png" alt="" loading="lazy" decoding="async" />
       </figure>
+      <p class="card-title">Visit the newsletter</p>
+      <p class="card-subtitle">Read the latest issues and browse the archive.</p>
+      <div class="card-actions">
+        <a href="https://stemmedin.com/" target="_blank" rel="noopener">Open site</a>
+      </div>
     </div>
-  </section>
-
-  <section class="stemmed-panel stemmed-focus" data-terminal-title="~/stemmed-in/focus">
-    <h2>Where We Focus</h2>
-    <p class="stemmed-intro">Each issue connects core ML ideas to practical use in real domains.</p>
-
-    <div class="stemmed-grid">
-      <article class="stemmed-card">
-        <h3>Physics</h3>
-        <p>Simulation-aware ML, inverse problems, scientific computing, and uncertainty estimation for physical systems.</p>
-      </article>
-
-      <article class="stemmed-card">
-        <h3>Medicine</h3>
-        <p>Clinical AI baselines: diagnostic metrics, trial logic, risk models, imaging pipelines, and responsible deployment.</p>
-      </article>
-
-      <article class="stemmed-card">
-        <h3>Finance</h3>
-        <p>Forecasting, portfolio optimization, risk controls, and evaluation methods that avoid fragile backtest results.</p>
-      </article>
-
-      <article class="stemmed-card">
-        <h3>Bio/Chem</h3>
-        <p>Foundations for computational biology and chemistry: sequence data, structure representations, and noise-aware modeling.</p>
-      </article>
+    <div class="card-side">
+      <span class="badge is-green">Live</span>
+      <span class="chip">stemmedin.com</span>
     </div>
-  </section>
+  </div>
 </div>
 
+<div class="section-header fade-up" style="--delay: 0.25s">
+  <div class="section-left">
+    <span class="section-dot is-teal" aria-hidden="true"></span>
+    <span class="section-label">Focus</span>
+  </div>
+  <span class="section-count">4</span>
+</div>
+
+<div class="grid-2 fade-up" style="--delay: 0.35s">
+  <article class="mini-card">
+    <h4>Physics</h4>
+    <p>Simulation-aware ML, inverse problems, scientific computing, and uncertainty estimation.</p>
+  </article>
+
+  <article class="mini-card">
+    <h4>Medicine</h4>
+    <p>Clinical AI fundamentals: evaluation, trial logic, risk models, imaging pipelines, deployment.</p>
+  </article>
+
+  <article class="mini-card">
+    <h4>Finance</h4>
+    <p>Forecasting, portfolio ideas, risk controls, and methods that avoid fragile backtests.</p>
+  </article>
+
+  <article class="mini-card">
+    <h4>Bio/Chem</h4>
+    <p>Sequence + structure representations, noisy data, and modeling foundations.</p>
+  </article>
+</div>
+
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -109,28 +113,7 @@
   </footer>
   <script>
     (() => {
-      const root = document.documentElement;
-      const themeToggle = document.getElementById("theme-toggle");
-      const setTheme = (theme) => {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme-preference", theme);
-        if (themeToggle) {
-          const isDark = theme === "dark";
-          themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-          themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
-        }
-      };
-
-      if (themeToggle) {
-        const activeTheme = root.getAttribute("data-theme") || "light";
-        setTheme(activeTheme);
-        themeToggle.addEventListener("click", () => {
-          const current = root.getAttribute("data-theme") || "light";
-          setTheme(current === "dark" ? "light" : "dark");
-        });
-      }
-
-      const clickableCards = document.querySelectorAll(".project-card[data-href], .mini-card[data-href]");
+      const clickableCards = document.querySelectorAll("[data-href].card, [data-href].mini-card");
       clickableCards.forEach((card) => {
         card.setAttribute("role", "link");
         card.setAttribute("tabindex", "0");
@@ -159,60 +142,6 @@
           }
         });
       });
-
-      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!isFinePointer || prefersReducedMotion) return;
-
-      const aura = document.createElement("div");
-      aura.className = "cursor-aura";
-      const dot = document.createElement("div");
-      dot.className = "cursor-dot";
-      document.body.appendChild(aura);
-      document.body.appendChild(dot);
-
-      let targetX = window.innerWidth / 2;
-      let targetY = window.innerHeight / 2;
-      let auraX = targetX;
-      let auraY = targetY;
-      let rafId = 0;
-
-      const render = () => {
-        auraX += (targetX - auraX) * 0.16;
-        auraY += (targetY - auraY) * 0.16;
-        aura.style.left = `${auraX}px`;
-        aura.style.top = `${auraY}px`;
-        rafId = window.requestAnimationFrame(render);
-      };
-
-      const show = () => {
-        aura.classList.add("is-visible");
-        dot.classList.add("is-visible");
-        if (!rafId) rafId = window.requestAnimationFrame(render);
-      };
-
-      const hide = () => {
-        aura.classList.remove("is-visible");
-        dot.classList.remove("is-visible");
-        aura.classList.remove("is-pressed");
-        if (rafId) {
-          window.cancelAnimationFrame(rafId);
-          rafId = 0;
-        }
-      };
-
-      document.addEventListener("mousemove", (event) => {
-        targetX = event.clientX;
-        targetY = event.clientY;
-        dot.style.left = `${targetX}px`;
-        dot.style.top = `${targetY}px`;
-        show();
-      }, { passive: true });
-
-      document.addEventListener("mousedown", () => aura.classList.add("is-pressed"));
-      document.addEventListener("mouseup", () => aura.classList.remove("is-pressed"));
-      document.addEventListener("mouseleave", hide);
-
     })();
   </script>
 </body>
