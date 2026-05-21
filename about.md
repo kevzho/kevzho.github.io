@@ -1,11 +1,11 @@
 ---
 layout: default
-title: About
+title: about
 ---
 
 <header class="page-header fade-up" style="--delay: 0.05s">
   <p class="eyebrow">More</p>
-  <h1>About <em>me</em></h1>
+  <h1>about <em>me</em></h1>
   <p class="lead">Outside data + ML, this is where I spend my energy.</p>
 </header>
 
@@ -14,10 +14,10 @@ title: About
     <span class="section-dot is-green" aria-hidden="true"></span>
     <span class="section-label">Hobbies</span>
   </div>
-  <span class="section-count">5</span>
+  <span class="section-count">6</span>
 </div>
 
-<div class="grid-2 fade-up" style="--delay: 0.25s">
+<div class="grid-2 hobby-grid fade-up" style="--delay: 0.25s">
   <article class="mini-card">
     <h4>Working Out</h4>
     <p>Current numbers: <strong>245 bench</strong>, <strong>365 squat</strong>, <strong>405 deadlift</strong>.</p>
@@ -29,8 +29,8 @@ title: About
   </article>
 
   <article class="mini-card">
-    <h4>Piano</h4>
-    <p>Been playing for <strong>11+ years</strong>, from disciplined practice to expressive pieces.</p>
+    <h4>piano</h4>
+    <p>playing for <strong>11+ years</strong>; abrsm grade 8 certificate in 2022 and carnegie hall 3x invite.</p>
   </article>
 
   <article class="mini-card">
@@ -41,6 +41,16 @@ title: About
   <article class="mini-card">
     <h4>Pickup Soccer</h4>
     <p>Fast-paced games that keep me sharp, competitive, and active.</p>
+  </article>
+
+  <article class="mini-card">
+    <h4>competitive typist</h4>
+    <p>averaging <strong>135+ wpm</strong> across typing platforms.</p>
+    <div class="card-actions">
+      <a href="https://data.typeracer.com/pit/profile?user=kz_lifts" target="_blank" rel="noopener">typeracer</a>
+      <a href="https://monkeytype.com/profile/kevin_zhou33" target="_blank" rel="noopener">monkeytype</a>
+      <a href="https://www.nitrotype.com/racer/b7de03f665418cb0c16721c9bb38fdb5" target="_blank" rel="noopener">nitrotype</a>
+    </div>
   </article>
 </div>
 

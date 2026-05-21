@@ -1,54 +1,57 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="monochrome">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
   
-  <title>Projects | Kevin Zhou</title>
+  <title>projects | kevin zhou</title>
   <meta name="description" content="High school data scientist exploring ML, AI, statistics">
-  <link rel="canonical" href="http://localhost:4000/projects/">
+  <link rel="canonical" href="https://kevzho.github.io/projects/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Kevin Zhou">
-  <meta property="og:title" content="Projects">
+  <meta property="og:site_name" content="kevin zhou">
+  <meta property="og:title" content="projects">
   <meta property="og:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta property="og:url" content="http://localhost:4000/projects/">
-  <meta property="og:image" content="http://localhost:4000/assets/images/whl.jpg">
-  <meta property="og:image:alt" content="Kevin Zhou portfolio preview">
+  <meta property="og:url" content="https://kevzho.github.io/projects/">
+  <meta property="og:image" content="https://kevzho.github.io/assets/images/whl.jpg">
+  <meta property="og:image:alt" content="kevin zhou portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Projects">
+  <meta name="twitter:title" content="projects">
   <meta name="twitter:description" content="High school data scientist exploring ML, AI, statistics">
-  <meta name="twitter:image" content="http://localhost:4000/assets/images/whl.jpg">
+  <meta name="twitter:image" content="https://kevzho.github.io/assets/images/whl.jpg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400;1,8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">Kevin Zhou</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="home-button" href="/" >home</a>
+  <div class="music-panel" data-music-panel>
+    <button class="music-button" type="button" aria-pressed="false" aria-label="toggle music" data-music-button>
+      <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+        <path d="M5 10h4l6-5v14l-6-5H5z"></path>
+        <path class="music-wave" d="M18 9c1 1 1 5 0 6"></path>
+      </svg>
+      <span data-music-label>off</span>
+    </button>
+    <button class="music-next-button" type="button" aria-label="next song" data-next-track>next</button>
+    <span class="music-track" data-music-track>no song selected</span>
+    <label class="music-volume">
+      <span>volume</span>
+      <input type="range" min="0" max="100" value="28" data-music-volume>
+    </label>
+  </div>
+  <audio data-site-audio preload="none"></audio>
 
-      <div class="nav-links" aria-label="Primary">
-        <a href="/" class="nav-link " >Home</a>
-        <a href="/projects/" class="nav-link is-active" aria-current="page">Projects</a>
-        <a href="/learning/" class="nav-link " >Learning</a>
-        <a href="/about/" class="nav-link " >About</a>
-        <a href="/stemmed-in/" class="nav-link " >STEMmed In</a>
-      </div>
-    </div>
-</nav>
-
-
-
-  <main class="main-content">
+  <main class="main-content" id="main-content">
     <div class="container">
       <header class="page-header fade-up" style="--delay: 0.05s">
   <p class="eyebrow">Work</p>
-  <h1>Projects <em>&amp; experiments</em></h1>
+  <h1>projects <em>&amp; experiments</em></h1>
   <p class="lead">Recent builds and ML explorations — listed from most recent to earliest.</p>
   <div class="chip-row">
     <span class="chip">Updated Apr 2026</span>
@@ -61,10 +64,10 @@
     <span class="section-dot is-teal" aria-hidden="true"></span>
     <span class="section-label">Selected</span>
   </div>
-  <span class="section-count">4</span>
+  <span class="section-count">5</span>
 </div>
 
-<div class="card-list fade-up" style="--delay: 0.25s">
+<div class="card-list compact-card-list fade-up" style="--delay: 0.25s">
   <div class="card" data-href="https://github.com/kevzho/iu-indy-2026" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
@@ -84,6 +87,28 @@
     <div class="card-side">
       <span class="badge is-amber">Award</span>
       <span class="chip">Mar 2026</span>
+    </div>
+  </div>
+
+  <div class="card" data-href="https://github.com/junior-academy" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="/assets/images/mind.png" alt="" loading="lazy" decoding="async" />
+      </figure>
+      <p class="card-title">junior academy</p>
+      <p class="card-subtitle">Human-centered AI work developing an ensemble ML framework for stabilizing BCI signals.</p>
+      <div class="tag-row">
+        <span class="tag">AI</span>
+        <span class="tag">BCI</span>
+        <span class="tag">Research</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://github.com/junior-academy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="card-side">
+      <span class="badge is-teal">Research</span>
+      <span class="chip">Feb 2026–Apr 2026</span>
     </div>
   </div>
 
@@ -192,7 +217,7 @@
 <div class="section-header fade-up" style="--delay: 0.65s">
   <div class="section-left">
     <span class="section-dot is-green" aria-hidden="true"></span>
-    <span class="section-label">Learning Archive</span>
+    <span class="section-label">learning archive</span>
   </div>
   <span class="section-count">1</span>
 </div>
@@ -225,25 +250,31 @@
   </main>
 
   <footer class="site-footer">
-    &copy; 2026 Kevin Zhou • "You don't have any enemies. No one has any."
+    &copy; 2026 kevin zhou • "you don't have any enemies. no one has any."
   </footer>
   <script>
     (() => {
-      const clickableCards = document.querySelectorAll("[data-href].card, [data-href].mini-card");
-      clickableCards.forEach((card) => {
-        card.setAttribute("role", "link");
-        card.setAttribute("tabindex", "0");
+      const setupClickableCards = (root = document) => {
+        const clickableCards = root.querySelectorAll("[data-href].card, [data-href].mini-card");
+        clickableCards.forEach((card) => {
+          if (card.dataset.cardReady === "true") return;
+          card.dataset.cardReady = "true";
 
-        const navigate = () => {
-          const href = card.getAttribute("data-href");
-          if (!href) return;
-          const openNewTab = card.getAttribute("data-target") === "_blank";
-          if (openNewTab) {
-            window.open(href, "_blank", "noopener,noreferrer");
-          } else {
-            window.location.href = href;
-          }
-        };
+          card.setAttribute("role", "link");
+          card.setAttribute("tabindex", "0");
+
+          const navigate = () => {
+            const href = card.getAttribute("data-href");
+            if (!href) return;
+            const openNewTab = card.getAttribute("data-target") === "_blank";
+            if (openNewTab) {
+              window.open(href, "_blank", "noopener,noreferrer");
+            } else if (window.navigateTo) {
+              window.navigateTo(href);
+            } else {
+              window.location.href = href;
+            }
+          };
 
         card.addEventListener("click", (event) => {
           const interactive = event.target.closest("a, button");
@@ -257,6 +288,457 @@
             navigate();
           }
         });
+      });
+      };
+
+      window.setupClickableCards = setupClickableCards;
+      setupClickableCards();
+    })();
+
+    (() => {
+      const button = document.querySelector("[data-music-button]");
+      const label = button ? button.querySelector("[data-music-label]") : null;
+      const nextButton = document.querySelector("[data-next-track]");
+      const trackLabel = document.querySelector("[data-music-track]");
+      const volumeInput = document.querySelector("[data-music-volume]");
+      const audio = document.querySelector("[data-site-audio]");
+      if (!button) return;
+
+      const tracks = [
+        
+        
+          
+          
+            
+            
+            
+            {
+              src: "/assets/audio/bobby%20james%20-%20n.e.r.d.mp3",
+              title: "bobby james - n.e.r.d"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/chapter%20six%20-%20kendrick%20lamar.mp3",
+              title: "chapter six - kendrick lamar"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/feel%20the%20rhythm.mp3",
+              title: "feel the rhythm"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/in%20your%20body%20-%20t%C3%A9o.mp3",
+              title: "in your body - téo"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/intergalactic%20janet%20-%20ley%20soul.mp3",
+              title: "intergalactic janet - ley soul"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/lavender%20buds%20-%20mf%20doom.mp3",
+              title: "lavender buds - mf doom"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/luggage%20-%20muchi.mp3",
+              title: "luggage - muchi"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/luv(sic)%20part%203%20-%20nujabes%20feat.shing02.mp3",
+              title: "luv(sic) part 3 - nujabes feat.shing02"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/m%20y%20.%20l%20i%20f%20e%20-%20j.%20cole%20feat.%2021%20savage,%20morray.mp3",
+              title: "m y . l i f e - j. cole feat. 21 savage, morray"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/pearls%20-%20sade.mp3",
+              title: "pearls - sade"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/someone%20like%20you%20-%20mac%20miller.mp3",
+              title: "someone like you - mac miller"
+            }
+            
+          
+        
+          
+          
+            ,
+            
+            
+            {
+              src: "/assets/audio/sometimes%20-%20erykah%20badu.mp3",
+              title: "sometimes - erykah badu"
+            }
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      ];
+
+      let audioContext;
+      let masterGain;
+      let oscillators = [];
+      let playing = false;
+      let usingFallback = false;
+      let currentTrackIndex = -1;
+
+      if (audio && volumeInput) audio.volume = Number(volumeInput.value) / 100;
+      if (trackLabel && tracks.length) trackLabel.textContent = "choose a song";
+      if (trackLabel && !tracks.length) trackLabel.textContent = "ambient fallback";
+      if (nextButton && !tracks.length) nextButton.disabled = true;
+
+      const setState = (nextPlaying) => {
+        playing = nextPlaying;
+        button.setAttribute("aria-pressed", String(nextPlaying));
+        if (label) label.textContent = nextPlaying ? "on" : "off";
+      };
+
+      const setTrack = (nextIndex) => {
+        if (!audio || !tracks.length) return;
+        currentTrackIndex = nextIndex;
+        audio.src = tracks[currentTrackIndex].src;
+        if (trackLabel) trackLabel.textContent = tracks[currentTrackIndex].title;
+      };
+
+      const chooseNextTrack = () => {
+        if (!tracks.length) return;
+        const nextIndex = currentTrackIndex < 0 ? 0 : (currentTrackIndex + 1) % tracks.length;
+        setTrack(nextIndex);
+      };
+
+      const startFallback = async () => {
+        if (!window.AudioContext && !window.webkitAudioContext) return false;
+
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioContext) audioContext = new AudioContext();
+        if (audioContext.state === "suspended") await audioContext.resume();
+
+        if (!masterGain) {
+          masterGain = audioContext.createGain();
+          masterGain.gain.value = 0.018;
+          masterGain.connect(audioContext.destination);
+        }
+
+        if (!oscillators.length) {
+          [196, 246.94, 293.66].forEach((frequency, index) => {
+            const oscillator = audioContext.createOscillator();
+            const gain = audioContext.createGain();
+            oscillator.type = index === 1 ? "triangle" : "sine";
+            oscillator.frequency.value = frequency;
+            gain.gain.value = 0.45 / (index + 1);
+            oscillator.connect(gain);
+            gain.connect(masterGain);
+            oscillator.start();
+            oscillators.push(oscillator);
+          });
+        }
+
+        masterGain.gain.setTargetAtTime(0.018, audioContext.currentTime, 0.08);
+        usingFallback = true;
+        return true;
+      };
+
+      const startMusic = async () => {
+        if (audio && tracks.length) {
+          if (currentTrackIndex < 0) chooseNextTrack();
+          if (volumeInput) audio.volume = Number(volumeInput.value) / 100;
+          try {
+            await audio.play();
+            usingFallback = false;
+            setState(true);
+            return;
+          } catch (error) {
+            audio.pause();
+          }
+        }
+
+        const fallbackStarted = await startFallback();
+        if (fallbackStarted) setState(true);
+      };
+
+      const stopMusic = () => {
+        if (audio) {
+          audio.pause();
+        }
+
+        if (usingFallback && masterGain && audioContext) {
+          masterGain.gain.setTargetAtTime(0, audioContext.currentTime, 0.08);
+        }
+
+        setState(false);
+      };
+
+      button.addEventListener("click", () => {
+        if (playing) {
+          stopMusic();
+          return;
+        }
+        startMusic();
+      });
+
+      if (nextButton) {
+        nextButton.addEventListener("click", () => {
+          chooseNextTrack();
+          startMusic();
+        });
+      }
+
+      if (volumeInput && audio) {
+        volumeInput.addEventListener("input", () => {
+          audio.volume = Number(volumeInput.value) / 100;
+        });
+      }
+
+      if (audio) {
+        audio.addEventListener("ended", () => {
+          if (!playing || !tracks.length) return;
+          chooseNextTrack();
+          startMusic();
+        });
+      }
+    })();
+
+    (() => {
+      const main = document.querySelector("#main-content");
+      const homeButton = document.querySelector(".home-button");
+      if (!main) return;
+
+      const isHomePath = (pathname) => pathname === "/" || pathname === "/index.html";
+
+      const updateHomeButton = (pathname = window.location.pathname) => {
+        if (!homeButton) return;
+        homeButton.hidden = isHomePath(pathname);
+      };
+
+      const isPageNavigation = (url) => {
+        if (url.origin !== window.location.origin) return false;
+        if (url.pathname.startsWith("/assets/")) return false;
+        const finalPart = url.pathname.split("/").filter(Boolean).pop() || "";
+        return !finalPart.includes(".") || url.pathname.endsWith("/");
+      };
+
+      const swapPage = async (href, options = {}) => {
+        const url = new URL(href, window.location.href);
+        if (!isPageNavigation(url)) {
+          window.location.href = url.href;
+          return;
+        }
+
+        const response = await fetch(url.href, {
+          credentials: "same-origin",
+          headers: { "X-Requested-With": "fetch" }
+        });
+
+        if (!response.ok) {
+          window.location.href = url.href;
+          return;
+        }
+
+        const html = await response.text();
+        const nextDocument = new DOMParser().parseFromString(html, "text/html");
+        const nextMain = nextDocument.querySelector("#main-content");
+        if (!nextMain) {
+          window.location.href = url.href;
+          return;
+        }
+
+        document.title = nextDocument.title;
+        main.innerHTML = nextMain.innerHTML;
+
+        if (options.replace) {
+          window.history.replaceState({}, "", url.href);
+        } else {
+          window.history.pushState({}, "", url.href);
+        }
+
+        updateHomeButton(url.pathname);
+        if (window.setupClickableCards) window.setupClickableCards(main);
+        if (options.scroll !== false) window.scrollTo({ top: 0, behavior: "auto" });
+      };
+
+      window.navigateTo = swapPage;
+      updateHomeButton();
+
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest("a[href]");
+        if (!link || event.defaultPrevented) return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        if (link.target || link.hasAttribute("download")) return;
+
+        const url = new URL(link.getAttribute("href"), window.location.href);
+        if (!isPageNavigation(url)) return;
+
+        event.preventDefault();
+        swapPage(url.href);
+      });
+
+      window.addEventListener("popstate", () => {
+        swapPage(window.location.href, { replace: true, scroll: false });
       });
     })();
   </script>

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Projects
+title: projects
 ---
 
 <header class="page-header fade-up" style="--delay: 0.05s">
   <p class="eyebrow">Work</p>
-  <h1>Projects <em>&amp; experiments</em></h1>
+  <h1>projects <em>&amp; experiments</em></h1>
   <p class="lead">Recent builds and ML explorations — listed from most recent to earliest.</p>
   <div class="chip-row">
     <span class="chip">Updated Apr 2026</span>
@@ -18,10 +18,10 @@ title: Projects
     <span class="section-dot is-teal" aria-hidden="true"></span>
     <span class="section-label">Selected</span>
   </div>
-  <span class="section-count">4</span>
+  <span class="section-count">5</span>
 </div>
 
-<div class="card-list fade-up" style="--delay: 0.25s">
+<div class="card-list compact-card-list fade-up" style="--delay: 0.25s">
   <div class="card" data-href="https://github.com/kevzho/iu-indy-2026" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
@@ -41,6 +41,28 @@ title: Projects
     <div class="card-side">
       <span class="badge is-amber">Award</span>
       <span class="chip">Mar 2026</span>
+    </div>
+  </div>
+
+  <div class="card" data-href="https://github.com/junior-academy" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/mind.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">junior academy</p>
+      <p class="card-subtitle">Human-centered AI work developing an ensemble ML framework for stabilizing BCI signals.</p>
+      <div class="tag-row">
+        <span class="tag">AI</span>
+        <span class="tag">BCI</span>
+        <span class="tag">Research</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://github.com/junior-academy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="card-side">
+      <span class="badge is-teal">Research</span>
+      <span class="chip">Feb 2026–Apr 2026</span>
     </div>
   </div>
 
@@ -149,7 +171,7 @@ title: Projects
 <div class="section-header fade-up" style="--delay: 0.65s">
   <div class="section-left">
     <span class="section-dot is-green" aria-hidden="true"></span>
-    <span class="section-label">Learning Archive</span>
+    <span class="section-label">learning archive</span>
   </div>
   <span class="section-count">1</span>
 </div>

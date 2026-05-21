@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="monochrome">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% assign seo_title = page.title | default: site.title | default: "Kevin Zhou" %}
+  {% assign seo_title = page.title | default: site.title | default: "kevin zhou" %}
   {% assign seo_description = page.description | default: site.description | default: "High school data scientist exploring ML, AI, statistics" %}
   {% assign seo_image = page.image | default: "/assets/images/whl.jpg" %}
-  <title>{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title | default: "Kevin Zhou" }}{% else %}{{ site.title | default: "Kevin Zhou" }}{% endif %}</title>
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title | default: "kevin zhou" }}{% else %}{{ site.title | default: "kevin zhou" }}{% endif %}</title>
   <meta name="description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="{{ site.title | default: 'Kevin Zhou' }}">
+  <meta property="og:site_name" content="{{ site.title | default: 'kevin zhou' }}">
   <meta property="og:title" content="{{ seo_title | escape }}">
   <meta property="og:description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ seo_image | absolute_url }}">
-  <meta property="og:image:alt" content="Kevin Zhou portfolio preview">
+  <meta property="og:image:alt" content="kevin zhou portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ seo_title | escape }}">
   <meta name="twitter:description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
@@ -24,52 +24,61 @@
   <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400;1,8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">Kevin Zhou</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="home-button" href="{{ '/' | relative_url }}" {% if page.url == "/" %}hidden{% endif %}>home</a>
+  <div class="music-panel" data-music-panel>
+    <button class="music-button" type="button" aria-pressed="false" aria-label="toggle music" data-music-button>
+      <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+        <path d="M5 10h4l6-5v14l-6-5H5z"></path>
+        <path class="music-wave" d="M18 9c1 1 1 5 0 6"></path>
+      </svg>
+      <span data-music-label>off</span>
+    </button>
+    <button class="music-next-button" type="button" aria-label="next song" data-next-track>next</button>
+    <span class="music-track" data-music-track>no song selected</span>
+    <label class="music-volume">
+      <span>volume</span>
+      <input type="range" min="0" max="100" value="28" data-music-volume>
+    </label>
+  </div>
+  <audio data-site-audio preload="none"></audio>
 
-      <div class="nav-links" aria-label="Primary">
-        <a href="/" class="nav-link {% if page.url == '/' %}is-active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
-        <a href="/projects/" class="nav-link {% if page.url contains '/projects' %}is-active{% endif %}" {% if page.url contains '/projects' %}aria-current="page"{% endif %}>Projects</a>
-        <a href="/learning/" class="nav-link {% if page.url contains '/learning' %}is-active{% endif %}" {% if page.url contains '/learning' %}aria-current="page"{% endif %}>Learning</a>
-        <a href="/about/" class="nav-link {% if page.url contains '/about' %}is-active{% endif %}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>About</a>
-        <a href="/stemmed-in/" class="nav-link {% if page.url contains '/stemmed-in' %}is-active{% endif %}" {% if page.url contains '/stemmed-in' %}aria-current="page"{% endif %}>STEMmed In</a>
-      </div>
-    </div>
-</nav>
-
-
-
-  <main class="main-content">
+  <main class="main-content" id="main-content">
     <div class="container">
       {{ content }}
     </div>
   </main>
 
   <footer class="site-footer">
-    &copy; {{ 'now' | date: "%Y" }} Kevin Zhou • "You don't have any enemies. No one has any."
+    &copy; {{ 'now' | date: "%Y" }} kevin zhou • "you don't have any enemies. no one has any."
   </footer>
   <script>
     (() => {
-      const clickableCards = document.querySelectorAll("[data-href].card, [data-href].mini-card");
-      clickableCards.forEach((card) => {
-        card.setAttribute("role", "link");
-        card.setAttribute("tabindex", "0");
+      const setupClickableCards = (root = document) => {
+        const clickableCards = root.querySelectorAll("[data-href].card, [data-href].mini-card");
+        clickableCards.forEach((card) => {
+          if (card.dataset.cardReady === "true") return;
+          card.dataset.cardReady = "true";
 
-        const navigate = () => {
-          const href = card.getAttribute("data-href");
-          if (!href) return;
-          const openNewTab = card.getAttribute("data-target") === "_blank";
-          if (openNewTab) {
-            window.open(href, "_blank", "noopener,noreferrer");
-          } else {
-            window.location.href = href;
-          }
-        };
+          card.setAttribute("role", "link");
+          card.setAttribute("tabindex", "0");
+
+          const navigate = () => {
+            const href = card.getAttribute("data-href");
+            if (!href) return;
+            const openNewTab = card.getAttribute("data-target") === "_blank";
+            if (openNewTab) {
+              window.open(href, "_blank", "noopener,noreferrer");
+            } else if (window.navigateTo) {
+              window.navigateTo(href);
+            } else {
+              window.location.href = href;
+            }
+          };
 
         card.addEventListener("click", (event) => {
           const interactive = event.target.closest("a, button");
@@ -83,6 +92,238 @@
             navigate();
           }
         });
+      });
+      };
+
+      window.setupClickableCards = setupClickableCards;
+      setupClickableCards();
+    })();
+
+    (() => {
+      const button = document.querySelector("[data-music-button]");
+      const label = button ? button.querySelector("[data-music-label]") : null;
+      const nextButton = document.querySelector("[data-next-track]");
+      const trackLabel = document.querySelector("[data-music-track]");
+      const volumeInput = document.querySelector("[data-music-volume]");
+      const audio = document.querySelector("[data-site-audio]");
+      if (!button) return;
+
+      const tracks = [
+        {% assign first_track = true %}
+        {% for audio_file in site.static_files %}
+          {% assign audio_ext = audio_file.extname | downcase %}
+          {% if audio_file.path contains '/assets/audio/' and audio_ext == '.mp3' %}
+            {% unless first_track %},{% endunless %}
+            {% assign audio_filename = audio_file.path | split: '/' | last %}
+            {% assign audio_title = audio_filename | remove: audio_file.extname | replace: '_', ' ' %}
+            {
+              src: {{ audio_file.path | relative_url | jsonify }},
+              title: {{ audio_title | jsonify }}
+            }
+            {% assign first_track = false %}
+          {% endif %}
+        {% endfor %}
+      ];
+
+      let audioContext;
+      let masterGain;
+      let oscillators = [];
+      let playing = false;
+      let usingFallback = false;
+      let currentTrackIndex = -1;
+
+      if (audio && volumeInput) audio.volume = Number(volumeInput.value) / 100;
+      if (trackLabel && tracks.length) trackLabel.textContent = "choose a song";
+      if (trackLabel && !tracks.length) trackLabel.textContent = "ambient fallback";
+      if (nextButton && !tracks.length) nextButton.disabled = true;
+
+      const setState = (nextPlaying) => {
+        playing = nextPlaying;
+        button.setAttribute("aria-pressed", String(nextPlaying));
+        if (label) label.textContent = nextPlaying ? "on" : "off";
+      };
+
+      const setTrack = (nextIndex) => {
+        if (!audio || !tracks.length) return;
+        currentTrackIndex = nextIndex;
+        audio.src = tracks[currentTrackIndex].src;
+        if (trackLabel) trackLabel.textContent = tracks[currentTrackIndex].title;
+      };
+
+      const chooseNextTrack = () => {
+        if (!tracks.length) return;
+        const nextIndex = currentTrackIndex < 0 ? 0 : (currentTrackIndex + 1) % tracks.length;
+        setTrack(nextIndex);
+      };
+
+      const startFallback = async () => {
+        if (!window.AudioContext && !window.webkitAudioContext) return false;
+
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioContext) audioContext = new AudioContext();
+        if (audioContext.state === "suspended") await audioContext.resume();
+
+        if (!masterGain) {
+          masterGain = audioContext.createGain();
+          masterGain.gain.value = 0.018;
+          masterGain.connect(audioContext.destination);
+        }
+
+        if (!oscillators.length) {
+          [196, 246.94, 293.66].forEach((frequency, index) => {
+            const oscillator = audioContext.createOscillator();
+            const gain = audioContext.createGain();
+            oscillator.type = index === 1 ? "triangle" : "sine";
+            oscillator.frequency.value = frequency;
+            gain.gain.value = 0.45 / (index + 1);
+            oscillator.connect(gain);
+            gain.connect(masterGain);
+            oscillator.start();
+            oscillators.push(oscillator);
+          });
+        }
+
+        masterGain.gain.setTargetAtTime(0.018, audioContext.currentTime, 0.08);
+        usingFallback = true;
+        return true;
+      };
+
+      const startMusic = async () => {
+        if (audio && tracks.length) {
+          if (currentTrackIndex < 0) chooseNextTrack();
+          if (volumeInput) audio.volume = Number(volumeInput.value) / 100;
+          try {
+            await audio.play();
+            usingFallback = false;
+            setState(true);
+            return;
+          } catch (error) {
+            audio.pause();
+          }
+        }
+
+        const fallbackStarted = await startFallback();
+        if (fallbackStarted) setState(true);
+      };
+
+      const stopMusic = () => {
+        if (audio) {
+          audio.pause();
+        }
+
+        if (usingFallback && masterGain && audioContext) {
+          masterGain.gain.setTargetAtTime(0, audioContext.currentTime, 0.08);
+        }
+
+        setState(false);
+      };
+
+      button.addEventListener("click", () => {
+        if (playing) {
+          stopMusic();
+          return;
+        }
+        startMusic();
+      });
+
+      if (nextButton) {
+        nextButton.addEventListener("click", () => {
+          chooseNextTrack();
+          startMusic();
+        });
+      }
+
+      if (volumeInput && audio) {
+        volumeInput.addEventListener("input", () => {
+          audio.volume = Number(volumeInput.value) / 100;
+        });
+      }
+
+      if (audio) {
+        audio.addEventListener("ended", () => {
+          if (!playing || !tracks.length) return;
+          chooseNextTrack();
+          startMusic();
+        });
+      }
+    })();
+
+    (() => {
+      const main = document.querySelector("#main-content");
+      const homeButton = document.querySelector(".home-button");
+      if (!main) return;
+
+      const isHomePath = (pathname) => pathname === "/" || pathname === "/index.html";
+
+      const updateHomeButton = (pathname = window.location.pathname) => {
+        if (!homeButton) return;
+        homeButton.hidden = isHomePath(pathname);
+      };
+
+      const isPageNavigation = (url) => {
+        if (url.origin !== window.location.origin) return false;
+        if (url.pathname.startsWith("/assets/")) return false;
+        const finalPart = url.pathname.split("/").filter(Boolean).pop() || "";
+        return !finalPart.includes(".") || url.pathname.endsWith("/");
+      };
+
+      const swapPage = async (href, options = {}) => {
+        const url = new URL(href, window.location.href);
+        if (!isPageNavigation(url)) {
+          window.location.href = url.href;
+          return;
+        }
+
+        const response = await fetch(url.href, {
+          credentials: "same-origin",
+          headers: { "X-Requested-With": "fetch" }
+        });
+
+        if (!response.ok) {
+          window.location.href = url.href;
+          return;
+        }
+
+        const html = await response.text();
+        const nextDocument = new DOMParser().parseFromString(html, "text/html");
+        const nextMain = nextDocument.querySelector("#main-content");
+        if (!nextMain) {
+          window.location.href = url.href;
+          return;
+        }
+
+        document.title = nextDocument.title;
+        main.innerHTML = nextMain.innerHTML;
+
+        if (options.replace) {
+          window.history.replaceState({}, "", url.href);
+        } else {
+          window.history.pushState({}, "", url.href);
+        }
+
+        updateHomeButton(url.pathname);
+        if (window.setupClickableCards) window.setupClickableCards(main);
+        if (options.scroll !== false) window.scrollTo({ top: 0, behavior: "auto" });
+      };
+
+      window.navigateTo = swapPage;
+      updateHomeButton();
+
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest("a[href]");
+        if (!link || event.defaultPrevented) return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        if (link.target || link.hasAttribute("download")) return;
+
+        const url = new URL(link.getAttribute("href"), window.location.href);
+        if (!isPageNavigation(url)) return;
+
+        event.preventDefault();
+        swapPage(url.href);
+      });
+
+      window.addEventListener("popstate", () => {
+        swapPage(window.location.href, { replace: true, scroll: false });
       });
     })();
   </script>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: STEMmed In
+title: stemmed in
 permalink: /stemmed-in/
 ---
 
