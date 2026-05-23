@@ -23,29 +23,21 @@ title: kevin zhou
   </div>
 </header>
 
-<div class="section-header fade-up" style="--delay: 0.15s">
-  <div class="section-left">
-    <span class="section-dot" aria-hidden="true"></span>
-    <span class="section-label">Connect</span>
-  </div>
-  <span class="section-count">Links</span>
-</div>
-
-<div class="card-list fade-up" style="--delay: 0.25s">
+<div class="card-list fade-up" style="--delay: 0.15s">
   <div class="card">
     <div class="card-main">
-      <p class="card-title">Connect</p>
-      <p class="card-subtitle">Links if you want to see code or reach out.</p>
+      <p class="card-title">connect</p>
+      <p class="card-subtitle">links if you want to see code or reach out.</p>
       <div class="card-actions">
-        <a href="https://github.com/kevzho" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://leetcode.com/u/kevin_zhou33/" target="_blank" rel="noopener">LeetCode</a>
-        <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:kevinz09302009@gmail.com">Email</a>
+        <a href="https://github.com/kevzho" target="_blank" rel="noopener">github</a>
+        <a href="https://leetcode.com/u/kevin_zhou33/" target="_blank" rel="noopener">leetcode</a>
+        <a href="https://www.linkedin.com/in/kevin-zhou-423827308/" target="_blank" rel="noopener">linkedin</a>
+        <a href="mailto:kevinz09302009@gmail.com">email</a>
       </div>
     </div>
     <div class="card-side">
-      <span class="badge is-teal">Online</span>
-      <span class="chip">Links</span>
+      <span class="badge is-teal">online</span>
+      <span class="chip">links</span>
     </div>
   </div>
 </div>

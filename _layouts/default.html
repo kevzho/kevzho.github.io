@@ -29,21 +29,64 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <a class="home-button" href="{{ '/' | relative_url }}" {% if page.url == "/" %}hidden{% endif %}>home</a>
+  <div class="photo-backdrop" aria-hidden="true">
+    <div class="photo-backdrop-track">
+      {% for image_file in site.static_files %}
+        {% assign image_ext = image_file.extname | downcase %}
+        {% if image_file.path contains '/assets/me/' and image_ext == '.jpeg' or image_file.path contains '/assets/me/' and image_ext == '.jpg' or image_file.path contains '/assets/me/' and image_ext == '.png' or image_file.path contains '/assets/me/' and image_ext == '.webp' %}
+          <img src="{{ image_file.path | relative_url }}" alt="">
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="photo-backdrop-track">
+      {% for image_file in site.static_files %}
+        {% assign image_ext = image_file.extname | downcase %}
+        {% if image_file.path contains '/assets/me/' and image_ext == '.jpeg' or image_file.path contains '/assets/me/' and image_ext == '.jpg' or image_file.path contains '/assets/me/' and image_ext == '.png' or image_file.path contains '/assets/me/' and image_ext == '.webp' %}
+          <img src="{{ image_file.path | relative_url }}" alt="">
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <header class="site-nav" data-site-nav>
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="kevin zhou home">kz</a>
+    <nav class="site-links" aria-label="Primary navigation">
+      <a href="{{ '/' | relative_url }}" {% if page.url == "/" %}aria-current="page"{% endif %}>home</a>
+      <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}aria-current="page"{% endif %}>projects</a>
+      <a href="{{ '/learning/' | relative_url }}" {% if page.url contains '/learning/' %}aria-current="page"{% endif %}>learning</a>
+      <a href="{{ '/experience/' | relative_url }}" {% if page.url contains '/experience/' %}aria-current="page"{% endif %}>experience</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>about</a>
+    </nav>
+  </header>
   <div class="music-panel" data-music-panel>
-    <button class="music-button" type="button" aria-pressed="false" aria-label="toggle music" data-music-button>
-      <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-        <path d="M5 10h4l6-5v14l-6-5H5z"></path>
-        <path class="music-wave" d="M18 9c1 1 1 5 0 6"></path>
-      </svg>
-      <span data-music-label>off</span>
-    </button>
-    <button class="music-next-button" type="button" aria-label="next song" data-next-track>next</button>
-    <span class="music-track" data-music-track>no song selected</span>
-    <label class="music-volume">
-      <span>volume</span>
-      <input type="range" min="0" max="100" value="28" data-music-volume>
-    </label>
+    <div class="music-now-row">
+      <button class="music-button" type="button" aria-pressed="false" aria-label="toggle music" data-music-button>
+        <span class="music-cover" aria-hidden="true">
+          <span class="music-cover-dot"></span>
+        </span>
+        <span class="music-copy">
+          <span class="music-kicker" data-music-label>paused</span>
+          <span class="music-track" data-music-track>choose a song</span>
+        </span>
+      </button>
+      <label class="music-select-wrap" aria-label="song selector">
+        <select class="music-select" data-track-select></select>
+      </label>
+    </div>
+    <div class="music-control-row">
+      <button class="music-next-button" type="button" aria-label="next song" data-next-track>next</button>
+      <div class="music-visualizer" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <label class="music-volume">
+        <span>volume</span>
+        <input type="range" min="0" max="100" value="28" data-music-volume>
+      </label>
+    </div>
   </div>
   <audio data-site-audio preload="none"></audio>
 
@@ -104,25 +147,25 @@
       const label = button ? button.querySelector("[data-music-label]") : null;
       const nextButton = document.querySelector("[data-next-track]");
       const trackLabel = document.querySelector("[data-music-track]");
+      const trackSelect = document.querySelector("[data-track-select]");
+      const panel = document.querySelector("[data-music-panel]");
       const volumeInput = document.querySelector("[data-music-volume]");
       const audio = document.querySelector("[data-site-audio]");
       if (!button) return;
 
       const tracks = [
-        {% assign first_track = true %}
-        {% for audio_file in site.static_files %}
-          {% assign audio_ext = audio_file.extname | downcase %}
-          {% if audio_file.path contains '/assets/audio/' and audio_ext == '.mp3' %}
-            {% unless first_track %},{% endunless %}
-            {% assign audio_filename = audio_file.path | split: '/' | last %}
-            {% assign audio_title = audio_filename | remove: audio_file.extname | replace: '_', ' ' %}
-            {
-              src: {{ audio_file.path | relative_url | jsonify }},
-              title: {{ audio_title | jsonify }}
-            }
-            {% assign first_track = false %}
-          {% endif %}
-        {% endfor %}
+        { src: "{{ '/assets/audio/intergalactic janet - ley soul.mp3' | relative_url }}", title: "intergalactic janet - ley soul" },
+        { src: "{{ '/assets/audio/lavender buds - mf doom.mp3' | relative_url }}", title: "lavender buds - mf doom" },
+        { src: "{{ '/assets/audio/chapter six - kendrick lamar.mp3' | relative_url }}", title: "chapter six - kendrick lamar" },
+        { src: "{{ '/assets/audio/pearls - sade.mp3' | relative_url }}", title: "pearls - sade" },
+        { src: "{{ '/assets/audio/someone like you - mac miller.mp3' | relative_url }}", title: "someone like you - mac miller" },
+        { src: "{{ '/assets/audio/sometimes - erykah badu.mp3' | relative_url }}", title: "sometimes - erykah badu" },
+        { src: "{{ '/assets/audio/in your body - t%C3%A9o.mp3' | relative_url }}", title: "in your body - teo" },
+        { src: "{{ '/assets/audio/bobby james - n.e.r.d.mp3' | relative_url }}", title: "bobby james - n.e.r.d" },
+        { src: "{{ '/assets/audio/luggage - muchi.mp3' | relative_url }}", title: "luggage - muchi" },
+        { src: "{{ '/assets/audio/feel the rhythm.mp3' | relative_url }}", title: "feel the rhythm" },
+        { src: "{{ '/assets/audio/luv(sic) part 3 - nujabes feat.shing02.mp3' | relative_url }}", title: "luv(sic) part 3 - nujabes feat.shing02" },
+        { src: "{{ '/assets/audio/m y . l i f e - j. cole feat. 21 savage, morray.mp3' | relative_url }}", title: "m y . l i f e - j. cole feat. 21 savage, morray" }
       ];
 
       let audioContext;
@@ -132,15 +175,25 @@
       let usingFallback = false;
       let currentTrackIndex = -1;
 
+      if (trackSelect) {
+        tracks.forEach((track, index) => {
+          const option = document.createElement("option");
+          option.value = String(index);
+          option.textContent = track.title;
+          trackSelect.append(option);
+        });
+      }
+
       if (audio && volumeInput) audio.volume = Number(volumeInput.value) / 100;
-      if (trackLabel && tracks.length) trackLabel.textContent = "choose a song";
       if (trackLabel && !tracks.length) trackLabel.textContent = "ambient fallback";
       if (nextButton && !tracks.length) nextButton.disabled = true;
+      if (trackSelect && !tracks.length) trackSelect.disabled = true;
 
       const setState = (nextPlaying) => {
         playing = nextPlaying;
         button.setAttribute("aria-pressed", String(nextPlaying));
-        if (label) label.textContent = nextPlaying ? "on" : "off";
+        if (panel) panel.dataset.playing = String(nextPlaying);
+        if (label) label.textContent = nextPlaying ? "now playing" : "paused";
       };
 
       const setTrack = (nextIndex) => {
@@ -148,7 +201,10 @@
         currentTrackIndex = nextIndex;
         audio.src = tracks[currentTrackIndex].src;
         if (trackLabel) trackLabel.textContent = tracks[currentTrackIndex].title;
+        if (trackSelect) trackSelect.value = String(currentTrackIndex);
       };
+
+      if (tracks.length) setTrack(0);
 
       const chooseNextTrack = () => {
         if (!tracks.length) return;
@@ -233,6 +289,14 @@
         });
       }
 
+      if (trackSelect) {
+        trackSelect.addEventListener("change", () => {
+          const nextIndex = Number(trackSelect.value);
+          if (!Number.isNaN(nextIndex)) setTrack(nextIndex);
+          startMusic();
+        });
+      }
+
       if (volumeInput && audio) {
         volumeInput.addEventListener("input", () => {
           audio.volume = Number(volumeInput.value) / 100;
@@ -250,14 +314,23 @@
 
     (() => {
       const main = document.querySelector("#main-content");
-      const homeButton = document.querySelector(".home-button");
+      const navLinks = document.querySelectorAll(".site-links a");
       if (!main) return;
 
       const isHomePath = (pathname) => pathname === "/" || pathname === "/index.html";
 
-      const updateHomeButton = (pathname = window.location.pathname) => {
-        if (!homeButton) return;
-        homeButton.hidden = isHomePath(pathname);
+      const updateNavigation = (pathname = window.location.pathname) => {
+        navLinks.forEach((link) => {
+          const url = new URL(link.getAttribute("href"), window.location.origin);
+          const active = isHomePath(url.pathname)
+            ? isHomePath(pathname)
+            : pathname.startsWith(url.pathname);
+          if (active) {
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
       };
 
       const isPageNavigation = (url) => {
@@ -301,13 +374,13 @@
           window.history.pushState({}, "", url.href);
         }
 
-        updateHomeButton(url.pathname);
+        updateNavigation(url.pathname);
         if (window.setupClickableCards) window.setupClickableCards(main);
         if (options.scroll !== false) window.scrollTo({ top: 0, behavior: "auto" });
       };
 
       window.navigateTo = swapPage;
-      updateHomeButton();
+      updateNavigation();
 
       document.addEventListener("click", (event) => {
         const link = event.target.closest("a[href]");
