@@ -286,23 +286,20 @@ textarea:focus {
 .site-links a {
   position: relative;
   width: 100%;
-  padding: 0.16rem 0.18rem;
-  transition: color 100ms linear;
+  padding: 0.36rem 0.42rem;
+  transition: color 180ms ease;
 }
 
 .site-links a::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.02em;
+  inset: 0;
   z-index: -1;
-  height: 0.72em;
   background: var(--foreground);
   opacity: 0;
   transform: scaleX(0);
   transform-origin: left center;
-  transition: opacity 100ms linear, transform 100ms linear;
+  transition: opacity 220ms ease, transform 180ms ease;
 }
 
 .site-links a:hover,
@@ -1503,8 +1500,7 @@ strong {
   }
 
   .site-links a::before {
-    bottom: 0.35em;
-    width: auto;
+    inset: 0.08rem 0.1rem;
     transform: scaleX(0);
     transform-origin: left center;
   }
