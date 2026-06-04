@@ -100,14 +100,6 @@ title: experience
 
     <article class="resume-entry">
       <div class="resume-entry-head">
-        <h3>computational biology researcher</h3>
-        <p>ycrg-labs · february 2026 to present</p>
-      </div>
-      <p>researching ml methods for scientific discovery, focusing on novel immunotherapy approaches.</p>
-    </article>
-
-    <article class="resume-entry">
-      <div class="resume-entry-head">
         <h3>human-centered ai researcher</h3>
         <p>junior academy · february 2026 to april 2026</p>
       </div>

@@ -3,7 +3,7 @@ layout: default
 title: learning
 ---
 
-<header class="page-header fade-up" style="--delay: 0.05s">
+<header class="page-header learning-hero fade-up" style="--delay: 0.05s">
   <p class="eyebrow">Now</p>
   <h1>learning <em>in public</em></h1>
   <p class="lead">Repos and study logs documenting what I’m actively learning and practicing.</p>
@@ -13,7 +13,7 @@ title: learning
   </div>
 </header>
 
-<div class="section-header fade-up" style="--delay: 0.15s">
+<div class="section-header learning-section-header fade-up" style="--delay: 0.15s">
   <div class="section-left">
     <span class="section-dot is-teal" aria-hidden="true"></span>
     <span class="section-label">Repositories</span>
@@ -21,8 +21,8 @@ title: learning
   <span class="section-count">3</span>
 </div>
 
-<div class="card-list compact-card-list fade-up" style="--delay: 0.25s">
-  <div class="card" data-href="https://github.com/kevzho/project-euler-sols/settings" data-target="_blank">
+<div class="card-list compact-card-list learning-grid fade-up" style="--delay: 0.25s">
+  <div class="card" data-href="https://github.com/kevzho/project-euler-sols" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/hackerrank.png' | relative_url }}" alt="" loading="lazy" decoding="async">
@@ -35,7 +35,7 @@ title: learning
         <span class="tag">Practice</span>
       </div>
       <div class="card-actions">
-        <a href="https://github.com/kevzho/project-euler-sols/settings" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/kevzho/project-euler-sols" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <div class="card-side">

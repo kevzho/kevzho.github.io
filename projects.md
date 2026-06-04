@@ -21,7 +21,7 @@ title: projects
   <span class="section-count">5</span>
 </div>
 
-<div class="card-list compact-card-list fade-up" style="--delay: 0.25s">
+<div class="card-list compact-card-list selected-project-grid fade-up" style="--delay: 0.25s">
   <div class="card" data-href="https://github.com/kevzho/iu-indy-2026" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
