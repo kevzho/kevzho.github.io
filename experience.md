@@ -63,45 +63,95 @@ title: experience
 
   <section class="resume-section">
     <h2>experience</h2>
-    <article class="resume-entry">
-      <div class="resume-entry-head">
-        <h3>researcher @ ischool</h3>
-        <p>urbana-champaign, il · april 2026 to present</p>
+    <details class="resume-entry">
+      <summary>
+        <div class="resume-entry-head">
+          <h3>researcher @ ischool</h3>
+          <p>urbana-champaign, il · april 2026 to present</p>
+        </div>
+        <p class="resume-entry-summary">first and lead student collaborator on a restricted police-training spatial memory system at uiuc ischool with prof. yun huang.</p>
+      </summary>
+      <div class="resume-entry-details">
+        <p>i work on a research system for studying spatial memory in police-training contexts, helping translate a complex real-world training workflow into a technical prototype that can support controlled study and iteration.</p>
+        <ul>
+          <li>collaborate directly with prof. yun huang and the ischool research team on project direction, implementation priorities, and experiment-facing features.</li>
+          <li>help define how spatial tasks, user flow, and data capture should work so the system is useful for research instead of only functioning as a demo.</li>
+          <li>balance privacy, access restrictions, and realistic training needs while documenting technical decisions for future collaborators.</li>
+        </ul>
       </div>
-      <p>first and lead student collaborator on a restricted police-training spatial memory system at uiuc ischool with prof. yun huang.</p>
-    </article>
+    </details>
 
-    <article class="resume-entry">
-      <div class="resume-entry-head">
-        <h3>human-centered ai researcher</h3>
-        <p>junior academy · february 2026 to april 2026</p>
+    <details class="resume-entry">
+      <summary>
+        <div class="resume-entry-head">
+          <h3>human-centered ai researcher</h3>
+          <p>junior academy · february 2026 to april 2026</p>
+        </div>
+        <p class="resume-entry-summary">developed ensemble ml framework to stabilize bci signals for smooth prosthetic control; mentored by a dartmouth phd.</p>
+      </summary>
+      <div class="resume-entry-details">
+        <p>this project focused on the messy edge between machine learning and human-centered assistive technology: making brain-computer interface signals more stable so prosthetic control can feel smoother and less brittle.</p>
+        <ul>
+          <li>built and compared ensemble learning approaches for noisy bci signal prediction, emphasizing robustness over one-off benchmark performance.</li>
+          <li>studied signal variability, model confidence, and practical failure modes that matter when an ai system interacts with a human body.</li>
+          <li>worked under phd mentorship to frame the project as both an ml problem and an accessibility problem.</li>
+        </ul>
       </div>
-      <p>developed ensemble ml framework to stabilize bci signals for smooth prosthetic control; mentored by a dartmouth phd.</p>
-    </article>
+    </details>
 
-    <article class="resume-entry">
-      <div class="resume-entry-head">
-        <h3>google-sponsored research assistant</h3>
-        <p>u michigan-flint · november 2025 to present</p>
+    <details class="resume-entry">
+      <summary>
+        <div class="resume-entry-head">
+          <h3>google-sponsored research assistant</h3>
+          <p>u michigan-flint · november 2025 to present</p>
+        </div>
+        <p class="resume-entry-summary">collaborating with a google swe, prof. hua ming, and a graduate team on kotlin compiler research for scalable software.</p>
+      </summary>
+      <div class="resume-entry-details">
+        <p>i contribute to a compiler research effort centered on kotlin and scalable software systems, working with a mixed team of academic researchers, graduate students, and industry mentorship.</p>
+        <ul>
+          <li>read compiler and language tooling material to understand how kotlin code is represented, transformed, and analyzed.</li>
+          <li>support research implementation work by testing ideas, reviewing technical behavior, and connecting low-level tooling details back to project goals.</li>
+          <li>learn how production engineering concerns shape research questions when the work has to scale beyond a classroom prototype.</li>
+        </ul>
       </div>
-      <p>collaborating with a google swe, prof. hua ming, and a graduate team on kotlin compiler research for scalable software.</p>
-    </article>
+    </details>
 
-    <article class="resume-entry">
-      <div class="resume-entry-head">
-        <h3>wula camp counselor</h3>
-        <p>june 2024 to july 2024</p>
+    <details class="resume-entry">
+      <summary>
+        <div class="resume-entry-head">
+          <h3>wula camp counselor</h3>
+          <p>june 2024 to july 2024</p>
+        </div>
+        <p class="resume-entry-summary">led daily scratch and math lessons for 30+ campers. only student staff member to lead technical curriculum.</p>
+      </summary>
+      <div class="resume-entry-details">
+        <p>as a counselor, i was responsible for making technical material approachable for younger students while keeping the room energetic, structured, and safe.</p>
+        <ul>
+          <li>planned and taught scratch programming lessons that moved from simple interaction to student-built projects.</li>
+          <li>led math activities and daily support for 30+ campers with different confidence levels and learning speeds.</li>
+          <li>served as the only student staff member trusted to lead technical curriculum, which meant adapting explanations quickly when students got stuck.</li>
+        </ul>
       </div>
-      <p>led daily scratch and math lessons for 30+ campers. only student staff member to lead technical curriculum.</p>
-    </article>
+    </details>
 
-    <article class="resume-entry">
-      <div class="resume-entry-head">
-        <h3>volunteer teaching assistant</h3>
-        <p>september 2023 to june 2024</p>
+    <details class="resume-entry">
+      <summary>
+        <div class="resume-entry-head">
+          <h3>volunteer teaching assistant</h3>
+          <p>september 2023 to june 2024</p>
+        </div>
+        <p class="resume-entry-summary">teaching assistant at local Chinese school for Chinese grandparents seeking to learn English.</p>
+      </summary>
+      <div class="resume-entry-details">
+        <p>i helped older adult learners practice english in a community classroom setting, where patience and clarity mattered as much as the lesson content.</p>
+        <ul>
+          <li>supported vocabulary, pronunciation, conversation practice, and written exercises during weekly classes.</li>
+          <li>helped bridge language and comfort gaps by explaining concepts slowly and respectfully.</li>
+          <li>learned how to teach in a way that protects confidence, especially for students returning to a classroom environment later in life.</li>
+        </ul>
       </div>
-      <p>teaching assistant at local Chinese school for Chinese grandparents seeking to learn English.</p>
-    </article>
+    </details>
   </section>
 
   <section class="resume-section resume-compact">
