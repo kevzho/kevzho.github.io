@@ -22,7 +22,7 @@ title: learning
 </div>
 
 <div class="card-list compact-card-list learning-grid fade-up" style="--delay: 0.25s">
-  <div class="card" data-href="https://github.com/kevzho/project-euler-sols" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/hackerrank.png' | relative_url }}')" data-href="https://github.com/kevzho/project-euler-sols" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/hackerrank.png' | relative_url }}" alt="" loading="lazy" decoding="async">
@@ -44,7 +44,7 @@ title: learning
     </div>
   </div>
 
-  <div class="card" data-href="https://github.com/kevzho/USACO" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/usaco.png' | relative_url }}')" data-href="https://github.com/kevzho/USACO" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/usaco.png' | relative_url }}" alt="" loading="lazy" decoding="async">
@@ -67,7 +67,7 @@ title: learning
     </div>
   </div>
 
-  <div class="card" data-href="https://github.com/kevzho/r-for-data-science" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/r.png' | relative_url }}')" data-href="https://github.com/kevzho/r-for-data-science" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/r.png' | relative_url }}" alt="" loading="lazy" decoding="async">

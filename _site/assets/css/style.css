@@ -926,6 +926,68 @@ strong {
   padding: 1.5rem;
 }
 
+.image-card {
+  background-color: #151719;
+  background-image: linear-gradient(180deg, rgba(9, 11, 13, 0.34), rgba(9, 11, 13, 0.86)), var(--card-image);
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  text-align: left;
+}
+
+.image-card::before {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  opacity: 0.35;
+}
+
+.image-card .card-media {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.image-card .card-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: end;
+  min-height: 0;
+  padding: 0.85rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(16, 24, 32, 0.9);
+  color: var(--foreground);
+}
+
+.image-card .card-title,
+.image-card .card-subtitle,
+.image-card p,
+.image-card li,
+.image-card strong {
+  color: var(--foreground);
+  text-shadow: none;
+}
+
+.image-card .chip,
+.image-card .tag,
+.image-card .badge,
+.image-card .card-actions a {
+  color: var(--foreground);
+  background: var(--background);
+  border-color: var(--foreground);
+  backdrop-filter: none;
+}
+
+.image-card .badge {
+  color: var(--background);
+  background: var(--foreground);
+}
+
 .compact-card-list {
   gap: 1rem;
 }
@@ -998,6 +1060,10 @@ strong {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-self: end;
+  padding: 0.6rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(16, 24, 32, 0.9);
   min-width: 0;
 }
 
@@ -1010,13 +1076,13 @@ strong {
 }
 
 .learning-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .learning-grid .card {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   grid-template-columns: 1fr;
   align-content: stretch;
   max-width: none;
@@ -1074,7 +1140,13 @@ strong {
   justify-content: flex-start;
   gap: 0.45rem;
   min-width: 0;
-  padding: 0 1rem 1rem;
+  padding: 0.6rem;
+}
+
+.learning-grid .image-card .card-side {
+  margin: 0 1rem 1rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(16, 24, 32, 0.9);
 }
 
 .learning-grid .badge,
@@ -1091,6 +1163,15 @@ strong {
 .mini-card:hover {
   background: var(--foreground);
   color: var(--background);
+  border-color: var(--foreground);
+}
+
+.image-card:hover {
+  background-color: #151719;
+  background-image: linear-gradient(180deg, rgba(9, 11, 13, 0.2), rgba(9, 11, 13, 0.78)), var(--card-image);
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
   border-color: var(--foreground);
 }
 
@@ -1262,6 +1343,41 @@ strong {
 .card:hover .card-media img {
   filter: grayscale(0);
   transform: scale(1.04);
+}
+
+.image-card:hover .card-media img {
+  transform: none;
+}
+
+.image-card:hover .card-title,
+.image-card:hover .card-subtitle,
+.image-card:hover p,
+.image-card:hover li,
+.image-card:hover strong,
+.image-card:hover .chip,
+.image-card:hover .tag,
+.image-card:hover .badge,
+.image-card:hover .card-actions a {
+  color: var(--foreground);
+}
+
+.image-card:hover .chip,
+.image-card:hover .tag,
+.image-card:hover .card-actions a {
+  background: var(--background);
+  border-color: var(--foreground);
+}
+
+.image-card:hover .badge {
+  color: var(--background);
+  background: var(--foreground);
+  border-color: var(--foreground);
+}
+
+.image-card:hover .card-actions a:hover {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
 }
 
 .grid-2 {

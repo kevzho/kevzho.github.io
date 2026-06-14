@@ -8,7 +8,7 @@ title: projects
   <h1>projects <em>&amp; experiments</em></h1>
   <p class="lead">Recent builds and ML explorations — listed from most recent to earliest.</p>
   <div class="chip-row">
-    <span class="chip">Updated Apr 2026</span>
+    <span class="chip">Updated Jun 2026</span>
     <span class="chip">Links open externally</span>
   </div>
 </header>
@@ -18,11 +18,34 @@ title: projects
     <span class="section-dot is-teal" aria-hidden="true"></span>
     <span class="section-label">Selected</span>
   </div>
-  <span class="section-count">5</span>
+  <span class="section-count">6</span>
 </div>
 
 <div class="card-list compact-card-list selected-project-grid fade-up" style="--delay: 0.25s">
-  <div class="card" data-href="https://github.com/kevzho/iu-indy-2026" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/kintsugi.png' | relative_url }}')" data-href="https://thekintsugi.vercel.app/" data-target="_blank">
+    <div class="card-main">
+      <figure class="card-media" aria-hidden="true">
+        <img src="{{ '/assets/images/kintsugi.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="card-title">Kintsugi</p>
+      <p class="card-subtitle">CSV readiness app that reviews quality, leakage risk, missingness, outliers, and class balance before model work begins.</p>
+      <div class="tag-row">
+        <span class="tag">Next.js</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">ML QA</span>
+      </div>
+      <div class="card-actions">
+        <a href="https://thekintsugi.vercel.app/" target="_blank" rel="noopener">Live App</a>
+        <a href="https://github.com/kevzho/kintsugi" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="card-side">
+      <span class="badge is-green">Shipped</span>
+      <span class="chip">Jun 2026</span>
+    </div>
+  </div>
+
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/iu-indy.png' | relative_url }}')" data-href="https://github.com/kevzho/iu-indy-2026" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/iu-indy.png' | relative_url }}" alt="" loading="lazy" decoding="async">
@@ -44,7 +67,7 @@ title: projects
     </div>
   </div>
 
-  <div class="card" data-href="https://github.com/junior-academy" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/mind.png' | relative_url }}')" data-href="https://github.com/junior-academy" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/mind.png' | relative_url }}" alt="" loading="lazy" decoding="async">
@@ -66,7 +89,7 @@ title: projects
     </div>
   </div>
 
-  <div class="card" data-href="https://github.com/Notorious-D-A-T-A/WHL-2026" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/whl.jpg' | relative_url }}')" data-href="https://github.com/Notorious-D-A-T-A/WHL-2026" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/whl.jpg' | relative_url }}" alt="" loading="lazy" decoding="async">
@@ -88,17 +111,17 @@ title: projects
     </div>
   </div>
 
-  <div class="card" data-href="https://plforecast.streamlit.app/" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/plforecast-cover.jpg' | relative_url }}')" data-href="https://plforecast.streamlit.app/" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/plforecast-cover.jpg' | relative_url }}" alt="" loading="lazy" decoding="async">
       </figure>
-      <p class="card-title">PLForecast</p>
-      <p class="card-subtitle">Premier League predictive dashboard built with Streamlit for interactive forecasting.</p>
+      <p class="card-title">MultiForecast</p>
+      <p class="card-subtitle">Interactive sports forecasting dashboard for Premier League outcomes and World Cup predictions.</p>
       <div class="tag-row">
         <span class="tag">Streamlit</span>
         <span class="tag">Forecasting</span>
-        <span class="tag">Sports</span>
+        <span class="tag">World Cup</span>
       </div>
       <div class="card-actions">
         <a href="https://plforecast.streamlit.app/" target="_blank" rel="noopener">Live App</a>
@@ -111,7 +134,7 @@ title: projects
     </div>
   </div>
 
-  <div class="card" data-href="https://github.com/kevzho/VeritasAI" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/veritas-cover.jpg' | relative_url }}')" data-href="https://github.com/kevzho/VeritasAI" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/veritas-cover.jpg' | relative_url }}" alt="" loading="lazy" decoding="async">
@@ -177,7 +200,7 @@ title: projects
 </div>
 
 <div class="card-list fade-up" style="--delay: 0.75s">
-  <div class="card" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
+  <div class="card image-card" style="--card-image: url('{{ '/assets/images/real-estate.jpg' | relative_url }}')" data-href="https://github.com/kevzho/ai-ml-learning-files" data-target="_blank">
     <div class="card-main">
       <figure class="card-media" aria-hidden="true">
         <img src="{{ '/assets/images/real-estate.jpg' | relative_url }}" alt="" loading="lazy" decoding="async">
