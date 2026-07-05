@@ -43,7 +43,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const backdropImages = ["china.jpeg", "festival.jpeg", "friends.jpeg", "lift.jpeg", "lifting.jpeg", "shanghai.jpeg", "work.jpeg"];
 
   return (
-    <html lang="en" data-theme="monochrome">
+    <html lang="en" data-theme="monochrome" suppressHydrationWarning>
       <body>
         <a className="skip-link" href="#main-content">
           Skip to content
