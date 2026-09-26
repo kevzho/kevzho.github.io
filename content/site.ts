@@ -5,7 +5,7 @@ export const siteConfig = {
   handle: "kevzho",
   title: "kevin zhou",
   description: "High school data scientist exploring ML, AI, statistics",
-  url: "https://kevzho.github.io",
+  url: "https://kevinzhou.dev",
   location: "Pennington, NJ",
   email: "kevinz09302009@gmail.com",
   resumePath: "/assets/resume/resume.pdf"
