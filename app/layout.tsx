@@ -1,10 +1,15 @@
-/* eslint-disable @next/next/no-img-element */
 import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { AgeDock } from "@/components/site/AgeTracker";
 import { Footer } from "@/components/site/Footer";
-import { LegacyInteractions } from "@/components/site/LegacyInteractions";
-import { LegacyNavbar } from "@/components/site/LegacyNavbar";
+import { Intro } from "@/components/site/Intro";
+import { SiteNav } from "@/components/site/SiteNav";
 import { siteConfig } from "@/content/site";
+import { introBootScript } from "@/lib/intro";
+
+const sans = Geist({ subsets: ["latin"], variable: "--font-sans" });
+const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -18,14 +23,14 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    images: [{ url: "/assets/images/whl.jpg", width: 1200, height: 630, alt: "Kevin Zhou portfolio preview" }],
+    images: [{ url: "/assets/collage/shanghai.jpg", alt: "Kevin Zhou" }],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/assets/images/whl.jpg"]
+    images: ["/assets/collage/shanghai.jpg"]
   },
   icons: {
     icon: "/assets/images/favicon.png",
@@ -40,29 +45,20 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const backdropImages = ["china.jpeg", "festival.jpeg", "friends.jpeg", "lift.jpeg", "lifting.jpeg", "shanghai.jpeg", "work.jpeg"];
-
   return (
-    <html lang="en" data-theme="monochrome" suppressHydrationWarning>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: introBootScript }} />
+      </head>
       <body>
+        <Intro />
         <a className="skip-link" href="#main-content">
-          Skip to content
+          skip to content
         </a>
-        <div className="photo-backdrop" aria-hidden="true">
-          {[0, 1].map((track) => (
-            <div className="photo-backdrop-track" key={track}>
-              {backdropImages.map((image) => (
-                <img src={`/assets/me/${image}`} alt="" key={`${track}-${image}`} />
-              ))}
-            </div>
-          ))}
-        </div>
-        <LegacyNavbar />
-        <main className="main-content" id="main-content">
-          <div className="container">{children}</div>
-        </main>
-        <LegacyInteractions />
+        <SiteNav />
+        <main id="main-content">{children}</main>
         <Footer />
+        <AgeDock />
       </body>
     </html>
   );

@@ -1,2 +1,2 @@
-export { metadata } from "../experience/page";
-export { default } from "../experience/page";
+export { metadata } from "../timeline/page";
+export { default } from "../timeline/page";

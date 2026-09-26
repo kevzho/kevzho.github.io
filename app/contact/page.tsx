@@ -1,2 +1,2 @@
-export { metadata } from "../about/page";
-export { default } from "../about/page";
+export { metadata } from "../hobbies/page";
+export { default } from "../hobbies/page";
