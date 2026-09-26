@@ -86,10 +86,10 @@ export const timeline: TimelineEntry[] = [
   {
     year: "2026",
     dates: "2026",
-    title: "plforecast crossed 1,000 users",
+    title: "multiforecast crossed 1,000 users",
     kind: "life",
     summary: "my open-source premier league monte carlo engine. it's past 1.5k people and 25k+ views now.",
-    links: [{ label: "live app", href: "https://plforecast.streamlit.app/" }]
+    links: [{ label: "live app", href: "https://multiforecast.streamlit.app/" }]
   },
   {
     year: "2025",

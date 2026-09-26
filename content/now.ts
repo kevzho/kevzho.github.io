@@ -69,13 +69,13 @@ export const formerItems: NowItem[] = [
     body: "led a 6-person eeg/bci team on an ml pipeline that classifies motor imagery for prosthetic and fes control, mentored by a dartmouth phd. ieee bigdata hs submission + preprint."
   },
   {
-    id: "plforecast",
-    title: "plforecast",
+    id: "multiforecast",
+    title: "multiforecast",
     icon: "/assets/icons/github.svg",
     body: "an open-source premier league monte carlo engine. 1.5k+ people and 25k+ views, and a graduate researcher abroad adapted the model for their own work.",
     links: [
-      { label: "live app", href: "https://plforecast.streamlit.app/" },
-      { label: "code", href: "https://github.com/kevzho/plforecast" }
+      { label: "live app", href: "https://multiforecast.streamlit.app/" },
+      { label: "code", href: "https://github.com/kevzho/MultiForecast" }
     ]
   }
 ];
