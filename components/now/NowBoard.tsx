@@ -5,10 +5,16 @@ import { Newspaper } from "lucide-react";
 import { useState } from "react";
 import type { NowItem } from "@/content/now";
 
-function Row({ item, active, onHover }: { item: NowItem; active: string | null; onHover: (id: string | null) => void }) {
-  const state = active === null ? "" : active === item.id ? " is-active" : " is-dim";
+function Row({ item, active, onHover }: { item: NowItem; active: string | null; onHover?: (id: string | null) => void }) {
+  // nested rows have no hover handlers; they light up and dim with their parent
+  const state = !onHover || active === null ? "" : active === item.id ? " is-active" : " is-dim";
   return (
-    <li className={`now-row${state}`} id={`now-${item.id}`} onPointerEnter={() => onHover(item.id)} onPointerLeave={() => onHover(null)}>
+    <li
+      className={`now-row${state}`}
+      id={`now-${item.id}`}
+      onPointerEnter={onHover && (() => onHover(item.id))}
+      onPointerLeave={onHover && (() => onHover(null))}
+    >
       <span className="now-icon" aria-hidden="true">
         {!item.icon ? (
           <Newspaper />
@@ -30,6 +36,13 @@ function Row({ item, active, onHover }: { item: NowItem; active: string | null; 
               </a>
             ))}
           </div>
+        )}
+        {item.children && (
+          <ol className="now-rows now-children">
+            {item.children.map((child) => (
+              <Row item={child} active={active} key={child.id} />
+            ))}
+          </ol>
         )}
       </div>
     </li>

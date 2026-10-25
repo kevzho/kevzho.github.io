@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/now", label: "now" },
   { href: "/timeline", label: "timeline" },
-  { href: "/hobbies", label: "hobbies" }
+  { href: "/hobbies", label: "hobbies" },
+  { href: "/projects", label: "projects" }
 ];
 
 export function SiteNav() {

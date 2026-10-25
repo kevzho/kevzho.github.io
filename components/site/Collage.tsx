@@ -19,20 +19,24 @@ type Piece = {
 };
 
 const pieces: Piece[] = [
-  { id: "shanghai", kind: "photo", src: "/assets/collage/shanghai.jpg", ratio: 0.93, caption: "shanghai", x: 1, y: 2, w: 32, rotate: -6, depth: 0.6, tape: true },
+  { id: "shanghai", kind: "photo", src: "/assets/collage/shanghai.jpg", ratio: 0.93, caption: "shanghai", x: 1, y: 1.5, w: 32, rotate: -6, depth: 0.6, tape: true },
   { id: "event", kind: "photo", src: "/assets/collage/event.jpg", ratio: 0.75, caption: "badged in", x: 36, y: 0, w: 25, rotate: 4, depth: 0.9 },
-  { id: "festival", kind: "photo", src: "/assets/collage/festival.jpg", ratio: 0.75, caption: "festival fit", x: 69, y: 3, w: 26, rotate: 6, depth: 1.1, tape: true },
-  { id: "work", kind: "photo", src: "/assets/collage/work.jpg", ratio: 1.08, caption: "locked in", x: 66, y: 31, w: 31, rotate: 7, depth: 0.5 },
-  { id: "kpot", kind: "photo", src: "/assets/collage/kpot.jpg", ratio: 1.33, caption: "kpot night", x: 0, y: 46, w: 44, rotate: 3, depth: 0.8, tape: true },
-  { id: "china", kind: "photo", src: "/assets/collage/china.jpg", ratio: 0.75, caption: "china", x: 31, y: 27, w: 29, rotate: -2, depth: 1.4, tape: true },
-  { id: "friends", kind: "photo", src: "/assets/collage/friends.jpg", ratio: 1.78, caption: "the crew", x: 46, y: 56, w: 38, rotate: -4, depth: 0.7 },
-  { id: "lift", kind: "photo", src: "/assets/collage/lift.jpg", ratio: 0.75, caption: "gym", x: 74, y: 62, w: 23, rotate: 8, depth: 1.2 },
-  { id: "lifting", kind: "photo", src: "/assets/collage/lifting.jpg", ratio: 1.77, caption: "after hours", x: 3, y: 75, w: 36, rotate: -5, depth: 0.9 },
-  { id: "physique", kind: "photo", src: "/assets/collage/physique.jpg", ratio: 1.78, caption: "progress pic", x: 40, y: 79, w: 35, rotate: 4, depth: 1.1, tape: true },
-  { id: "note", kind: "note", text: "currently: project lead @ uiuc salt lab", x: 3, y: 33, w: 25, rotate: -4, depth: 1.6 },
-  { id: "stamp", kind: "stamp", text: "pennington\nnew jersey", x: 57, y: 20, w: 16, rotate: 12, depth: 1.8 },
-  { id: "sushi", kind: "sticker", src: "/assets/images/pixel-icons/sushi.svg", x: 38, y: 71, w: 8, rotate: -12, depth: 2 },
-  { id: "piano", kind: "sticker", src: "/assets/images/pixel-icons/piano.svg", x: 88, y: 53, w: 8, rotate: 10, depth: 2.1 }
+  { id: "festival", kind: "photo", src: "/assets/collage/festival.jpg", ratio: 0.75, caption: "festival fit", x: 69, y: 2.3, w: 26, rotate: 6, depth: 1.1, tape: true },
+  { id: "work", kind: "photo", src: "/assets/collage/work.jpg", ratio: 1.08, caption: "locked in", x: 66, y: 23.7, w: 31, rotate: 7, depth: 0.5 },
+  { id: "kpot", kind: "photo", src: "/assets/collage/kpot.jpg", ratio: 1.33, caption: "kpot night", x: 0, y: 35.2, w: 44, rotate: 3, depth: 0.8, tape: true },
+  { id: "china", kind: "photo", src: "/assets/collage/china.jpg", ratio: 0.75, caption: "china", x: 31, y: 20.6, w: 29, rotate: -2, depth: 1.4, tape: true },
+  { id: "friends", kind: "photo", src: "/assets/collage/friends.jpg", ratio: 1.78, caption: "the crew", x: 46, y: 42.8, w: 38, rotate: -4, depth: 0.7 },
+  { id: "lift", kind: "photo", src: "/assets/collage/lift.jpg", ratio: 0.75, caption: "gym", x: 74, y: 47.4, w: 23, rotate: 8, depth: 1.2 },
+  { id: "lifting", kind: "photo", src: "/assets/collage/lifting.jpg", ratio: 1.77, caption: "after hours", x: 3, y: 57.4, w: 36, rotate: -5, depth: 0.9 },
+  { id: "physique", kind: "photo", src: "/assets/collage/physique.jpg", ratio: 1.78, caption: "progress pic", x: 40, y: 60.4, w: 35, rotate: 4, depth: 1.1, tape: true },
+  { id: "yc", kind: "photo", src: "/assets/collage/yc.jpg", ratio: 1.33, caption: "yc startup school", x: 1, y: 76, w: 36, rotate: -3, depth: 0.8, tape: true },
+  { id: "vegas", kind: "photo", src: "/assets/collage/vegas.jpg", ratio: 0.75, caption: "vegas, fam", x: 39, y: 75, w: 24, rotate: 5, depth: 1.2 },
+  { id: "coast", kind: "photo", src: "/assets/collage/coast.jpg", ratio: 1.33, caption: "pacific coast", x: 64, y: 66, w: 33, rotate: -6, depth: 0.6, tape: true },
+  { id: "dinner", kind: "photo", src: "/assets/collage/dinner.jpg", ratio: 1.33, caption: "fire-pit dinner", x: 62, y: 83, w: 34, rotate: 4, depth: 1 },
+  { id: "note", kind: "note", text: "currently: project lead @ uiuc salt lab", x: 3, y: 25.2, w: 25, rotate: -4, depth: 1.6 },
+  { id: "stamp", kind: "stamp", text: "pennington\nnew jersey", x: 57, y: 15.3, w: 16, rotate: 12, depth: 1.8 },
+  { id: "sushi", kind: "sticker", src: "/assets/images/pixel-icons/sushi.svg", x: 38, y: 54.3, w: 8, rotate: -12, depth: 2 },
+  { id: "piano", kind: "sticker", src: "/assets/images/pixel-icons/piano.svg", x: 88, y: 40.5, w: 8, rotate: 10, depth: 2.1 }
 ];
 
 type Offset = { x: number; y: number };

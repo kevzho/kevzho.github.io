@@ -49,7 +49,10 @@ export const timeline: TimelineEntry[] = [
       "co-authored “loud or silent? a reusable framework for per-modality failure analysis in multimodal clinical ai.”",
       "drafted preprints on social-media redesign and ai flourishing."
     ],
-    links: [{ label: "preprint", href: "https://arxiv.org/abs/2608.01462" }]
+    links: [
+      { label: "preprint", href: "https://arxiv.org/abs/2608.01462" },
+      { label: "github", href: "https://github.com/criticaldata" }
+    ]
   },
   {
     year: "2026",

@@ -27,5 +27,6 @@ export const socialLinks: SocialLink[] = [
 export const navItems = [
   { label: "now", href: "/now" },
   { label: "timeline", href: "/timeline" },
-  { label: "hobbies", href: "/hobbies" }
+  { label: "hobbies", href: "/hobbies" },
+  { label: "projects", href: "/projects" }
 ];

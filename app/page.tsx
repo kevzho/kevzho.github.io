@@ -3,6 +3,7 @@ import { Collage } from "@/components/site/Collage";
 import { SocialIcons } from "@/components/site/SocialIcons";
 import { hobbies } from "@/content/hobbies";
 import { nowUpdated } from "@/content/now";
+import { projects } from "@/content/projects";
 import { siteConfig } from "@/content/site";
 import { timeline } from "@/content/timeline";
 
@@ -27,6 +28,13 @@ const sections = [
     title: "hobbies",
     preview: hobbies.map((hobby) => hobby.title).join(" · "),
     meta: "off the clock"
+  },
+  {
+    href: "/projects",
+    index: "04",
+    title: "projects",
+    preview: "multiforecast · ariel · invariantguard · eeg research",
+    meta: `${projects.length} in the archive`
   }
 ];
 
